@@ -7525,7 +7525,8 @@
                 icon.classList.replace("ri-eye-line", "ri-eye-off-line"); // Change icon to "show" mode
             }
         });
-    }
+    }    
+
     const passwordHideShow2 = document.getElementById("passwordHideShow2");
     if (passwordHideShow2) {
         document.getElementById("toggleButton2").addEventListener("click", function() {

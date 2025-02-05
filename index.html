@@ -36,16 +36,6 @@
 
 <body>
 
-    <!-- Light/Dark Mode Button -->
-    <button type="button"
-        class="light-dark-toggle leading-none inline-block transition-all text-[#fe7a36] absolute top-[20px] md:top-[25px] ltr:right-[20px] rtl:left-[20px] ltr:md:right-[25px] rtl:md:left-[25px]"
-        id="light-dark-toggle">
-        <i class="material-symbols-outlined !text-[20px] md:!text-[22px]">
-            light_mode
-        </i>
-    </button>
-    <!-- End Light/Dark Mode Button -->
-
     <!-- Sign In -->
     <div class="bg-white dark:bg-[#0a0e19] py-[60px] md:py-[80px] lg:py-[135px]">
         <div class="mx-auto px-[12.5px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1255px]">
@@ -55,7 +45,7 @@
                     <img src="assets/images/sign-in.jpg" alt="sign-in-image" class="rounded-[25px]">
                 </div>
                 <div class="xl:ltr:pl-[90px] xl:rtl:pr-[90px] 2xl:ltr:pl-[120px] 2xl:rtl:pr-[120px] order-1 lg:order-2">
-                    <img src="assets/images/sidesi/sidesi_color.png" width="150" alt="logo"
+                    <img src="assets/images/sidesi/logo_bersama.png" width="350" alt="logo"
                         class="inline-block dark:hidden">
                     <img src="assets/images/sidesi/logo_white.png" width="150" alt="logo"
                         class="hidden dark:inline-block">
@@ -97,7 +87,7 @@
                         </label>
                         <input type="password"
                             class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
-                            id="password" placeholder="*********">
+                            id="password" placeholder="Isikan Password">
                         <button
                             class="absolute text-lg ltr:right-[20px] rtl:left-[20px] bottom-[12px] transition-all hover:text-primary-500"
                             id="toggleButton" type="button">
@@ -134,6 +124,24 @@
     <script src="assets/js/world-merc.js"></script>
     <script src="assets/js/quill.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const passwordInput = document.getElementById("password");
+            const toggleButton = document.getElementById("toggleButton");
+
+            toggleButton.addEventListener("click", function () {
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    toggleButton.innerHTML = '<i class="ri-eye-line"></i>'; // Ubah ikon ke mata terbuka
+                } else {
+                    passwordInput.type = "password";
+                    toggleButton.innerHTML =
+                        '<i class="ri-eye-off-line"></i>'; // Ubah ikon ke mata tertutup
+                }
+            });
+        });
+    </script> -->
 </body>
 
 </html>
