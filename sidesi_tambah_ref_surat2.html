@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/quill.snow.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/tom-select.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.ico">
@@ -103,7 +102,7 @@
                 </div>
                 <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
                     <a href="sidesi_ref_surat.html"
-                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        class="accordion-button active flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
                         <i
                             class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             mark_as_unread
@@ -365,7 +364,7 @@
                 </div>
                 <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
                     <a href="sidesi_list_surat_masuk.html"
-                        class="accordion-button active flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
                         <i
                             class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             mail
@@ -552,439 +551,42 @@
     <!-- Main Content -->
     <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen" id="main-content">
 
-        <!-- Breadcrumb -->
-        <div class="mb-[25px] md:flex items-center justify-between">
-            <h5 class="mb-0">
-                Tambah Surat Dinas
-            </h5>
-            <ol class="breadcrumb mt-[12px] md:mt-0">
-                <li
-                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
-                    <a href="dashboard.html"
-                        class="inline-block relative ltr:pl-[22px] rtl:pr-[22px] transition-all hover:text-primary-500">
-                        <i
-                            class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 !text-lg -mt-px text-primary-500 top-1/2 -translate-y-1/2">
-                            home
-                        </i>
-                        Dashboard
-                    </a>
-                </li>
-                <li
-                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
-                    Tambah Surat Dinas
-                </li>
-            </ol>
-        </div>
 
-        <div class="trezo-card mb-[25px] p-[20px] md:p-[25px] rounded-md"
-            style="background: linear-gradient(81deg, #605DFF 3.39%, #9747FF 93.3%);">
-            <div class="trezo-card-content relative sm:ltr:pr-[250px] sm:rtl:pl-[250px]">
-                <div class="md:pb-[20px] flex items-center gap-[3px]">
-                    <i class="material-symbols-outlined text-white !text-[35px] ltr:mr-[8px] rtl:ml-[8px]">
-                        info
-                    </i>
-                    <h5 class="mb-[5px] md:mb-px font-semibold text-white">
-                        Petunjuk <span class="text-orange-100"> Pembuatan Surat Dinas</span>
-                    </h5>
-                </div>
-                <p class="text-white">
-                    Berikut Petunjuk Pembuatan Surat Dinas (Contoh : Surat Perintah Tugas) :
-                </p>
-                <ul class="ltr:text-left rtl:text-right">
-                    <li
-                        class="relative ltr:pl-[30px] ltr:md:pl-[38px] text-white rtl:pr-[30px] rtl:md:pr-[38px] mb-[5px] last:mb-0">
-                        <i
-                            class="material-symbols-outlined text-white absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2">
-                            check
-                        </i>
-                        Pilih Kategori Surat
-                    </li>
-                    <li
-                        class="relative ltr:pl-[30px] ltr:md:pl-[38px] text-white rtl:pr-[30px] rtl:md:pr-[38px] mb-[5px] last:mb-0">
-                        <i
-                            class="material-symbols-outlined text-white absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2">
-                            check
-                        </i>
-                        Lengkapi Template Surat
-                    </li>
-                    <li
-                        class="relative ltr:pl-[30px] ltr:md:pl-[38px] text-white rtl:pr-[30px] rtl:md:pr-[38px] mb-[5px] last:mb-0">
-                        <i
-                            class="material-symbols-outlined text-white absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2">
-                            check
-                        </i>
-                        Pilih Penandatangan Surat pada form entitas surat
-                    </li>
-                    <li
-                        class="relative ltr:pl-[30px] ltr:md:pl-[38px] text-white rtl:pr-[30px] rtl:md:pr-[38px] mb-[5px] last:mb-0">
-                        <i
-                            class="material-symbols-outlined text-white absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2">
-                            check
-                        </i>
-                        Check list semua kelengkapan surat sebelum konfirmasi selesai
-                    </li>
-                </ul>
-                <div
-                    class="sm:absolute hidden md:block sm:top-1/2 sm:-translate-y-1/2 sm:ltr:-right-[15px] sm:rtl:-left-[15px] sm:-mt-[8px] sm:max-w-[285px]">
-                    <!-- <img src="assets/images/online-learning.gif" alt="online-learning-image"> -->
-                    <dotlottie-player src="https://lottie.host/ae3bb526-9c99-42f7-8868-5c227090dac9/JstUY2BxD8.lottie"
-                        background="transparent" speed="1" style="width: 300px; height: 200px" loop autoplay>
-                    </dotlottie-player>
-                </div>
-            </div>
-        </div>
-
-        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-            <div class="trezo-card-content">
-                <div class="progress-container">
-                    <div class="progress-step tampil">Kategori Surat</div>
-                    <div class="progress-step">Kepala Surat</div>
-                    <div class="progress-step">Badan Surat</div>
-                    <div class="progress-step">Lampiran Surat</div>
-                    <div class="progress-step">Entitas Surat</div>
-                    <div class="progress-step">Resume Surat</div>
-                </div>
-
-                <div class="step tampil" id="step1">
-                    <form>
-                        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                            <div class="trezo-card-content mb-[25px]">
-                                <h3 class="mb-[25px]">Kategori Surat</h3>
-                                <div class="sm:grid sm:grid-cols-1 md:grid-cols-4 sm:gap-[25px]">
-                                    <div class="sm:col-span-4 mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Pilih kategori surat yang akan dibuat : <span
-                                                class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-kategori" placeholder="Pilih Kategori Surat ..."
-                                            autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Surat Perintah Tugas ...</option>
-                                            <option value="1">Surat Perjanjian Kinerja</option>
-                                            <option value="2">Surat PPPK</option>
-                                            <option value="3">Surat Perintah Tugas</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="step" id="step2">
-                    <form>
-                        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                            <div class="trezo-card-content mb-[25px]">
-                                <h3 class="mb-[25px]">Kepala Surat</h3>
-                                <div class="sm:grid grid-cols-1 md:grid-cols-2 sm:gap-[25px]">
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Nomor Surat <span class="text-orange-600">*</span>
-                                        </label>
-                                        <input type="text"
-                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="Masukkan Nomor Surat ...">
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Perihal Surat <span class="text-orange-600">*</span>
-                                        </label>
-                                        <input type="text"
-                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="Masukkan Perihal Surat ...">
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Lampiran Surat <span class="text-orange-600">*</span>
-                                        </label>
-                                        <input type="text"
-                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="Masukkan lampiran surat jika ada ...">
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Sifat Surat <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-sifatSurat" placeholder="Pilih Sifat Surat ..."
-                                            autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Sifat Surat ...</option>
-                                            <option value="1">Biasa</option>
-                                            <option value="2">Penting</option>
-                                            <option value="3">Rahasia</option>
-                                            <option value="3">Segera</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Penerima Surat <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-jenisPenerima" placeholder="Pilih Sifat Surat ..."
-                                            autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Penerima Surat ...</option>
-                                            <option value="1">Desa</option>
-                                            <option value="2">Non-SKPD</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Desa Penerima <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-desa-list" placeholder="Pilih Desa Penerima Surat ..."
-                                            autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Penerima Surat ...</option>
-                                            <option value="1">Pilih Semua Desa</option>
-                                            <option value="2">Desa Munggu</option>
-                                            <option value="3">Desa Ibul Besar 3</option>
-                                            <option value="4">Desa Pegayut</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="step" id="step3">
-                    <form>
-                        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                            <div class="trezo-card-content mb-[25px]">
-                                <h3 class="mb-[25px]">Badan Surat</h3>
-                                <div class="sm:grid grid-cols-1 md:grid-cols-2 sm:gap-[25px]">
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Nama Pemberi Perintah <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-pegawai1" placeholder="Cari Pegawai ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Pilih Semua Pegawai ...</option>
-                                            <option value="1">Yofi</option>
-                                            <option value="2">Theda</option>
-                                            <option value="3">Yogi</option>
-                                            <option value="4">Yoga</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jabatan Pemberi Perintah <span class="text-orange-600">*</span>
-                                        </label>
-                                        <input type="text"
-                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="Masukkan Jabatan ...">
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Nama Penerima Perintah <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-pegawai2" placeholder="Cari Pegawai ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Pilih Semua Pegawai ...</option>
-                                            <option value="1">Yofi</option>
-                                            <option value="2">Theda</option>
-                                            <option value="3">Yogi</option>
-                                            <option value="4">Yoga</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jabatan Penerima Perintah <span class="text-orange-600">*</span>
-                                        </label>
-                                        <input type="text"
-                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="Masukkan Jabatan ...">
-                                    </div>
-                                    <div class="md:col-span-2 mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Peruntukan Deskripsi Tugas <span class="text-orange-600">*</span>
-                                        </label>
-                                        <div id="richTextEditor" class="h-[180px]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="step" id="step4">
-                    <form>
-                        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                            <div class="trezo-card-content mb-[25px]">
-                                <h3 class="mb-[25px]">Berkas Lampiran Surat</h3>
-                                <div class="grid sm:gap-[25px]">
-                                    <div class="mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                            Upload Berkas Lampiran Surat
-                                        </label>
-                                        <div id="fileUploader">
-                                            <div
-                                                class="relative flex items-center justify-center overflow-hidden rounded-md py-[88px] px-[20px] border border-gray-200 dark:border-[#172036]">
-                                                <div class="flex items-center justify-center">
-                                                    <div
-                                                        class="w-[35px] h-[35px] border border-gray-100 dark:border-[#15203c] flex items-center justify-center rounded-md text-primary-500 text-lg ltr:mr-[12px] rtl:ml-[12px]">
-                                                        <i class="ri-upload-2-line"></i>
-                                                    </div>
-                                                    <p class="leading-[1.5]">
-                                                        <strong class="text-black dark:text-white">Seret dan Letakkan
-                                                            Lampiran Surat
-                                                        </strong><br> Anda Disini (Drag and Drop)
-                                                    </p>
-                                                </div>
-                                                <input type="file" id="fileInput"
-                                                    class="absolute top-0 left-0 right-0 bottom-0 rounded-md z-[1] opacity-0 cursor-pointer">
-                                            </div>
-                                            <ul id="fileList"></ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="step" id="step5">
-                    <form>
-                        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                            <div class="trezo-card-content mb-[25px]">
-                                <h3 class="mb-[25px]">Entitas Surat</h3>
-                                <div class="grid sm:gap-[25px]">
-                                    <div class="mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Pilih Pemeriksa (Atasan Langsung) <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-verifikator" placeholder="Cari Pegawai ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Pilih Semua Pegawai ...</option>
-                                            <option value="1">Yofi</option>
-                                            <option value="2">Theda</option>
-                                            <option value="3">Yogi</option>
-                                            <option value="4">Yoga</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Pilih Penandatangan Surat <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-ttd" placeholder="Cari Pegawai ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Pilih Semua Pegawai ...</option>
-                                            <option value="1">Yofi</option>
-                                            <option value="2">Theda</option>
-                                            <option value="3">Yogi</option>
-                                            <option value="4">Yoga</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Tembusan Surat <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-tembusan" placeholder="Cari Pegawai ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Pilih Semua Pegawai ...</option>
-                                            <option value="1">Yofi</option>
-                                            <option value="2">Theda</option>
-                                            <option value="3">Yogi</option>
-                                            <option value="4">Yoga</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="step" id="step6">
-                    <form>
-                        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                            <div class="trezo-card-content mb-[25px]">
-                                <h3 class="mb-[25px]">Periksa Kembali Surat</h3>
-                                <div class="flex items-center justify-center">
-                                    <object type="application/pdf"
-                                        data="assets/images/ACFrOgBFNSXSMI3HrxFOH1xSXDV5_7jFEBNgmWUmN73YxqbD5Q_1UiVYQheOc9vf9g89K9eiW6JfH__pA9zKiGcVQLy2rfPD6ZGcPALRD5bybOlKy03Sh2ggcBZm9xKnmYg77rf22njbkrggkTor.pdf"
-                                        width="50%" height="1080px"></object>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="p-[20px] md:p-[25px]">
-                    <div class="buttons">
-                        <button id="prev" type="button"
-                            class="inline-block transition-all rounded-md font-medium px-[13px] py-[6px] text-primary-500 border border-primary-500 hover:bg-primary-500 hover:text-white disabled:pointer-events-none"
-                            disabled>
-                            Sebelumnya
-                        </button>
-                        <button id="next" type="button"
-                            class="inline-block py-[10px] px-[30px] bg-primary-500 text-white transition-all hover:bg-primary-400 rounded-md border border-primary-500 hover:border-primary-400"
-                            type="button">
-                            Selanjutnya
-                        </button>
+        <!-- Not Found -->
+        <div class="bg-white dark:bg-[#0a0e19] py-[30px] h-screen overflow-x-hidden">
+            <div class="w-full h-full table">
+                <div class="table-cell align-middle">
+                    <div class="mx-auto max-w-[960px] text-center">
+                        <img src="assets/images/error.png" class="inline-block" alt="error-image">
+                        <h4 class="text-[19px] md:text-[21px] mt-[25px] md:mt-[33px] mb-[13px]">
+                            Untuk saat ini halaman yang anda akses belum tersedia,
+                        </h4>
+                        <p>
+                            Kami sedang meningkatkan layanan aplikasi Sidesi. silahkan refresh halaman ini, atau
+                            kunjungi halaman ini dilain waktu.
+                        </p>
+                        <a href="dashboard.html"
+                            class="inline-block font-medium rounded-md md:text-md mt-[2px] md:mt-[10px] py-[12px] px-[25px] text-white bg-primary-500 transition-all hover:bg-primary-400">
+                            Kembali ke Dashboard
+                        </a>
                     </div>
                 </div>
-
             </div>
         </div>
+        <!-- End Not Found -->
 
         <div class="grow"></div>
 
-        <!-- Tambahkan hidden di modal -->
-        <div id="modalError" class="hidden fixed inset-0 z-[999] overflow-x-hidden overflow-y-auto">
-            <div class="popup-dialog flex transition-all max-w-[550px] min-h-full items-center mx-auto">
-                <div class="trezo-card w-full border border-danger-500 dark:bg-[#15203c] rounded-md">
-                    <div class="trezo-card-header p-[20px] md:p-[25px] bg-danger-500 flex items-center justify-between">
-                        <h3 class="text-lg font-semibold text-white">Informasi </h3>
-                        <button id="closeModal" type="button" class="text-[23px] text-white dark:text-white">
-                            <i class="ri-close-fill"></i>
-                        </button>
-                    </div>
-                    <div class="trezo-card-content justify-center text-center bg-warning-50 p-[20px] md:p-[25px]">
-                        <div class="flex items-center justify-center">
-                            <dotlottie-player
-                                src="https://lottie.host/ffabf350-65c3-4616-9281-0f8d9162c42c/CBRDEbdujY.lottie"
-                                background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
-                            </dotlottie-player>
-                        </div>
-                        <p class="text-dark dark:text-white">Silakan pilih <b>Kategori Surat</b> terlebih dahulu untuk
-                            melanjutkan proses selanjutnya pada pembuatan <b> Surat Dinas</b>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="modalSuccess" class="hidden fixed inset-0 z-[999] overflow-x-hidden overflow-y-auto">
-            <div class="popup-dialog flex transition-all max-w-[550px] min-h-full items-center mx-auto">
-                <div class="trezo-card w-full border border-primary-500 dark:bg-[#15203c] rounded-md">
-                    <div
-                        class="trezo-card-header p-[20px] md:p-[25px] bg-primary-500 flex items-center justify-between">
-                        <h3 class="text-lg font-semibold text-white">Informasi Berhasil </h3>
-                        <button id="closeModal" type="button" class="text-[23px] text-white dark:text-white">
-                            <i class="ri-close-fill"></i>
-                        </button>
-                    </div>
-                    <div class="trezo-card-content justify-center text-center bg-white  p-[20px] md:p-[25px]">
-                        <div class="flex items-center justify-center">
-                            <dotlottie-player
-                                src="https://lottie.host/7ae5497b-1418-4c73-974f-0967cf577938/rwdsu6WVaI.lottie"
-                                background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay>
-                            </dotlottie-player>
-                        </div>
-                        <p class="text-dark dark:text-white mt-[20px]">Volia, Surat Layanan Masyarakat <b>Berhasil
-                                Dibuat
-                                !!</b></b>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Footer -->
+        <footer
+            class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
+            <p>
+                © <span class="text-purple-500">Copyright</span> Kominfo Ogan Ilir<a href="oganilirkab.go.id"
+                    target="_blank" class="text-primary-500 transition-all hover:underline"> 2025</a>
+            </p>
+        </footer>
 
     </div>
-    <!-- End Main Content -->
-
-    <!-- Footer -->
-    <footer class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
-        <p>
-            © <span class="text-purple-500">Copyright</span> Kominfo Ogan Ilir<a href="oganilirkab.go.id"
-                target="_blank" class="text-primary-500 transition-all hover:underline"> 2025</a>
-        </p>
-    </footer>
     <!-- End Main Content -->
 
     <!-- Links Of JS File -->
@@ -999,136 +601,7 @@
     <script src="assets/js/world-merc.js"></script>
     <script src="assets/js/quill.min.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/tom-select.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-
-    <script>
-        new TomSelect("#pilih-kategori", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-        new TomSelect("#pilih-sifatSurat", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-        new TomSelect("#pilih-jenisPenerima", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-        new TomSelect("#pilih-desa-list", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-        new TomSelect("#pilih-pegawai1", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-        new TomSelect("#pilih-pegawai2", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-        new TomSelect("#pilih-verifikator", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-        new TomSelect("#pilih-ttd", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-        new TomSelect("#pilih-tembusan", {
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-    </script>
-
-    <script>
-        let currentStep = 1;
-        const totalSteps = 6;
-        const steps = document.querySelectorAll(".progress-step");
-
-        document.getElementById("next").addEventListener("click", function (event) {
-            if (currentStep === 1) {
-                let pilihKategori = document.getElementById("pilih-kategori").value;
-
-                if (!pilihKategori || pilihKategori === "") {
-                    console.log("Modal Error Muncul"); // Debugging
-                    document.getElementById("modalError").classList.remove("hidden"); // Tampilkan modal
-                    document.getElementById("modalError").style.display = "block"; // Pastikan modal terlihat
-                    event.preventDefault();
-                    return;
-                }
-            }
-
-            if (currentStep < totalSteps) {
-                document.getElementById(`step${currentStep}`).classList.remove("tampil");
-                steps[currentStep - 1].classList.remove("tampil");
-                currentStep++;
-                document.getElementById(`step${currentStep}`).classList.add("tampil");
-                steps[currentStep - 1].classList.add("tampil");
-                updateButtons();
-            } else if (currentStep === totalSteps) {
-                // Tampilkan modal success saat tombol "Selesai" ditekan
-                document.getElementById("modalSuccess").classList.remove("hidden");
-                document.getElementById("modalSuccess").style.display = "block";
-            }
-        });
-
-        document.getElementById("prev").addEventListener("click", function () {
-            if (currentStep > 1) {
-                document.getElementById(`step${currentStep}`).classList.remove("tampil");
-                steps[currentStep - 1].classList.remove("tampil");
-                currentStep--;
-                document.getElementById(`step${currentStep}`).classList.add("tampil");
-                steps[currentStep - 1].classList.add("tampil");
-                updateButtons();
-            }
-        });
-
-        function updateButtons() {
-            document.getElementById("prev").disabled = currentStep === 1;
-            document.getElementById("next").textContent = currentStep === totalSteps ? "Selesai" : "Selanjutnya";
-        }
-
-        // Event untuk menutup modal error
-        document.getElementById("closeModal").addEventListener("click", function () {
-            document.getElementById("modalError").classList.add("hidden");
-            document.getElementById("modalError").style.display = "none";
-        });
-
-        // Event untuk menutup modal success
-        document.getElementById("modalSuccess").querySelector("#closeModal").addEventListener("click", function () {
-            document.getElementById("modalSuccess").classList.add("hidden");
-            document.getElementById("modalSuccess").style.display = "none";
-        });
-    </script>
-
 </body>
 
 </html>

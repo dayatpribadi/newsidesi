@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/quill.snow.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tom-select.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.ico">
@@ -468,7 +469,7 @@
     <div class="header-area bg-white dark:bg-[#0c1427] py-[13px] px-[20px] md:px-[25px] fixed top-0 z-[6] rounded-b-md transition-all"
         id="header-area">
         <div class="md:flex md:items-center md:justify-between">
-            <div class="flex items-center justify-between md:justify-normal">
+            <div class="flex items-center justify-center md:justify-normal">
                 <div
                     class="relative leading-none top-px ltr:mr-[13px] ltr:md:mr-[18px] ltr:lg:mr-[23px] rtl:ml-[13px] rtl:md:ml-[18px] rtl:lg:ml-[23px]">
                     <button type="button" class="hide-sidebar-toggle transition-all inline-block hover:text-primary-500"
@@ -479,7 +480,7 @@
                     </button>
                 </div>
             </div>
-            <ul class="flex items-center justify-between md:justify-normal mt-[13px] md:mt-0">
+            <ul class="flex items-center justify-center md:justify-normal mt-[13px] md:mt-0">
                 <li
                     class="relative mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
                     <button type="button"
@@ -551,40 +552,302 @@
     <!-- Main Content -->
     <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen" id="main-content">
 
+        <!-- Breadcrumb -->
+        <div class="mb-[25px] md:flex items-center justify-between">
+            <h3 class="mb-0">
+                Referensi Surat Dinas
+            </h3>
+            <ol class="breadcrumb mt-[12px] md:mt-0">
+                <li
+                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
+                    <a href="dashboard.html"
+                        class="inline-block relative ltr:pl-[22px] rtl:pr-[22px] transition-all hover:text-primary-500">
+                        <i
+                            class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 !text-lg -mt-px text-primary-500 top-1/2 -translate-y-1/2">
+                            home
+                        </i>
+                        Dashboard
+                    </a>
+                </li>
+                <li
+                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
+                    Detail Surat Dinas
+                </li>
+            </ol>
+        </div>
 
-        <!-- Not Found -->
-        <div class="bg-white dark:bg-[#0a0e19] py-[30px] h-screen overflow-x-hidden">
-            <div class="w-full h-full table">
-                <div class="table-cell align-middle">
-                    <div class="mx-auto max-w-[960px] text-center">
-                        <img src="assets/images/error.png" class="inline-block" alt="error-image">
-                        <h4 class="text-[19px] md:text-[21px] mt-[25px] md:mt-[33px] mb-[13px]">
-                            Untuk saat ini halaman yang anda akses belum tersedia,
-                        </h4>
-                        <p>
-                            Kami sedang meningkatkan layanan aplikasi Sidesi. silahkan refresh halaman ini, atau
-                            kunjungi halaman ini dilain waktu.
-                        </p>
-                        <a href="dashboard.html"
-                            class="inline-block font-medium rounded-md md:text-md mt-[2px] md:mt-[10px] py-[12px] px-[25px] text-white bg-primary-500 transition-all hover:bg-primary-400">
-                            Kembali ke Dashboard
-                        </a>
+        <div class="lg:grid lg:grid-cols-3 gap-[25px]">
+            <div class="lg:col-span-1">
+
+                <!-- Sidebar -->
+                <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                    <div
+                        class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between border-b border-gray-100 pb-[15px] dark:border-[#15203c]">
+                        <div class="trezo-card-title">
+                            <h5 class="mb-0">
+                                Detail Surat Dinas
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="trezo-card-content">
+                        <form>
+                            <div class="sm:grid sm:grid-cols-1 sm:gap-[25px] mb-[20px]">
+                                <div class="mb-[20px] sm:mb-0">
+                                    <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                        Nama Surat
+                                    </label>
+                                    <input type="text"
+                                        class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] dark:bg-[#15203c] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                        placeholder="Masukkan Nama Surat ...">
+                                </div>
+                                <div class="mb-[20px] sm:mb-0">
+                                    <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                        Jenis Surat
+                                    </label>
+                                    <select id="jenis-surat" placeholder="Pilih Jenis Surat ..." autocomplete="on"
+                                        class="h-[44px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer">
+                                        <option value="">Pilih Jenis Surat ...</option>
+                                        <option value="1">Umum</option>
+                                        <option value="2">Internal</option>
+                                        <option value="3">Eksternal</option>
+                                    </select>
+                                </div>
+                                <div class="mb-[20px] sm:mb-0">
+                                    <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                        Template
+                                    </label>
+                                    <div id="fileUploader">
+                                        <div
+                                            class="relative flex items-center justify-center overflow-hidden rounded-md py-[65px] px-[20px] border border-gray-200 dark:border-[#172036]">
+                                            <div class="flex items-center justify-center">
+                                                <div
+                                                    class="w-[35px] h-[35px] border border-gray-100 dark:border-[#15203c] flex items-center justify-center rounded-md text-primary-500 text-lg ltr:mr-[12px] rtl:ml-[12px]">
+                                                    <i class="ri-upload-2-line"></i>
+                                                </div>
+                                                <p class="leading-[1.5]">
+                                                    <strong class="text-black dark:text-white">Click to
+                                                        upload</strong><br> you file here
+                                                </p>
+                                            </div>
+                                            <input type="file" id="fileInput"
+                                                class="absolute top-0 left-0 right-0 bottom-0 rounded-md z-[1] opacity-0 cursor-pointer">
+                                        </div>
+                                        <ul id="fileList"></ul>
+                                    </div>
+                                </div>
+                                <div class="mb-[20px] sm:mb-0">
+                                    <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                        Template Desa/Kelurahan
+                                    </label>
+                                    <div id="fileUploader">
+                                        <div
+                                            class="relative flex items-center justify-center overflow-hidden rounded-md py-[65px] px-[20px] border border-gray-200 dark:border-[#172036]">
+                                            <div class="flex items-center justify-center">
+                                                <div
+                                                    class="w-[35px] h-[35px] border border-gray-100 dark:border-[#15203c] flex items-center justify-center rounded-md text-primary-500 text-lg ltr:mr-[12px] rtl:ml-[12px]">
+                                                    <i class="ri-upload-2-line"></i>
+                                                </div>
+                                                <p class="leading-[1.5]">
+                                                    <strong class="text-black dark:text-white">Click to
+                                                        upload</strong><br> you file here
+                                                </p>
+                                            </div>
+                                            <input type="file" id="fileInput"
+                                                class="absolute top-0 left-0 right-0 bottom-0 rounded-md z-[1] opacity-0 cursor-pointer">
+                                        </div>
+                                        <ul id="fileList"></ul>
+                                    </div>
+                                </div>
+                                <div class="mb-[20px] sm:mb-0">
+                                    <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                        Template Puskesmas
+                                    </label>
+                                    <div id="fileUploader">
+                                        <div
+                                            class="relative flex items-center justify-center overflow-hidden rounded-md py-[65px] px-[20px] border border-gray-200 dark:border-[#172036]">
+                                            <div class="flex items-center justify-center">
+                                                <div
+                                                    class="w-[35px] h-[35px] border border-gray-100 dark:border-[#15203c] flex items-center justify-center rounded-md text-primary-500 text-lg ltr:mr-[12px] rtl:ml-[12px]">
+                                                    <i class="ri-upload-2-line"></i>
+                                                </div>
+                                                <p class="leading-[1.5]">
+                                                    <strong class="text-black dark:text-white">Click to
+                                                        upload</strong><br> you file here
+                                                </p>
+                                            </div>
+                                            <input type="file" id="fileInput"
+                                                class="absolute top-0 left-0 right-0 bottom-0 rounded-md z-[1] opacity-0 cursor-pointer">
+                                        </div>
+                                        <ul id="fileList"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="mb-[50px] mt-[50px]">
+                                <li
+                                    class="rounded-md flex justify-between items-center bg-gray-50 dark:bg-[#15203c] p-[15px] mb-[10px] last:mb-0">
+                                    <div class="flex items-center">
+                                        <a href="#" type="button"
+                                            class="bg-white dark:bg-[#0c1427] text-primary-500 rounded-full text-center leading-[40px] text-[22px] w-[40px] h-[40px]">
+                                            <i class="ri-search-line"></i>
+                                        </a>
+                                        <div class="ltr:ml-[12px] rtl:mr-[12px]">
+                                            <h6 class="text-base mb-[3px] font-medium">
+                                                Template Surat Kosong .docx
+                                            </h6>
+                                            <span class="block text-sm">
+                                                3.45 Kb
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="leading-none text-primary-500 text-[22px]">
+                                        <i class="ri-download-2-line"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="mt-[20px] md:mt-[25px]">
+                                <button type="button"
+                                    class="mb-[10px] font-medium inline-block dark:bg-[#15203c] transition-all rounded-md md:text-md py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-danger-500 text-white hover:bg-danger-400 ltr:mr-[15px] rtl:ml-[15px]">
+                                    <span class="inline-block relative ltr:pl-[29px] rtl:pr-[29px]">
+                                        <i
+                                            class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
+                                            delete
+                                        </i>
+                                        Hapus Surat
+                                    </span>
+                                </button>
+                                <button type="button"
+                                    class="font-medium inline-block dark:bg-[#15203c] transition-all rounded-md md:text-md py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-primary-500 text-white hover:bg-primary-400">
+                                    <span class="inline-block relative ltr:pl-[29px] rtl:pr-[29px]">
+                                        <i
+                                            class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
+                                            edit
+                                        </i>
+                                        Edit Surat
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                    <div
+                        class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between border-b border-gray-100 pb-[15px] dark:border-[#15203c]">
+                        <div class="trezo-card-title">
+                            <h5 class="mb-0">
+                                Informasi Variabel Surat Dinas
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="trezo-card-content">
+                        <div class="table-responsive overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="text-black dark:text-white">
+                                    <tr>
+                                        <th
+                                            class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                            No
+                                        </th>
+                                        <th
+                                            class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                            Nama Kolom
+                                        </th>
+                                        <th
+                                            class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                            Nama Variabel
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[17px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                            <span class="text-gray-500 dark:text-gray-400">
+                                                1
+                                            </span>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[17px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                            <span class="text-gray-500 dark:text-gray-400">
+                                                Nama SKPD
+                                            </span>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[17px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                            <span
+                                                class="px-[8px] py-[3px] inline-block bg-primary-50 dark:bg-[#15203c] text-primary-500 rounded-sm font-medium text-xs">
+                                                ${nama_skpd}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-2">
+
+                <!-- Compose -->
+                <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                    <div
+                        class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between border-b border-gray-100 pb-[15px] dark:border-[#15203c]">
+                        <div class="trezo-card-title">
+                            <h5 class="mb-0">
+                                Formulir
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="trezo-card-content">
+                        <form>
+                            <div class="sm:grid sm:grid-cols-1 sm:gap-[25px] mb-[20px]">
+                                <div class="mb-[20px] sm:mb-0">
+                                    <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                        Nama Surat
+                                    </label>
+                                    <input type="text"
+                                        class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] dark:bg-[#15203c] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                        placeholder="Masukkan Nama Surat ...">
+                                </div>
+                            </div>
+
+                            <div class="sm:col-span-2 mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Peruntukan Surat
+                                </label>
+                                <div id="richTextEditor" class="h-[244px]"></div>
+                            </div>
+                            <button type="button"
+                                class="font-medium inline-block transition-all mt-[20px] rounded-md md:text-md py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-warning-500 dark:bg-[#15203c] dark:text-white text-dark hover:bg-warning-400 ltr:mr-[15px] rtl:ml-[15px]">
+                                <span class="inline-block relative ltr:pl-[29px] rtl:pr-[29px]">
+                                    <i
+                                        class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
+                                        arrow_back
+                                    </i>
+                                    Batal
+                                </span>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Not Found -->
 
-        <div class="grow"></div>
+    </div>
+    </div>
 
-        <!-- Footer -->
-        <footer
-            class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
-            <p>
-                © <span class="text-purple-500">Copyright</span> Kominfo Ogan Ilir<a href="oganilirkab.go.id"
-                    target="_blank" class="text-primary-500 transition-all hover:underline"> 2025</a>
-            </p>
-        </footer>
+    <div class="grow"></div>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
+        <p>
+            © <span class="text-purple-500">Copyright</span> Kominfo Ogan Ilir<a href="oganilirkab.go.id"
+                target="_blank" class="text-primary-500 transition-all hover:underline"> 2025</a>
+        </p>
+    </footer>
 
     </div>
     <!-- End Main Content -->
@@ -601,7 +864,17 @@
     <script src="assets/js/world-merc.js"></script>
     <script src="assets/js/quill.min.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="assets/js/tom-select.js"></script>
+
+    <script>
+        new TomSelect("#jenis-surat", {
+            create: true,
+            sortField: {
+                field: "text",
+                direction: "asc"
+            }
+        });
+    </script>
 </body>
 
 </html>
