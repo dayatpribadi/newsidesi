@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+    <!-- Title -->
+    <title>Aplikasi Sidesi Kabupaten Ogan Ilir</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar-area bg-white dark:bg-[#0c1427] fixed overflow-hidden z-[7] top-0 h-screen transition-all rounded-r-md"
+        id="sidebar-area">
+        <div
+            class="logo bg-white dark:bg-[#0c1427] border-b border-gray-100 dark:border-[#172036] px-[25px] pt-[19px] pb-[15px] absolute z-[2] right-0 top-0 left-0">
+            <a href="dashboard.html" class="transition-none relative flex items-center">
+                <img src="assets/images/logo-icon.svg" alt="logo-icon">
+                <span class="font-bold text-black dark:text-white relative ltr:ml-[8px] rtl:mr-[8px] top-px text-xl">
+                    Sidesi
+                </span>
+            </a>
+            <button type="button"
+                class="burger-menu inline-block absolute z-[3] top-[24px] ltr:right-[25px] rtl:left-[25px] transition-all hover:text-primary-500"
+                id="hide-sidebar-toggle2">
+                <i class="material-symbols-outlined">
+                    close
+                </i>
+            </button>
+        </div>
+        <div class="pt-[89px] px-[25px] pb-[20px] h-screen" data-simplebar>
+            <div class="accordion">
+                <span class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs">
+                    Main
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="dashboard.html"
+                        class="accordion-button active flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            connected_tv
+                        </i>
+                        <span class="title leading-none">
+                            Dashboard
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_profil_lembaga.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            military_tech
+                        </i>
+                        <span class="title leading-none">
+                            Profil Lembaga
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Referensi Data
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_desa.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            format_list_bulleted
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Desa
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_surat.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            mark_as_unread
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Surat
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_surat_desa.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            mark_as_unread
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Surat Desa
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_bantuan.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            diversity_2
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Bantuan
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_listing.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            captive_portal
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Website Desa
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_pengguna.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            people
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Pengguna
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Kepegawaian
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_data_pegawai.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            groups
+                        </i>
+                        <span class="title leading-none">
+                            Data Pegawai
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            center_focus_strong
+                        </i>
+                        <span class="title leading-none">
+                            Presensi Pegawai
+                        </span>
+                    </button>
+                    <div class="accordion-collapse hidden">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_pengaturan_shift.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Pengaturan Shift
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_lap_rekap_presensi.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Rekapitulasi
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_lap_presensi.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Laporan Presensi
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            document_scanner
+                        </i>
+                        <span class="title leading-none">
+                            LKH
+                        </span>
+                    </button>
+                    <div class="accordion-collapse hidden">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_input_lkh.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Input LKH
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_verifikator_lkh.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Verifikator LKH
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_monitoring_lkh.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Monitoring LKH
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Kependudukan
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_data_penduduk.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            diversity_3
+                        </i>
+                        <span class="title leading-none">
+                            Data Penduduk
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_bantuan_blt_dd.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            diversity_1
+                        </i>
+                        <span class="title leading-none">
+                            Data Bantuan BLT DD
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_bnba_stunting.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            diversity_4
+                        </i>
+                        <span class="title leading-none">
+                            Data BNBA Stunting
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Data Sakip
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_sakip_desa.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            house
+                        </i>
+                        <span class="title leading-none">
+                            Sakip Desa
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_sebaran_lokasi.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            my_location
+                        </i>
+                        <span class="title leading-none">
+                            Sebaran Lokasi
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Desa Cantik Simpatik
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_desa_cantik.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            other_houses
+                        </i>
+                        <span class="title leading-none">
+                            Desa Cantik
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_sdgs.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            holiday_village
+                        </i>
+                        <span class="title leading-none">
+                            SDGs
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Tata Persuratan
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_surat_desa_tata_naskah.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            mail
+                        </i>
+                        <span class="title leading-none">
+                            Layanan Masyarakat
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_list_surat_masuk.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            mail
+                        </i>
+                        <span class="title leading-none">
+                            Surat Dinas
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Pengaturan
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_pengumuman.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            notifications
+                        </i>
+                        <span class="title leading-none">
+                            Pengumuman
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_helpdesk.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            forum
+                        </i>
+                        <span class="title leading-none">
+                            Helpdesk
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            travel_explore
+                        </i>
+                        <span class="title leading-none">
+                            Frontend Sidesi
+                        </span>
+                    </button>
+                    <div class="accordion-collapse hidden">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Menu
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#" class=" sidemenu-link rounded-md flex items-center relative transition-all
+                                        font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px]
+                                        ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500
+                                        hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Header
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Banner
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Menu Lainnya
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="index.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            logout
+                        </i>
+                        <span class="title leading-none">
+                            Keluar
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <!-- Header -->
+    <div class="header-area bg-white dark:bg-[#0c1427] py-[13px] px-[20px] md:px-[25px] fixed top-0 z-[6] rounded-b-md transition-all"
+        id="header-area">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="flex items-center justify-between md:justify-normal">
+                <div
+                    class="relative leading-none top-px ltr:mr-[13px] ltr:md:mr-[18px] ltr:lg:mr-[23px] rtl:ml-[13px] rtl:md:ml-[18px] rtl:lg:ml-[23px]">
+                    <button type="button" class="hide-sidebar-toggle transition-all inline-block hover:text-primary-500"
+                        id="hide-sidebar-toggle">
+                        <i class="material-symbols-outlined !text-[20px]">
+                            menu
+                        </i>
+                    </button>
+                </div>
+            </div>
+            <ul class="flex items-center justify-between md:justify-normal mt-[13px] md:mt-0">
+                <li
+                    class="relative mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                    <button type="button"
+                        class="light-dark-toggle leading-none inline-block transition-all relative top-[2px] text-[#fe7a36]"
+                        id="light-dark-toggle">
+                        <i class="material-symbols-outlined !text-[20px] md:!text-[22px]">
+                            light_mode
+                        </i>
+                    </button>
+                </li>
+                <li
+                    class="relative profile-menu mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                    <button type="button"
+                        class="flex items-center -mx-[5px] relative ltr:pr-[14px] rtl:pl-[14px] text-black dark:text-white"
+                        id="dropdownToggleBtn">
+                        <img src="assets/images/admin.png"
+                            class="w-[35px] h-[35px] md:w-[42px] md:h-[42px] rounded-full ltr:md:mr-[2px] ltr:lg:mr-[8px] rtl:md:ml-[2px] rtl:lg:ml-[8px] border-[2px] border-primary-200 inline-block"
+                            alt="admin-image">
+                        <span class="block font-semibold text-[0] lg:text-base">
+                            Sidesi
+                        </span>
+                        <i
+                            class="ri-arrow-down-s-line text-[15px] absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>
+                    </button>
+                    <div
+                        class="profile-menu-dropdown bg-white dark:bg-[#0c1427] transition-all shadow-3xl dark:shadow-none py-[22px] absolute mt-[13px] md:mt-[14px] w-[195px] z-[1] top-full ltr:right-0 rtl:left-0 rounded-md">
+                        <div
+                            class="flex items-center border-b border-gray-100 dark:border-[#172036] pb-[12px] mx-[20px] mb-[10px]">
+                            <img src="assets/images/admin.png"
+                                class="rounded-full w-[31px] h-[31px] ltr:mr-[9px] rtl:ml-[9px] border-2 border-primary-200 inline-block"
+                                alt="admin-image">
+                            <div>
+                                <span class="block text-black dark:text-white font-medium">
+                                    Sidesi
+                                </span>
+                                <span class="block text-xs">
+                                </span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="settings.html"
+                                    class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <i
+                                        class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                        settings
+                                    </i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html"
+                                    class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <i
+                                        class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                        logout
+                                    </i>
+                                    Keluar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Main Content -->
+    <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen" id="main-content">
+
+        <div class="mb-[25px] relative z-[1] pt-[20px] md:pt-[40px] lg:pt-[55px] px-[20px] md:px-[33px] rounded-md"
+            id="allNFTSlides">
+            <div class="lg:flex justify-between mb-[20px] md:mb-[30px] lg:mb-[50px] lg:px-[7px]">
+                <div>
+                    <h3 class="text-white text-xl md:text-2xl mb-[15px]">
+                        Selamat Datang,
+                    </h3>
+                    <p class="text-white">
+                        Aplikasi <strong>Sidesi</strong> merupakan Sistem Informasi Desa Terintegrasi yang digunakan
+                        untuk <br> mempermudah
+                        dalam pengelolaan data Kepegawaian, <br> Kependudukan, Desa Cantik, SAKIP Desa , Tata Naskah
+                        Surat
+                        dan Kegiatan Desa.
+                    </p>
+                </div>
+                <div>
+                    <a href="#"
+                        class="text-[15px] md:text-md mt-[15px] lg:mt-[3px] rounded-full bg-info-500 text-white font-medium py-[7px] px-[30px] transition-all hover:bg-danger-400 inline-block">
+                        Anda Login Sebagai : Admin
+                    </a>
+                </div>
+            </div>
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+                            <div class="h-[270px] rounded-md bg-center bg-cover bg-no-repeat mb-[12px]"
+                                style="background-image: url('https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=3580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                            </div>
+                            <div
+                                class="flex items-center justify-between border-b border-primary-50 dark:border-[#172036] pb-[10px] mb-[14px]">
+                                <div class="flex items-center gap-[6px]">
+                                    <img src="assets/images/nfts/author.gif" class="rounded-full w-[27px]"
+                                        alt="author-image">
+
+                                    <div>
+                                        <span class="block text-xs">
+                                            NIP/NIPPPK : -
+                                        </span>
+                                        <a href="nft-details.html"
+                                            class="block font-semibold text-gray-900 dark:text-gray-400 transition-all hover:text-primary-500">
+                                            Theda Amanda Manopo
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <span class="block text-xs mb-[4px]">
+                                Status : <span
+                                    class="font-semibold text-gray-900 dark:text-gray-400 ltr:ml-[2px] rtl:mr-[2px]">
+                                    Berada Di Kantor</span>
+                            </span>
+                            <div class="flex items-center justify-between pb-[5px]">
+                                <span class="block font-semibold text-primary-800">
+                                    Waktu Hadir : 08:00 WIB
+                                </span>
+                                <span class="block relative text-xs font-semibold ltr:pl-[22px] rtl:pr-[22px]">
+                                    <img src="assets/images/nfts/verified2.svg" alt="verified">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+                            <div class="h-[270px] rounded-md bg-center bg-cover bg-no-repeat mb-[12px]"
+                                style="background-image: url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                            </div>
+                            <div
+                                class="flex items-center justify-between border-b border-primary-50 dark:border-[#172036] pb-[10px] mb-[14px]">
+                                <div class="flex items-center gap-[6px]">
+                                    <img src="assets/images/nfts/author.gif" class="rounded-full w-[27px]"
+                                        alt="author-image">
+
+                                    <div>
+                                        <span class="block text-xs">
+                                            NIP/NIPPPK : -
+                                        </span>
+                                        <a href="nft-details.html"
+                                            class="block font-semibold text-gray-900 dark:text-gray-400 transition-all hover:text-primary-500">
+                                            Yoga Suseno
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <span class="block text-xs mb-[4px]">
+                                Status : <span
+                                    class="font-semibold text-danger-500 dark:text-gray-400 ltr:ml-[2px] rtl:mr-[2px]">
+                                    Tidak Hadir</span>
+                            </span>
+                            <div class="flex items-center justify-between pb-[5px]">
+                                <span class="block font-semibold text-primary-800">
+                                    Waktu Hadir : -
+                                </span>
+                                <span class="block relative text-xs font-semibold ltr:pl-[22px] rtl:pr-[22px]">
+                                    <img src="assets/images/nfts/verified2.svg" alt="verified">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+                            <div class="h-[270px] rounded-md bg-center bg-cover bg-no-repeat mb-[12px]"
+                                style="background-image: url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                            </div>
+                            <div
+                                class="flex items-center justify-between border-b border-primary-50 dark:border-[#172036] pb-[10px] mb-[14px]">
+                                <div class="flex items-center gap-[6px]">
+                                    <img src="assets/images/nfts/author.gif" class="rounded-full w-[27px]"
+                                        alt="author-image">
+
+                                    <div>
+                                        <span class="block text-xs">
+                                            NIP/NIPPPK : -
+                                        </span>
+                                        <a href="nft-details.html"
+                                            class="block font-semibold text-gray-900 dark:text-gray-400 transition-all hover:text-primary-500">
+                                            Theda Amanda Manopo
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <span class="block text-xs mb-[4px]">
+                                Status : <span
+                                    class="font-semibold text-gray-900 dark:text-gray-400 ltr:ml-[2px] rtl:mr-[2px]">
+                                    Berada Di Kantor</span>
+                            </span>
+                            <div class="flex items-center justify-between pb-[5px]">
+                                <span class="block font-semibold text-primary-800">
+                                    Waktu Hadir : 08:00 WIB
+                                </span>
+                                <span class="block relative text-xs font-semibold ltr:pl-[22px] rtl:pr-[22px]">
+                                    <img src="assets/images/nfts/verified2.svg" alt="verified">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+                            <div class="h-[270px] rounded-md bg-center bg-cover bg-no-repeat mb-[12px]"
+                                style="background-image: url('https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                            </div>
+                            <div
+                                class="flex items-center justify-between border-b border-primary-50 dark:border-[#172036] pb-[10px] mb-[14px]">
+                                <div class="flex items-center gap-[6px]">
+                                    <img src="assets/images/nfts/author.gif" class="rounded-full w-[27px]"
+                                        alt="author-image">
+
+                                    <div>
+                                        <span class="block text-xs">
+                                            NIP/NIPPPK : -
+                                        </span>
+                                        <a href="nft-details.html"
+                                            class="block font-semibold text-gray-900 dark:text-gray-400 transition-all hover:text-primary-500">
+                                            Terediah Ananda Gumay
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <span class="block text-xs mb-[4px]">
+                                Status : <span
+                                    class="font-semibold text-danger-500 dark:text-gray-400 ltr:ml-[2px] rtl:mr-[2px]">
+                                    Tidak Hadir</span>
+                            </span>
+                            <div class="flex items-center justify-between pb-[5px]">
+                                <span class="block font-semibold text-primary-800">
+                                    Waktu Hadir : -
+                                </span>
+                                <span class="block relative text-xs font-semibold ltr:pl-[22px] rtl:pr-[22px]">
+                                    <img src="assets/images/nfts/verified2.svg" alt="verified">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+                            <div class="h-[270px] rounded-md bg-center bg-cover bg-no-repeat mb-[12px]"
+                                style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                            </div>
+                            <div
+                                class="flex items-center justify-between border-b border-primary-50 dark:border-[#172036] pb-[10px] mb-[14px]">
+                                <div class="flex items-center gap-[6px]">
+                                    <img src="assets/images/nfts/author.gif" class="rounded-full w-[27px]"
+                                        alt="author-image">
+
+                                    <div>
+                                        <span class="block text-xs">
+                                            NIP/NIPPPK : -
+                                        </span>
+                                        <a href="nft-details.html"
+                                            class="block font-semibold text-gray-900 dark:text-gray-400 transition-all hover:text-primary-500">
+                                            Sisca Damayanti Manopo
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <span class="block text-xs mb-[4px]">
+                                Status : <span
+                                    class="font-semibold text-gray-900 dark:text-gray-400 ltr:ml-[2px] rtl:mr-[2px]">
+                                    Berada Di Kantor</span>
+                            </span>
+                            <div class="flex items-center justify-between pb-[5px]">
+                                <span class="block font-semibold text-primary-800">
+                                    Waktu Hadir : 08:00 WIB
+                                </span>
+                                <span class="block relative text-xs font-semibold ltr:pl-[22px] rtl:pr-[22px]">
+                                    <img src="assets/images/nfts/verified2.svg" alt="verified">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="nft-swiper-button-prev absolute ltr:-left-[8px] rtl:-right-[8px] bottom-[145px] w-[25px] md:w-[30px] h-[25px] md:h-[30px] rounded-full bg-black text-primary-200 text-center leading-[24px] md:leading-[29px] transition-all hover:bg-primary-500 text-white">
+                <i class="ri-arrow-left-line"></i>
+            </div>
+            <div
+                class="nft-swiper-button-next absolute ltr:-right-[8px] rtl:-left-[8px] bottom-[145px] w-[25px] md:w-[30px] h-[25px] md:h-[30px] rounded-full bg-black text-primary-200 text-center leading-[24px] md:leading-[29px] transition-all hover:bg-primary-500 text-white">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+            <div class="absolute top-0 left-0 right-0 rounded-md -z-[1] h-[54%]"
+                style="background: linear-gradient(92deg, #ff38eb 7.31%, #a368be 97.89%);"></div>
+            <img src="assets/images/nfts/shape.png" class="absolute top-0 ltr:right-0 rtl:left-0 -z-[1]" alt="shape">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-[18px] mb-[25px] px-[20px]">
+            <div class="p-[20px] md:p-[25px] rounded-[16px] bg-center bg-no-repeat bg-cover"
+                style="background-image: url(assets/images/wallet/card1.jpg);">
+                <div class="mb-[7px] flex items-center justify-between">
+                    <span class="block text-white font-medium text-xs">
+                        Anda Sebagai Admininstrator
+                    </span>
+                    <span class="text-xl text-white leading-none">
+                        <i class="ri-mastercard-fill"></i>
+                    </span>
+                </div>
+                <img src="assets/images/wallet/sidodi_light.png" width="200" alt="card-frame">
+
+                <h5 class="text-white font-semibold mt-[12px] mb-[50px]" style="word-spacing: 4px;">
+
+                </h5>
+                <div class="flex items-center justify-between">
+                    <span class="block text-white">
+                        Masuk Aplikasi :
+                    </span>
+                    <a href="#" type="button"
+                        class="inline-block px-[15px] py-[.2em] text-white border border-gray-50 text-xs rounded-[100px] ltr:mr-[10px] rtl:ml-[10px]">
+                        Ke Aplikasi
+                    </a>
+                </div>
+            </div>
+            <div class="p-[20px] md:p-[25px] rounded-[16px] bg-center bg-no-repeat bg-cover"
+                style="background-image: url(assets/images/wallet/card2.jpg);">
+                <div class="mb-[7px] flex items-center justify-between">
+                    <span class="block text-white font-medium text-xs">
+                        Anda Sebagai Admininstrator
+                    </span>
+                    <span class="text-xl text-white leading-none">
+                        <i class="ri-mastercard-fill"></i>
+                    </span>
+                </div>
+                <img src="assets/images/icons/card-frame.png" alt="card-frame">
+                <h5 class="text-white font-semibold mt-[12px] mb-[50px]" style="word-spacing: 4px;">
+                    Aplikasi SIKEUDES
+                </h5>
+                <div class="flex items-center justify-between">
+                    <span class="block text-white">
+                        Login Terakhir
+                    </span>
+                    <a href="#" type="button"
+                        class="inline-block px-[15px] py-[.2em] text-white border border-gray-50 text-xs rounded-[100px] ltr:mr-[10px] rtl:ml-[10px]">
+                        Ke Aplikasi
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-[25px] mb-[25px]">
+            <div>
+
+                <!-- Active Auctions -->
+                <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
+                    <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
+                        <div class="trezo-card-title">
+                            <h5 class="mb-0">
+                                Layanan Masyarakat
+                            </h5>
+                        </div>
+                        <div class="trezo-card-subtitle">
+                            <div class="trezo-card-dropdown relative">
+                                <button type="button"
+                                    class="trezo-card-dropdown-btn inline-block rounded-md border border-gray-100 bg-gray-100 dark:bg-[#0a0e19] py-[5px] md:py-[6.5px] px-[12px] md:px-[19px] transition-all hover:bg-gray-50 dark:border-[#172036] dark:hover:bg-[#0a0e19]"
+                                    id="dropdownToggleBtn">
+                                    <span
+                                        class="inline-block relative ltr:pr-[17px] ltr:md:pr-[20px] rtl:pl-[17px] rtl:ml:pr-[20px]">
+                                        Filter
+                                        <i
+                                            class="ri-arrow-down-s-line text-lg absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>
+                                    </span>
+                                </button>
+                                <ul
+                                    class="trezo-card-dropdown-menu transition-all bg-white shadow-3xl rounded-md top-full py-[15px] absolute ltr:right-0 rtl:left-0 w-[195px] z-[5] dark:bg-dark dark:shadow-none">
+                                    <li>
+                                        <button type="button"
+                                            class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
+                                            Minggu Ini
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button"
+                                            class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
+                                            Bulan Ini
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button"
+                                            class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
+                                            Tahun Ini
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trezo-card-content">
+                        <div class="table-responsive overflow-x-auto">
+                            <table class="w-full">
+                                <tbody class="text-black dark:text-white">
+                                    <tr data-url="sidesi_surat_desa_detail.html"
+                                        class="clickable-row cursor-pointer hover:bg-primary-50 dark:hover:bg-primary-50">
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Sukat Keterangan Tidak Mampu (ybs)
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    29 Januari 2025
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Nomor Surat : -
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Dibuat Oleh:
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Theda - 1610025005850006
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Penandatangan
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    IMRON. MD
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    29 Januari 2025
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Penerima :
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Theda - 1610025005850006
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <span
+                                                class="px-[8px] py-[3px] inline-block bg-info-100 dark:bg-[#15203c] text-gray-500 rounded-sm font-medium text-xs">
+                                                Menunggu Penomoran
+                                            </span>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <button
+                                                class="inline-block rounded-full w-[30px] h-[30px] bg-gray-100 dark:bg-[#172036] text-center leading-[30px] text-[18px] text-gray-400 transition-all hover:bg-primary-500 hover:text-white"
+                                                type="button" id="scrollingLongContentModalToggle">
+                                                <i class="ri-arrow-right-line"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr data-url="sidesi_surat_desa_detail.html"
+                                        class="clickable-row cursor-pointer hover:bg-primary-50 dark:hover:bg-primary-50">
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Sukat Keterangan Tidak Mampu (ybs)
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    29 Januari 2025
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Nomor Surat : -
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Dibuat Oleh:
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Theda - 1610025005850006
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Penandatangan
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    IMRON. MD
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    29 Januari 2025
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Penerima :
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Theda - 1610025005850006
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <span
+                                                class="px-[8px] py-[3px] inline-block bg-info-100 dark:bg-[#15203c] text-gray-500 rounded-sm font-medium text-xs">
+                                                Menunggu Penomoran
+                                            </span>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <button
+                                                class="inline-block rounded-full w-[30px] h-[30px] bg-gray-100 dark:bg-[#172036] text-center leading-[30px] text-[18px] text-gray-400 transition-all hover:bg-primary-500 hover:text-white"
+                                                type="button" id="scrollingLongContentModalToggle">
+                                                <i class="ri-arrow-right-line"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr data-url="sidesi_surat_desa_detail.html"
+                                        class="clickable-row cursor-pointer hover:bg-primary-50 dark:hover:bg-primary-50">
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Sukat Keterangan Tidak Mampu (ybs)
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    29 Januari 2025
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Nomor Surat : 140/09/KD-TAB/2025
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Dibuat Oleh:
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Theda - 1610025005850006
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Penandatangan
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    IMRON. MD
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    29 Januari 2025
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <div class="relative py-[3.5px] ltr:pl-[13px] rtl:pr-[13px]">
+                                                <span class="block font-semibold mb-[3px]">
+                                                    Penerima :
+                                                </span>
+                                                <span class="block text-xs text-gray-500 dark:text-gray-400">
+                                                    Theda - 1610025005850006
+                                                </span>
+                                                <div
+                                                    class="absolute ltr:left-0 rtl:right-0 top-0 bottom-0 w-[2px] bg-orange-500">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <span
+                                                class="px-[8px] py-[3px] inline-block bg-info-100 dark:bg-[#15203c] text-gray-500 rounded-sm font-medium text-xs">
+                                                Menunggu Penomoran
+                                            </span>
+                                        </td>
+                                        <td
+                                            class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] border-b border-gray-100 dark:border-[#172036] ltr:first:pl-0 rtl:first:pr-0 ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                                            <button
+                                                class="inline-block rounded-full w-[30px] h-[30px] bg-gray-100 dark:bg-[#172036] text-center leading-[30px] text-[18px] text-gray-400 transition-all hover:bg-primary-500 hover:text-white"
+                                                type="button" id="scrollingLongContentModalToggle">
+                                                <i class="ri-arrow-right-line"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pt-[14px] md:pt-[20px] sm:flex sm:items-center justify-between">
+                            <p class="mb-0 text-sm">
+                                Showing 10 of 36 results
+                            </p>
+                            <ol class="mt-[10px] sm:mt-0">
+                                <li
+                                    class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                    <a href="contacts.html"
+                                        class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                        <span class="opacity-0">
+                                            0
+                                        </span>
+                                        <i
+                                            class="material-symbols-outlined left-0 right-0 absolute top-1/2 -translate-y-1/2">
+                                            chevron_left
+                                        </i>
+                                    </a>
+                                </li>
+                                <li
+                                    class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                    <a href="contacts.html"
+                                        class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-primary-500 bg-primary-500 text-white">
+                                        1
+                                    </a>
+                                </li>
+                                <li
+                                    class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                    <a href="contacts.html"
+                                        class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                        2
+                                    </a>
+                                </li>
+                                <li
+                                    class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                    <a href="contacts.html"
+                                        class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                        3
+                                    </a>
+                                </li>
+                                <li
+                                    class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                    <a href="contacts.html"
+                                        class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                        4
+                                    </a>
+                                </li>
+                                <li
+                                    class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                    <a href="contacts.html"
+                                        class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                        <span class="opacity-0">
+                                            0
+                                        </span>
+                                        <i
+                                            class="material-symbols-outlined left-0 right-0 absolute top-1/2 -translate-y-1/2">
+                                            chevron_right
+                                        </i>
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="grow"></div>
+
+        <!-- Footer -->
+        <footer
+            class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
+            <p>
+                © <span class="text-purple-500">Copyrigth</span> Kominfo Ogan Ilir<a href="oganilirkab.go.id"
+                    target="_blank" class="text-primary-500 transition-all hover:underline">2025</a>
+            </p>
+        </footer>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Links Of JS File -->
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/fslightbox.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fullcalendar.min.js"></script>
+    <script src="assets/js/jsvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/quill.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</body>
+
+</html>

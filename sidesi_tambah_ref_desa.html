@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+    <!-- Title -->
+    <title>Aplikasi Sidesi Kabupaten Ogan Ilir</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar-area bg-white dark:bg-[#0c1427] fixed overflow-hidden z-[7] top-0 h-screen transition-all rounded-r-md"
+        id="sidebar-area">
+        <div
+            class="logo bg-white dark:bg-[#0c1427] border-b border-gray-100 dark:border-[#172036] px-[25px] pt-[19px] pb-[15px] absolute z-[2] right-0 top-0 left-0">
+            <a href="dashboard.html" class="transition-none relative flex items-center">
+                <img src="assets/images/logo-icon.svg" alt="logo-icon">
+                <span class="font-bold text-black dark:text-white relative ltr:ml-[8px] rtl:mr-[8px] top-px text-xl">
+                    Sidesi
+                </span>
+            </a>
+            <button type="button"
+                class="burger-menu inline-block absolute z-[3] top-[24px] ltr:right-[25px] rtl:left-[25px] transition-all hover:text-primary-500"
+                id="hide-sidebar-toggle2">
+                <i class="material-symbols-outlined">
+                    close
+                </i>
+            </button>
+        </div>
+        <div class="pt-[89px] px-[25px] pb-[20px] h-screen" data-simplebar>
+            <div class="accordion">
+                <span class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs">
+                    Main
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="dashboard.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            connected_tv
+                        </i>
+                        <span class="title leading-none">
+                            Dashboard
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_profil_lembaga.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            military_tech
+                        </i>
+                        <span class="title leading-none">
+                            Profil Lembaga
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Referensi Data
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_desa.html"
+                        class="accordion-button active flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            format_list_bulleted
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Desa
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_surat.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            mark_as_unread
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Surat
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_surat_desa.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            mark_as_unread
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Surat Desa
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_bantuan.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            diversity_2
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Bantuan
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_listing.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            captive_portal
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Website Desa
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_pengguna.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            people
+                        </i>
+                        <span class="title leading-none">
+                            Referensi Pengguna
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Kepegawaian
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_data_pegawai.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            groups
+                        </i>
+                        <span class="title leading-none">
+                            Data Pegawai
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            center_focus_strong
+                        </i>
+                        <span class="title leading-none">
+                            Presensi Pegawai
+                        </span>
+                    </button>
+                    <div class="accordion-collapse hidden">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_pengaturan_shift.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Pengaturan Shift
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_lap_rekap_presensi.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Rekapitulasi
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_lap_presensi.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Laporan Presensi
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            document_scanner
+                        </i>
+                        <span class="title leading-none">
+                            LKH
+                        </span>
+                    </button>
+                    <div class="accordion-collapse hidden">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_input_lkh.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Input LKH
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_verifikator_lkh.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Verifikator LKH
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="sidesi_monitoring_lkh.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Monitoring LKH
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Kependudukan
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_data_penduduk.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            diversity_3
+                        </i>
+                        <span class="title leading-none">
+                            Data Penduduk
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_bantuan_blt_dd.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            diversity_1
+                        </i>
+                        <span class="title leading-none">
+                            Data Bantuan BLT DD
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_bnba_stunting.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            diversity_4
+                        </i>
+                        <span class="title leading-none">
+                            Data BNBA Stunting
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Data Sakip
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_sakip_desa.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            house
+                        </i>
+                        <span class="title leading-none">
+                            Sakip Desa
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_sebaran_lokasi.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            my_location
+                        </i>
+                        <span class="title leading-none">
+                            Sebaran Lokasi
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Desa Cantik Simpatik
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_desa_cantik.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            other_houses
+                        </i>
+                        <span class="title leading-none">
+                            Desa Cantik
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_sdgs.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            holiday_village
+                        </i>
+                        <span class="title leading-none">
+                            SDGs
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Tata Persuratan
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_ref_surat_desa_tata_naskah.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            mail
+                        </i>
+                        <span class="title leading-none">
+                            Layanan Masyarakat
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_list_surat_masuk.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            mail
+                        </i>
+                        <span class="title leading-none">
+                            Surat Dinas
+                        </span>
+                    </a>
+                </div>
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Pengaturan
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_pengumuman.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            notifications
+                        </i>
+                        <span class="title leading-none">
+                            Pengumuman
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="sidesi_helpdesk.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            forum
+                        </i>
+                        <span class="title leading-none">
+                            Helpdesk
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            travel_explore
+                        </i>
+                        <span class="title leading-none">
+                            Frontend Sidesi
+                        </span>
+                    </button>
+                    <div class="accordion-collapse hidden">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Menu
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#" class=" sidemenu-link rounded-md flex items-center relative transition-all
+                                        font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px]
+                                        ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500
+                                        hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Header
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Banner
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Menu Lainnya
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="index.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            logout
+                        </i>
+                        <span class="title leading-none">
+                            Keluar
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <!-- Header -->
+    <div class="header-area bg-white dark:bg-[#0c1427] py-[13px] px-[20px] md:px-[25px] fixed top-0 z-[6] rounded-b-md transition-all"
+        id="header-area">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="flex items-center justify-center md:justify-normal">
+                <div
+                    class="relative leading-none top-px ltr:mr-[13px] ltr:md:mr-[18px] ltr:lg:mr-[23px] rtl:ml-[13px] rtl:md:ml-[18px] rtl:lg:ml-[23px]">
+                    <button type="button" class="hide-sidebar-toggle transition-all inline-block hover:text-primary-500"
+                        id="hide-sidebar-toggle">
+                        <i class="material-symbols-outlined !text-[20px]">
+                            menu
+                        </i>
+                    </button>
+                </div>
+            </div>
+            <ul class="flex items-center justify-center md:justify-normal mt-[13px] md:mt-0">
+                <li
+                    class="relative mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                    <button type="button"
+                        class="light-dark-toggle leading-none inline-block transition-all relative top-[2px] text-[#fe7a36]"
+                        id="light-dark-toggle">
+                        <i class="material-symbols-outlined !text-[20px] md:!text-[22px]">
+                            light_mode
+                        </i>
+                    </button>
+                </li>
+                <li
+                    class="relative profile-menu mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                    <button type="button"
+                        class="flex items-center -mx-[5px] relative ltr:pr-[14px] rtl:pl-[14px] text-black dark:text-white"
+                        id="dropdownToggleBtn">
+                        <img src="assets/images/admin.png"
+                            class="w-[35px] h-[35px] md:w-[42px] md:h-[42px] rounded-full ltr:md:mr-[2px] ltr:lg:mr-[8px] rtl:md:ml-[2px] rtl:lg:ml-[8px] border-[2px] border-primary-200 inline-block"
+                            alt="admin-image">
+                        <span class="block font-semibold text-[0] lg:text-base">
+                            Sidesi
+                        </span>
+                        <i
+                            class="ri-arrow-down-s-line text-[15px] absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>
+                    </button>
+                    <div
+                        class="profile-menu-dropdown bg-white dark:bg-[#0c1427] transition-all shadow-3xl dark:shadow-none py-[22px] absolute mt-[13px] md:mt-[14px] w-[195px] z-[1] top-full ltr:right-0 rtl:left-0 rounded-md">
+                        <div
+                            class="flex items-center border-b border-gray-100 dark:border-[#172036] pb-[12px] mx-[20px] mb-[10px]">
+                            <img src="assets/images/admin.png"
+                                class="rounded-full w-[31px] h-[31px] ltr:mr-[9px] rtl:ml-[9px] border-2 border-primary-200 inline-block"
+                                alt="admin-image">
+                            <div>
+                                <span class="block text-black dark:text-white font-medium">
+                                    Sidesi
+                                </span>
+                                <span class="block text-xs">
+                                </span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="settings.html"
+                                    class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <i
+                                        class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                        settings
+                                    </i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html"
+                                    class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <i
+                                        class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                        logout
+                                    </i>
+                                    Keluar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Main Content -->
+    <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen" id="main-content">
+
+        <!-- Breadcrumb -->
+        <div class="mb-[25px] md:flex items-center justify-between">
+            <h5 class="mb-0">
+                Tambah Data Desa
+            </h5>
+            <ol class="breadcrumb mt-[12px] md:mt-0">
+                <li
+                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
+                    <a href="dashboard.html"
+                        class="inline-block relative ltr:pl-[22px] rtl:pr-[22px] transition-all hover:text-primary-500">
+                        <i
+                            class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 !text-lg -mt-px text-primary-500 top-1/2 -translate-y-1/2">
+                            home
+                        </i>
+                        Dashboard
+                    </a>
+                </li>
+                <li
+                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
+                    <a href="sidesi_ref_desa.html"
+                        class="inline-block relative rtl:pr-[22px] transition-all hover:text-primary-500">
+                        Referensi Desa
+                    </a>
+                </li>
+                <li
+                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
+                    Tambah Data Desa
+                </li>
+            </ol>
+        </div>
+
+        <!-- My Profile-->
+        <div class="2xl:grid 2xl:grid-cols-1 gap-[25px]">
+            <div>
+
+                <!-- Welcome -->
+                <div class="trezo-card mb-[25px] p-[20px] md:p-[25px] rounded-md"
+                    style="background: linear-gradient(81deg, #605DFF 3.39%, #9747FF 93.3%);">
+                    <div class="trezo-card-content relative sm:ltr:pr-[250px] sm:rtl:pl-[250px]">
+                        <div class="md:py-[25px]">
+                            <h1 class="mb-[5px] md:mb-px font-semibold text-white">
+                                Desa <span class="text-orange-100">Sidesi</span>
+                            </h1>
+                            <p class="text-white">
+                                Kecamatan Sidesi
+                            </p>
+                        </div>
+                        <div
+                            class="sm:absolute sm:top-1/2 sm:-translate-y-1/2 sm:ltr:-right-[15px] sm:rtl:-left-[15px] sm:-mt-[8px] sm:max-w-[285px]">
+                            <img src="assets/images/online-learning.gif" alt="online-learning-image">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="alertMessage"
+            class="py-[1rem] px-[1rem] mb-[25px] text-white bg-success-500 border border-success-500 rounded-md"
+            style="display: none;">
+            Data berhasil diperbarui
+        </div>
+
+        <div class="lg:grid lg:grid-cols-3 2xl:grid-cols-4 gap-[25px]">
+            <div class="lg:col-span-1">
+
+                <!-- Profile Intro -->
+                <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                    <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
+                        <div class="trezo-card-title">
+                            <h5 class="mb-0">
+                                Logo Lembaga
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="trezo-card-content">
+                        <div class="sm:col-span-2 mb-[20px] sm:mb-0">
+                            <div id="fileUploader">
+                                <div
+                                    class="relative flex items-center justify-center overflow-hidden rounded-md py-[88px] px-[20px] border border-gray-200 dark:border-[#172036]">
+                                    <div class="flex items-center justify-center">
+                                        <div
+                                            class="w-[35px] h-[35px] border border-gray-100 dark:border-[#15203c] flex items-center justify-center rounded-md text-primary-500 text-lg ltr:mr-[12px] rtl:ml-[12px]">
+                                            <i class="ri-upload-2-line"></i>
+                                        </div>
+                                        <p class="leading-[1.5]">
+                                            <strong class="text-black dark:text-white">Click to upload</strong><br>
+                                            you file here
+                                        </p>
+                                    </div>
+                                    <input type="file" id="fileInput"
+                                        class="absolute top-0 left-0 right-0 bottom-0 rounded-md z-[1] opacity-0 cursor-pointer">
+                                </div>
+                                <ul id="fileList"></ul>
+                            </div>
+                        </div>
+                        <!-- <div class="flex items-center gap-[7px]">
+                            <a href="#"
+                                class="inline-block relative text-center rounded-full w-[28px] h-[28px] text-white bg-[#3a559f]"
+                                target="_blank">
+                                <i class="ri-facebook-fill absolute left-0 right-0 top-1/2 -translate-y-1/2"></i>
+                            </a>
+                            <a href="#"
+                                class="inline-block relative text-center rounded-full w-[28px] h-[28px] text-white bg-[#03a9f4]"
+                                target="_blank">
+                                <i class="ri-twitter-x-fill absolute left-0 right-0 top-1/2 -translate-y-1/2"></i>
+                            </a>
+                            <a href="#"
+                                class="inline-block relative text-center rounded-full w-[28px] h-[28px] text-white bg-[#007ab9]"
+                                target="_blank">
+                                <i class="ri-linkedin-fill absolute left-0 right-0 top-1/2 -translate-y-1/2"></i>
+                            </a>
+                            <a href="#"
+                                class="inline-block relative text-center rounded-full w-[28px] h-[28px] text-white bg-[#2196f3]"
+                                target="_blank">
+                                <i class="ri-mail-fill absolute left-0 right-0 top-1/2 -translate-y-1/2"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="lg:col-span-2 2xl:col-span-3">
+                <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                    <div class="trezo-card-content">
+                        <div class="sm:grid sm:grid-cols-2 sm:gap-[25px]">
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Kecamatan
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    value="E.g. #JAN-123">
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Desa
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    value="E.g. Olivia John">
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Kepala Desa
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    value="E.g. olivia@trezo.com">
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Nama
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    value="E.g. olivia@trezo.com">
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Phone Number
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    placeholder="E.g. +1 555-445-4455">
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Projects
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    placeholder="E.g. 27">
+                            </div>
+                            <div class="sm:col-span-2 mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Add Some Info
+                                </label>
+                                <textarea
+                                    class="h-[140px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] p-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    placeholder="E.g. It makes me feel..."></textarea>
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Facebook
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    placeholder="E.g. https://www.facebook.com/">
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    X
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    placeholder="E.g. https://x.com/">
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Linkedin
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    placeholder="E.g. https://www.linkedin.com/">
+                            </div>
+                            <div class="mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    GitHub
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                    placeholder="E.g. https://github.com/">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trezo-card mb-[25px]">
+                    <div class="trezo-card-content">
+                        <button type="button"
+                            class="font-medium inline-block transition-all rounded-md md:text-md ltr:mr-[15px] rtl:ml-[15px] py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-danger-500 text-white hover:bg-danger-400">
+                            Cancel
+                        </button>
+                        <button type="button" id="updateButton"
+                            class="font-medium inline-block transition-all rounded-md md:text-md py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-primary-500 text-white hover:bg-primary-400">
+                            <span class="inline-block relative ltr:pl-[29px] rtl:pr-[29px]">
+                                <i
+                                    class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
+                                    edit
+                                </i>
+                                Simpan Data
+                            </span>
+                        </button>
+
+                        <script>
+                            document.getElementById("updateButton").addEventListener("click", function () {
+                                // Tampilkan alert dengan mengganti display menjadi block
+                                document.getElementById("alertMessage").style.display = "block";
+                            });
+                        </script>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="grow"></div>
+
+        <!-- Footer -->
+        <footer
+            class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
+            <p>
+                © <span class="text-purple-500">Copyrigth</span> Kominfo Ogan Ilir<a href="oganilirkab.go.id"
+                    target="_blank" class="text-primary-500 transition-all hover:underline">2025</a>
+            </p>
+        </footer>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Links Of JS File -->
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/fslightbox.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fullcalendar.min.js"></script>
+    <script src="assets/js/jsvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/quill.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
