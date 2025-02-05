@@ -72,36 +72,39 @@
                             </button>
                         </div>
                     </div>
-                    <div class="mt-[25px] mb-[15px] relative">
+                    <div class="mb-[15px] relative">
                         <label class="mb-[10px] md:mb-[12px] text-black dark:text-white font-medium block">
-                            Nama Pengguna
+                            Nama Pengguna <span class="text-gray-400"><i>(dummy : admin)</i></span>
                         </label>
-                        <input type="text"
+                        <input type="text" id="username"
                             class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
                             placeholder="Nama Pengguna">
                     </div>
-                    <div class="mb-[15px] relative" id="passwordHideShow">
+                    <div class="mb-[15px] relative">
                         <label class="mb-[10px] md:mb-[12px] text-black dark:text-white font-medium block">
-                            Kata Sandi
+                            Kata Sandi <span class="text-gray-400"><i>(dummy : password123)</i></span>
                         </label>
-                        <input type="password"
+                        <input type="password" id="password"
                             class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
-                            id="password" placeholder="Isikan Password">
-                        <button
-                            class="absolute text-lg ltr:right-[20px] rtl:left-[20px] bottom-[12px] transition-all hover:text-primary-500"
-                            id="toggleButton" type="button">
+                            placeholder="Isikan Password">
+                        <button id="toggleButton" type="button"
+                            class="absolute text-lg ltr:right-[20px] rtl:left-[20px] bottom-[12px] transition-all hover:text-primary-500">
                             <i class="ri-eye-off-line"></i>
                         </button>
                     </div>
-                    <a href="#" class="inline-block text-primary-500 transition-all font-semibold hover:underline">
-                        Forgot Password?
-                    </a>
-                    <a href="dashboard.html" type="button"
+                    <!-- Captcha -->
+                    <div class="mb-[15px] relative">
+                        <label class="mb-[10px] md:mb-[12px] text-black dark:text-white font-medium block">
+                            Masukkan Kode Keamanan: <span id="captchaText"></span>
+                        </label>
+                        <input type="text" id="captchaInput"
+                            class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500"
+                            placeholder="Masukkan kode di atas">
+                    </div>
+                    <a href="#" id="loginButton"
                         class="md:text-md block w-full text-center transition-all rounded-md font-medium mt-[20px] md:mt-[25px] py-[12px] px-[25px] text-white bg-primary-500 hover:bg-primary-400">
                         <span class="flex items-center justify-center gap-[5px]">
-                            <i class="material-symbols-outlined">
-                                login
-                            </i>
+                            <i class="material-symbols-outlined"> login </i>
                             Masuk
                         </span>
                     </a>
@@ -143,23 +146,48 @@
     <script src="assets/js/quill.min.js"></script>
     <script src="assets/js/custom.js"></script>
 
-    <!-- <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             const passwordInput = document.getElementById("password");
             const toggleButton = document.getElementById("toggleButton");
+            const loginButton = document.getElementById("loginButton");
+            const captchaText = document.getElementById("captchaText");
+            const captchaInput = document.getElementById("captchaInput");
+            const usernameInput = document.getElementById("username");
+
+            let generatedCaptcha = Math.floor(1000 + Math.random() * 9000);
+            captchaText.textContent = generatedCaptcha;
 
             toggleButton.addEventListener("click", function () {
                 if (passwordInput.type === "password") {
                     passwordInput.type = "text";
-                    toggleButton.innerHTML = '<i class="ri-eye-line"></i>'; // Ubah ikon ke mata terbuka
+                    toggleButton.innerHTML = '<i class="ri-eye-line"></i>';
                 } else {
                     passwordInput.type = "password";
-                    toggleButton.innerHTML =
-                        '<i class="ri-eye-off-line"></i>'; // Ubah ikon ke mata tertutup
+                    toggleButton.innerHTML = '<i class="ri-eye-off-line"></i>';
+                }
+            });
+
+            loginButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                let username = usernameInput.value;
+                let password = passwordInput.value;
+                let captchaValue = captchaInput.value;
+
+                if (username === "admin" && password === "password123" && captchaValue ==
+                    generatedCaptcha) {
+                    alert("Login Berhasil!");
+                    window.location.href = "dashboard.html";
+                } else {
+                    alert("Username, Password, atau Captcha salah!");
+                    generatedCaptcha = Math.floor(1000 + Math.random() * 9000);
+                    captchaText.textContent = generatedCaptcha;
+                    captchaInput.value = "";
                 }
             });
         });
-    </script> -->
+    </script>
+
 </body>
 
 </html>
