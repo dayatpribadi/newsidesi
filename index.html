@@ -37,7 +37,7 @@
 <body>
 
     <!-- Sign In -->
-    <div class="bg-white dark:bg-[#0a0e19] py-[60px] md:py-[80px] lg:py-[135px]">
+    <div class="py-[60px] md:py-[80px] lg:py-[135px]">
         <div class="mx-auto px-[12.5px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1255px]">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center">
                 <div
@@ -134,6 +134,8 @@
     </div>
     <!-- End Sign In -->
 
+    <canvas id="bgCanvas"></canvas>
+
     <!-- Links Of JS File -->
     <script src="assets/js/apexcharts.min.js"></script>
     <script src="assets/js/fslightbox.js"></script>
@@ -147,6 +149,8 @@
     <script src="assets/js/quill.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -221,6 +225,47 @@
             });
         });
     </script>
+
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({
+            canvas: document.getElementById("bgCanvas"),
+            alpha: true
+        });
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlesCount = 500;
+        const posArray = new Float32Array(particlesCount * 3);
+
+        for (let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 10;
+        }
+
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.1,
+            color: "#EDEDED",
+        });
+
+        const particleMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        scene.add(particleMesh);
+
+        camera.position.z = 5;
+
+        function animateParticles() {
+            requestAnimationFrame(animateParticles);
+            particleMesh.rotation.y += 0.001;
+            renderer.render(scene, camera);
+        }
+
+        animateParticles();
+    </script>
+
 
 
 </body>

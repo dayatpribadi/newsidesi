@@ -13296,3 +13296,11 @@ html[dir="rtl"] {
     font-size: 14px;
   }
 }
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
