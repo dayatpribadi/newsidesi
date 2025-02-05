@@ -145,6 +145,7 @@
     <script src="assets/js/world-merc.js"></script>
     <script src="assets/js/quill.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -155,9 +156,15 @@
             const captchaInput = document.getElementById("captchaInput");
             const usernameInput = document.getElementById("username");
 
+            // Dummy username dan password
+            const dummyUsername = "admin";
+            const dummyPassword = "password123";
+
+            // Generate captcha baru
             let generatedCaptcha = Math.floor(1000 + Math.random() * 9000);
             captchaText.textContent = generatedCaptcha;
 
+            // Toggle visibility password
             toggleButton.addEventListener("click", function () {
                 if (passwordInput.type === "password") {
                     passwordInput.type = "text";
@@ -168,25 +175,52 @@
                 }
             });
 
+            // Event listener tombol login
             loginButton.addEventListener("click", function (event) {
                 event.preventDefault();
-                let username = usernameInput.value;
-                let password = passwordInput.value;
-                let captchaValue = captchaInput.value;
+                let username = usernameInput.value.trim();
+                let password = passwordInput.value.trim();
+                let captchaValue = captchaInput.value.trim();
 
-                if (username === "admin" && password === "password123" && captchaValue ==
-                    generatedCaptcha) {
-                    alert("Login Berhasil!");
-                    window.location.href = "dashboard.html";
+                if (username === "" || password === "" || captchaValue === "") {
+                    Swal.fire({
+                        icon: "warning",
+                        title: "Form Tidak Lengkap",
+                        text: "Harap isi semua kolom yang diperlukan!",
+                    });
+                    return;
+                }
+
+                if (captchaValue != generatedCaptcha) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Captcha Salah",
+                        text: "Silakan coba lagi dengan captcha yang benar.",
+                    });
+                    return;
+                }
+
+                if (username === dummyUsername && password === dummyPassword) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Login Berhasil",
+                        text: "Selamat datang di Aplikasi Sidesi!",
+                        timer: 2000,
+                        showConfirmButton: false
+                    }).then(() => {
+                        window.location.href = "dashboard.html";
+                    });
                 } else {
-                    alert("Username, Password, atau Captcha salah!");
-                    generatedCaptcha = Math.floor(1000 + Math.random() * 9000);
-                    captchaText.textContent = generatedCaptcha;
-                    captchaInput.value = "";
+                    Swal.fire({
+                        icon: "error",
+                        title: "Login Gagal",
+                        text: "Username atau password salah!",
+                    });
                 }
             });
         });
     </script>
+
 
 </body>
 
