@@ -9635,6 +9635,10 @@ html[dir="rtl"] {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
   .md\:items-center {
     align-items: center;
   }
