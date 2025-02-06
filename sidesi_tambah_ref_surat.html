@@ -16,11 +16,6 @@
     <link rel="stylesheet" href="assets/css/quill.snow.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/tom-select.css">
-
-    <!-- Tambahkan Formeo CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/formeo@latest/dist/formeo.min.css">
-
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.ico">
 
@@ -806,7 +801,7 @@
                     </div>
 
                     <div class="trezo-card-content">
-                        <div id="form-builder"></div>
+                        <div id="form-builder" class="h-screen"></div>
                     </div>
                 </div>
             </div>
@@ -841,17 +836,6 @@
     <script src="assets/js/quill.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/tom-select.js"></script>
-    <!-- Tambahkan Formeo JS -->
-    <script src="https://cdn.jsdelivr.net/npm/formeo@latest/dist/formeo.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const fb = new Formeo({
-                renderContainer: '#form-builder'
-            });
-        });
-    </script>
-
 
     <script>
         new TomSelect("#jenis-surat", {

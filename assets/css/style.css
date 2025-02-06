@@ -9490,6 +9490,10 @@ html[dir="rtl"] {
     height: 85px;
   }
 
+  .md\:h-\[150px\] {
+    height: 150px;
+  }
+
   .md\:w-\[120px\] {
     width: 120px;
   }
