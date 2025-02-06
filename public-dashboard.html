@@ -71,13 +71,23 @@
                         <div class="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-center">
                             <div class="text-center">
                                 <h5 class="mb-0">
-                                    Filter Data Berdasarkan Wilayah
+                                    Filter Data Berdasarkan Kriteria
                                 </h5>
                             </div>
                         </div>
                         <div class="trezo-card-content">
                             <form>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-[15px] sm:gap-[20px]">
+                                    <!-- Dropdown untuk kategori bantuan/fasilitas -->
+                                    <div>
+                                        <select id="pilih-dashboards" placeholder="Pilih Dashboard ..."
+                                            class="h-[44px] rounded-md border border-primary-500  bg-gray-50 dark:bg-[#0a0e19] p-[5px] block w-full outline-0 cursor-pointer">
+                                            <option value="">Pilih Dashboard ...</option>
+                                            <option value="1">Desa Cantik</option>
+                                            <option value="2">Potensi Desa</option>
+                                        </select>
+                                    </div>
+
                                     <!-- Dropdown untuk pilih desa -->
                                     <div>
                                         <select id="pilih-kecamatans" placeholder="Ketik Nama Kecamatan ..."
@@ -105,16 +115,6 @@
                                                 <option value="5">Desa Bakung</option>
                                             </select>
                                         </div>
-                                    </div>
-
-                                    <!-- Dropdown untuk kategori bantuan/fasilitas -->
-                                    <div>
-                                        <select id="pilih-dashboards" placeholder="Pilih Dashboard ..."
-                                            class="h-[44px] rounded-md border border-primary-500  bg-gray-50 dark:bg-[#0a0e19] p-[5px] block w-full outline-0 cursor-pointer">
-                                            <option value="">Pilih Dashboard ...</option>
-                                            <option value="1">Desa Cantik</option>
-                                            <option value="2">Potensi Desa</option>
-                                        </select>
                                     </div>
 
                                     <!-- Dropdown untuk kategori bantuan/fasilitas -->
@@ -167,15 +167,14 @@
     <!-- Features -->
     <div class="relative z-[1]">
         <div class="container 2xl:max-w-[1320px] mx-auto px-[12px]">
-            <div
-                class="mx-auto text-center md:max-w-[650px] lg:max-w-[810px] xl:max-w-[785px] mb-[35px] md:mb-[50px] lg:mb-[65px] xl:mb-[90px]">
+            <div class="mx-auto text-center md:max-w-[650px] lg:max-w-[810px] xl:max-w-[785px] mb-[35px]">
                 <h2
                     class="mb-0 text-[24px] md:text-[28px] lg:text-[34px] xl:text-[36px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px] leading-[1.2]">
                     Dashboard Desa Cantik Simpatik <br> Kabupaten Ogan Ilir
                 </h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-x-[25px] gap-[25px] mb-[25px]">
-                <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
+                <div class="trezo-card bg-primary-50 dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                     <div class="trezo-card-content">
                         <div class="flex justify-between">
                             <div>
@@ -183,13 +182,13 @@
                                     Jumlah Kecamatan
                                 </span>
                                 <h5 class="mb-0 mt-[3px] text-[20px]">
-                                    $531,200
+                                    16
                                 </h5>
                             </div>
                             <div
                                 class="w-[55px] lg:w-[60px] h-[55px] lg:h-[60px] flex items-center justify-center rounded-full text-success-600 bg-success-50 dark:bg-[#0a0e19]">
                                 <i class="material-symbols-outlined">
-                                    attach_money
+                                    assured_workload
                                 </i>
                             </div>
                         </div>
@@ -204,21 +203,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
+                <div class="trezo-card bg-secondary-50 dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                     <div class="trezo-card-content">
                         <div class="flex justify-between">
                             <div>
                                 <span class="block">
-                                    Jumlah Penduduk
+                                    Jumlah Desa
                                 </span>
                                 <h5 class="mb-0 mt-[3px] text-[20px]">
-                                    $251,952
+                                    227
                                 </h5>
                             </div>
                             <div
                                 class="w-[55px] lg:w-[60px] h-[55px] lg:h-[60px] flex items-center justify-center rounded-full text-purple-600 bg-purple-50 dark:bg-[#0a0e19]">
                                 <i class="material-symbols-outlined">
-                                    account_balance_wallet
+                                    assured_workload
                                 </i>
                             </div>
                         </div>
@@ -233,21 +232,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
+                <div class="trezo-card bg-purple-50 dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                     <div class="trezo-card-content">
                         <div class="flex justify-between">
                             <div>
                                 <span class="block">
-                                    Penduduk Laki-laki
+                                    Jumlah KK
                                 </span>
                                 <h5 class="mb-0 mt-[3px] text-[20px]">
-                                    $15,990
+                                    15,990
                                 </h5>
                             </div>
                             <div
                                 class="w-[55px] lg:w-[60px] h-[55px] lg:h-[60px] flex items-center justify-center rounded-full text-primary-600 bg-primary-50 dark:bg-[#0a0e19]">
                                 <i class="material-symbols-outlined">
-                                    money_bag
+                                    groups
                                 </i>
                             </div>
                         </div>
@@ -262,21 +261,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
+                <div class="trezo-card bg-orange-50 dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                     <div class="trezo-card-content">
                         <div class="flex justify-between">
                             <div>
                                 <span class="block">
-                                    Penduduk Perempuan
+                                    Jumlah Penduduk
                                 </span>
                                 <h5 class="mb-0 mt-[3px] text-[20px]">
-                                    $14,580
+                                    386,941
                                 </h5>
                             </div>
                             <div
                                 class="w-[55px] lg:w-[60px] h-[55px] lg:h-[60px] flex items-center justify-center rounded-full text-secondary-600 bg-secondary-50 dark:bg-[#0a0e19]">
                                 <i class="material-symbols-outlined">
-                                    payments
+                                    groups
                                 </i>
                             </div>
                         </div>
@@ -297,89 +296,115 @@
     <!-- End Features -->
 
     <!-- Widgets -->
-    <div class="pb-[60px] md:pb-[80px] lg:pb-[100px] xl:pb-[150px]">
+    <div class="pb-[60px] pt-[60px] md:pb-[80px] lg:pb-[100px] xl:pb-[150px]">
         <div class="container 2xl:max-w-[1320px] mx-auto px-[12px] relative z-[1]">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center">
-                <div class="relative">
-                    <div
-                        class="md:max-w-[600px] lg:max-w-[400px] xl:max-w-[510px] p-[15px] md:p-[25px] md:p-[30px] xl:py-[27px] xl:px-[34px] rounded-[7px] bg-white/[.54] dark:bg-black/[.54] border border-white/[.10] dark:border-black/[.10] backdrop-blur-[5.400000095367432px]">
-                        <img src="assets/images/front-pages/order-summary.png" class="inline-block"
-                            alt="order-summary-image">
-                    </div>
-                    <div
-                        class="absolute ltr:right-0 rtl:left-0 ltr:lg:right-[30px] rtl:lg:left-[30px] max-w-[120px] md:max-w-[200px] lg:max-w-[219px] -mt-[15px] md:-mt-[17px] rounded-[4.294px] top-1/2 -translate-y-1/2 drop-shadow-xl">
-                        <img src="assets/images/front-pages/courses-sales.jpg" class="inline-block rounded-[4.294px]"
-                            alt="courses-sales-image">
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px]">
                 <div>
-                    <h2
-                        class="leading-[1.2] text-[24px] md:text-[28px] lg:text-[34px] xl:text-[36px] mb-[15px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px]">
-                        Tailor Your Dashboard: Unleash the Power of Customizable Widgets
-                    </h2>
-                    <ul class="ltr:xl:pl-[18px] rtl:xl:pr-[18px] mt-[25px] md:mt-[30px] lg:mt-[35px] xl:mt-[65px]">
-                        <li
-                            class="relative ltr:pl-[25px] rtl:pr-[25px] ltr:md:pl-[28px] rtl:md:pr-[28px] ltr:lg:pl-[30px] rtl:lg:pr-[30px] mb-[25px] xl:mb-[32px] last:mb-0">
-                            <i
-                                class="material-symbols-outlined absolute text-primary-600 !text-[17px] md:!text-[18px] lg:!text-[20px] ltr:left-0 rtl:right-0 top-0">
-                                done_outline
-                            </i>
-                            <h3
-                                class="text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] mb-[8px] md:mb-[10px] font-semibold leading-[1.2]">
-                                Tailored Display
-                            </h3>
-                            <p class="leading-[1.6] md:max-w-[458px]">
-                                Easily arrange, resize, and configure widgets to showcase the data most relevant to
-                                your workflow.
-                            </p>
-                        </li>
-                        <li
-                            class="relative ltr:pl-[25px] rtl:pr-[25px] ltr:md:pl-[28px] rtl:md:pr-[28px] ltr:lg:pl-[30px] rtl:lg:pr-[30px] mb-[25px] xl:mb-[32px] last:mb-0">
-                            <i
-                                class="material-symbols-outlined absolute text-primary-600 !text-[17px] md:!text-[18px] lg:!text-[20px] ltr:left-0 rtl:right-0 top-0">
-                                done_outline
-                            </i>
-                            <h3
-                                class="text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] mb-[8px] md:mb-[10px] font-semibold leading-[1.2]">
-                                Personalized Insights
-                            </h3>
-                            <p class="leading-[1.6] md:max-w-[458px]">
-                                Customize widget content and visualization options to match your specific
-                                preferences and priorities.
-                            </p>
-                        </li>
-                        <li
-                            class="relative ltr:pl-[25px] rtl:pr-[25px] ltr:md:pl-[28px] rtl:md:pr-[28px] ltr:lg:pl-[30px] rtl:lg:pr-[30px] mb-[25px] xl:mb-[32px] last:mb-0">
-                            <i
-                                class="material-symbols-outlined absolute text-primary-600 !text-[17px] md:!text-[18px] lg:!text-[20px] ltr:left-0 rtl:right-0 top-0">
-                                done_outline
-                            </i>
-                            <h3
-                                class="text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] mb-[8px] md:mb-[10px] font-semibold leading-[1.2]">
-                                Flexibility and Versatility
-                            </h3>
-                            <p class="leading-[1.6] md:max-w-[458px]">
-                                Adapt widgets to evolving business needs by adjusting layouts, styles, and data
-                                sources with ease.
-                            </p>
-                        </li>
-                        <li
-                            class="relative ltr:pl-[25px] rtl:pr-[25px] ltr:md:pl-[28px] rtl:md:pr-[28px] ltr:lg:pl-[30px] rtl:lg:pr-[30px] mb-[25px] xl:mb-[32px] last:mb-0">
-                            <i
-                                class="material-symbols-outlined absolute text-primary-600 !text-[17px] md:!text-[18px] lg:!text-[20px] ltr:left-0 rtl:right-0 top-0">
-                                done_outline
-                            </i>
-                            <h3
-                                class="text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] mb-[8px] md:mb-[10px] font-semibold leading-[1.2]">
-                                Seamless Integration
-                            </h3>
-                            <p class="leading-[1.6] md:max-w-[458px]">
-                                Integrate widgets seamlessly with other dashboard components and external systems
-                                for a cohesive user experience.
-                            </p>
-                        </li>
-                    </ul>
+                    <h4
+                        class="leading-[1.2] text-[24px] mb-[15px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px]">
+                        Data Sosial Ekonomi Keluarga Meliputi Data Penduduk Berdasarkan : Jenis Kelamin, Rentang
+                        Usia, Pendidikan dan Status Perkawinan
+                    </h4>
+                    <div class="trezo-card p-[20px] md:p-[25px] rounded-md"
+                        style="background: linear-gradient(104deg, #361E7D 2.4%, #403CFF 112.33%);">
+                        <div class="trezo-card-content">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="block mb-[7px] text-gray-300">
+                                        Penduduk Berdasarkan Rentang Usia
+                                    </span>
+                                    <div class="flex items-center gap-[10px]">
+                                        <h6 class="leading-none text-white text-xl mb-0">
+                                            Pertahun 2025 (Terpilih)
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="trezo-card-dropdown relative">
+                                    <button type="button"
+                                        class="trezo-card-dropdown-btn inline-block rounded-md border border-primary-500 bg-primary-500 text-white py-[5px] md:py-[6.5px] px-[12px] md:px-[19px] transition-all hover:bg-primary-400 hover:border-primary-400"
+                                        id="dropdownToggleBtn">
+                                        <span
+                                            class="inline-block relative ltr:pr-[17px] ltr:md:pr-[20px] rtl:pl-[17px] rtl:ml:pr-[20px]">
+                                            Monthly
+                                            <i
+                                                class="ri-arrow-down-s-line text-lg absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>
+                                        </span>
+                                    </button>
+                                    <ul
+                                        class="trezo-card-dropdown-menu transition-all bg-white shadow-3xl rounded-md top-full py-[15px] absolute ltr:right-0 rtl:left-0 w-[195px] z-[5] dark:bg-dark dark:shadow-none">
+                                        <li>
+                                            <button type="button"
+                                                class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
+                                                Weekly
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button"
+                                                class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
+                                                Monthly
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button"
+                                                class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
+                                                Yearly
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="-mb-[18px] ltr:-ml-[15px] rtl:-mr-[15px] mt-[10px]">
+                                <div id="chartPopulationByAge"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="trezo-card  dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
+                    <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-center">
+                        <div class="trezo-card-title text-center">
+                            <div>
+                                <span class="block mb-[7px] text-dark">
+                                    Penduduk Berdasarkan Jenis Kelamin
+                                </span>
+                                <div class="flex items-center gap-[10px]">
+                                    <h6 class="leading-none text-dark text-xl mb-0">
+                                        Pertahun 2025 (Terpilih)
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trezo-card-content">
+                        <div class="-mt-[8px]">
+                            <div id="chartPopulationBySex"></div>
+                            <ul class="text-center my-[10px]">
+                                <li
+                                    class="inline-block ltr:text-left rtl:text-right mx-[13px] lg:mx-[10px] xl:mx-[13px] mt-[15px]">
+                                    <span class="block text-xs mb-[8px] flex items-center justify-center">
+                                        <span style="background: #90C7FF"
+                                            class="block w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
+                                        Laki-Laki
+                                    </span>
+                                    <h6 class="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
+                                        196,200
+                                    </h6>
+                                </li>
+                                <li
+                                    class="inline-block ltr:text-left rtl:text-right mx-[13px] lg:mx-[10px] xl:mx-[13px] mt-[15px]">
+                                    <span class="block text-xs mb-[8px] flex items-center justify-center">
+                                        <span style="background: #AD63F6;"
+                                            class="block  w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
+                                        Perempuan
+                                    </span>
+                                    <h6 class="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
+                                        190,741
+                                    </h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="absolute -top-[60px] ltr:left-[65px] rtl:right-[65px] -z-[1] blur-[150px]">
                 <img src="assets/images/front-pages/shape1.png" alt="shape1">
@@ -1173,6 +1198,7 @@
     <script src="assets/js/quill.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/tom-select.js"></script>
+    <script src="assets/js/dashboard-sidesi.js"></script>
 
     <script>
         new TomSelect("#pilih-kecamatan", {
