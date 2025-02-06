@@ -715,7 +715,7 @@
                         <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
                             <div class="trezo-card-content mb-[25px]">
                                 <h3 class="mb-[25px]">Perumahan</h3>
-                                <div class="sm:grid sm:grid-cols-1 md:grid-cols-3 sm:gap-[25px]">
+                                <div class="sm:grid sm:grid-cols-1 md:grid-cols-2 sm:gap-[25px]">
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
                                             Status Penguasaan Bangunan Tempat Tinggal yang Ditempati <span
@@ -723,9 +723,10 @@
                                         </label>
                                         <select id="pilih-bangunan" placeholder="Status Bangunan ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Bebas Sewa ...</option>
+                                            <option value="1">Bebas Sewa ...</option>
+                                            <option value="1">Bebas Sewa</option>
                                             <option value="2">Rumah Sendiri</option>
-                                            <option value="1">Milik Orangtua</option>
+                                            <option value="3">Milik Orangtua</option>
                                         </select>
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
@@ -736,9 +737,10 @@
                                         <select id="pilih-lahan" placeholder="Status Lahan ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
                                             <option value="">Bebas Sewa ...</option>
-                                            <option value="2">Rumah Sendiri</option>
-                                            <option value="1">Milik Orangtua</option>
-                                            <option value="1">Milik Orang Lain</option>
+                                            <option value="4">Bebas Sewa</option>
+                                            <option value="1">Rumah Sendiri</option>
+                                            <option value="2">Milik Orangtua</option>
+                                            <option value="3">Milik Orang Lain</option>
                                         </select>
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
@@ -757,9 +759,9 @@
                                         <select id="pilih-lantai" placeholder="Jenis Lantai ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
                                             <option value="">Tanah ...</option>
-                                            <option value="2">Semen/Bata Merah</option>
-                                            <option value="1">Keramik/Geranit</option>
-                                            <option value="1">Papan</option>
+                                            <option value="1">Semen/Bata Merah</option>
+                                            <option value="2">Keramik/Geranit</option>
+                                            <option value="3">Papan</option>
                                         </select>
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
@@ -769,7 +771,8 @@
                                         </label>
                                         <select id="pilih-dinding" placeholder="Jenis Dinding ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Plasteran/Anyaman Bambu/Kawat ...</option>
+                                            <option value="">Jenis Dinding ...</option>
+                                            <option value="1">Plasteran/Anyaman Bambu/Kawat</option>
                                             <option value="2">Semen/Bata Merah</option>
                                         </select>
                                     </div>
@@ -788,9 +791,10 @@
                                         </label>
                                         <select id="pilih-atap" placeholder="Jenis Atap ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Genteng Tanah Liat ...</option>
-                                            <option value="">Seng ...</option>
-                                            <option value="">Asbes ...</option>
+                                            <option value="">Genteng Tanah Liat </option>
+                                            <option value="1">Genteng Tanah Liat </option>
+                                            <option value="2">Seng </option>
+                                            <option value="3">Asbes </option>
                                         </select>
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
@@ -801,8 +805,9 @@
                                         <select id="pilih-sumberair" placeholder="Sumber Air ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
                                             <option value="">Sumur Tanah ...</option>
-                                            <option value="">PDAM ...</option>
-                                            <option value="">Sumur Terlindungi ...</option>
+                                            <option value="1">Sumur Tanah ...</option>
+                                            <option value="2">PDAM</option>
+                                            <option value="3">Sumur Terlindungi</option>
                                         </select>
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
@@ -813,8 +818,75 @@
                                         <select id="pilih-sumberair" placeholder="Sumber Air ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
                                             <option value="">Sumur Tanah ...</option>
-                                            <option value="">PDAM ...</option>
-                                            <option value="">Sumur Terlindungi ...</option>
+                                            <option value="1">PDAM</option>
+                                            <option value="2">Sumur Terlindungi</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Sumber Penerangan Utama
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-penerangan" placeholder="Sumber Penerangan Utama "
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih Penerangan utama ...</option>
+                                            <option value="1">Listrik PLN</option>
+                                            <option value="2">Genset</option>
+                                            <option value="3">Dian/Pelita</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Bahan Bakar / Energi Utama Untuk Memasak
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-bbm" placeholder="Bahan Bakar Untuk Memasak "
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Gas Elpiji 3 Kg...</option>
+                                            <option value="1">Gas Elpiji 3 Kg</option>
+                                            <option value="2">Genset </option>
+                                            <option value="3">Dian/Pelita </option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Fasilitas Tempat Buang Air Besar
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-bab" placeholder="Bahan Bakar Untuk Memasak "
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Fasilitas Tempat BAB</option>
+                                            <option value="1">Sendiri</option>
+                                            <option value="2">Umum </option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Jenis Kloset
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-kloset" placeholder="Bahan Bakar Untuk Memasak "
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih Jenis Kloset</option>
+                                            <option value="1">Kloset Duduk</option>
+                                            <option value="2">Kloset Jongkok </option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Tempat Pembuangan Akhir Tinja
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-lokasibab" placeholder="Bahan Bakar Untuk Memasak "
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih lokasi kloset</option>
+                                            <option value="1">Lubang Tanah</option>
+                                            <option value="2">Sungai </option>
                                         </select>
                                     </div>
                                 </div>
@@ -824,109 +896,242 @@
                 </div>
                 <div class="step" id="step3">
                     <form>
-                        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                        <div
+                            class="trezo-card bg-secondary-50 dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
                             <div class="trezo-card-content mb-[25px]">
-                                <h3 class="mb-[25px]">Sosial Ekonomi</h3>
+                                <h3 class="mb-[25px]">Data Keluarga</h3>
                                 <div class="sm:grid sm:grid-cols-1 md:grid-cols-3 sm:gap-[25px]">
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Status Penguasaan Bangunan Tempat Tinggal yang Ditempati <span
-                                                class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-bangunan" placeholder="Status Bangunan ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Bebas Sewa ...</option>
-                                            <option value="2">Rumah Sendiri</option>
-                                            <option value="1">Milik Orangtua</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Status Lahan Tempat Tinggal Yang Ditempati <span
-                                                class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-lahan" placeholder="Status Lahan ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Bebas Sewa ...</option>
-                                            <option value="2">Rumah Sendiri</option>
-                                            <option value="1">Milik Orangtua</option>
-                                            <option value="1">Milik Orang Lain</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Luas Lantai (m2) <span class="text-orange-600">*</span>
+                                            NIK <span class="text-orange-600">*</span>
                                         </label>
                                         <input type="text"
                                             class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="289">
+                                            placeholder="Nomor Induk Kependudukan">
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Lantai Terluas
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-lantai" placeholder="Jenis Lantai ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Tanah ...</option>
-                                            <option value="2">Semen/Bata Merah</option>
-                                            <option value="1">Keramik/Geranit</option>
-                                            <option value="1">Papan</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Dinding Terluas
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-dinding" placeholder="Jenis Dinding ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Plasteran/Anyaman Bambu/Kawat ...</option>
-                                            <option value="2">Semen/Bata Merah</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jumlah Kamar Tidur <span class="text-orange-600">*</span>
+                                            Nama Lengkap <span class="text-orange-600">*</span>
                                         </label>
                                         <input type="text"
                                             class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="4">
+                                            placeholder="Nama Lengkap">
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Atap Terluas
-                                            <span class="text-orange-600">*</span>
+                                            Jenis Kelamin <span class="text-orange-600">*</span>
                                         </label>
-                                        <select id="pilih-atap" placeholder="Jenis Atap ..." autocomplete="on"
+                                        <select id="pilih-kelamin" placeholder="Jenis Kelamin ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Genteng Tanah Liat ...</option>
-                                            <option value="">Seng ...</option>
-                                            <option value="">Asbes ...</option>
+                                            <option value="">Pilih Jenis Kelamin</option>
+                                            <option value="2">Perempuan</option>
+                                            <option value="1">Laki-laki</option>
                                         </select>
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Sumber Air Minum
-                                            <span class="text-orange-600">*</span>
+                                            Pilih Agama <span class="text-orange-600">*</span>
                                         </label>
-                                        <select id="pilih-sumberair" placeholder="Sumber Air ..." autocomplete="on"
+                                        <select id="pilih-agama" placeholder="Pilih Agama" autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Sumur Tanah ...</option>
-                                            <option value="">PDAM ...</option>
-                                            <option value="">Sumur Terlindungi ...</option>
+                                            <option value="">Pilih Agama</option>
+                                            <option value="1">Islam</option>
+                                            <option value="2">Katolik</option>
+                                            <option value="3">Protestan</option>
+                                            <option value="4">Hindu</option>
+                                            <option value="5">Budha</option>
+                                            <option value="6">Konghucu</option>
                                         </select>
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Cara Memperoleh Air Minum
-                                            <span class="text-orange-600">*</span>
+                                            Tempat Lahir <span class="text-orange-600">*</span>
                                         </label>
-                                        <select id="pilih-sumberair" placeholder="Sumber Air ..." autocomplete="on"
+                                        <input type="text"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="Tempat Lahir">
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Tanggal Lahir <span class="text-orange-600">*</span>
+                                        </label>
+                                        <input type="date"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="02-04-1990">
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Kepemilikan Akta Nikah <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-aktanikah" placeholder="Kepemilikan Akta Nikah"
+                                            autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Sumur Tanah ...</option>
-                                            <option value="">PDAM ...</option>
-                                            <option value="">Sumur Terlindungi ...</option>
+                                            <option value="">Kepemilikan Akta Nikah</option>
+                                            <option value="2">Ya, Tidak dapat ditunjukkan</option>
+                                            <option value="1">Tidak</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Tercantum dalam Kartu Keluarga <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-cantumkk" placeholder="Kepemilikan Akta Nikah di KK"
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Kepemilikan Akta Nikah</option>
+                                            <option value="2">Ya</option>
+                                            <option value="1">Tidak</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Kepemilikan Kartu Identitas <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-kitas" placeholder="Kepemilikan Kartu Identitas"
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Kepemilikan Kitas</option>
+                                            <option value="1">Tidak Memiliki</option>
+                                            <option value="2">Akta Kelahiran</option>
+                                            <option value="3">Kartu Pelajar</option>
+                                            <option value="4">KTP</option>
+                                            <option value="5">SIM</option>
+                                            <option value="6">Paspor</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Partisipasi Sekolah <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-partisipasi" placeholder="Partisipasi Sekolah"
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Partisipasi Sekolah</option>
+                                            <option value="1">Tidak Bersekolah Lagi</option>
+                                            <option value="2">Sedang Bersekolah</option>
+                                            <option value="3">Putus Sekolah</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Jenjang Pendidikan Tertinggi <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-jenjangPendidikan" placeholder="Pendidikan Terakhir"
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Jenjang Pendidikan</option>
+                                            <option value="1">SD</option>
+                                            <option value="2">SMP Sederajat</option>
+                                            <option value="3">SMA Sederajat</option>
+                                            <option value="4">Dan Selanjutnya ...</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Kelas Pendidikan Tertinggi <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-kelasPendidikan"
+                                            placeholder="Pendidikan Kelas Pendidikan Tertinggi" autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Kelas Pendidikan</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">Dan Selanjutnya ...</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Ijazah Pendidikan Tertinggi <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-ijazahterakhir" placeholder="Ijazah Terakhir"
+                                            autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Jenjang Pendidikan</option>
+                                            <option value="1">SD</option>
+                                            <option value="2">SMP Sederajat</option>
+                                            <option value="3">SMA Sederajat</option>
+                                            <option value="4">Dan Selanjutnya ...</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Pensiunan <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-pensiun" placeholder="Pensiunan" autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih Pensiunan</option>
+                                            <option value="1">Ya</option>
+                                            <option value="2">Tidak</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Bekerja <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-pensiun" placeholder="Status Bekerja" autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih Status Bekerja</option>
+                                            <option value="1">Ya</option>
+                                            <option value="2">Tidak</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Golongan Darah <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-goldar" placeholder="Pilih Golongan Darah" autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih Golongan Darah</option>
+                                            <option value="1">A</option>
+                                            <option value="2">B</option>
+                                            <option value="3">AB</option>
+                                            <option value="4">O</option>
+                                            <option value="5">Tidak Tahu</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Riwayat Penyakit Kronis <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-kronis" placeholder="Pilih Penyakit Kronis" autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih Penyakit Kronis</option>
+                                            <option value="1">Ada</option>
+                                            <option value="2">Tidak Ada</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Jenis Cacat <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-cacat" placeholder="Pilih Cacat" autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih Cacat</option>
+                                            <option value="1">Cacat Jiwa</option>
+                                            <option value="2">Tidak Cacat</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Status Kehamilan (Khusus Wanita) <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-hamil" placeholder="Pilih Status Kehamilan" autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih Hamil</option>
+                                            <option value="1">Ya</option>
+                                            <option value="2">Tidak</option>
+                                        </select>
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Alat Kontrasepi (Khusus Wanita) <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-kb" placeholder="Pilih Alat Kontrasepsi" autocomplete="on"
+                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                            <option value="">Pilih KB</option>
+                                            <option value="1">Ikut</option>
+                                            <option value="2">Tidak Ikut KB</option>
                                         </select>
                                     </div>
                                 </div>
@@ -942,20 +1147,26 @@
                                 <div class="sm:grid sm:grid-cols-1 md:grid-cols-3 sm:gap-[25px]">
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Status Penguasaan Bangunan Tempat Tinggal yang Ditempati <span
-                                                class="text-orange-600">*</span>
+                                            Nama Lahan <span class="text-orange-600">*</span>
                                         </label>
-                                        <select id="pilih-bangunan" placeholder="Status Bangunan ..." autocomplete="on"
+                                        <input type="text"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="Masukkan Nama Lahan">
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Jenis Lahan <span class="text-orange-600">*</span>
+                                        </label>
+                                        <select id="pilih-jenislahan" placeholder="Pilih Jenis Lahan" autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Bebas Sewa ...</option>
-                                            <option value="2">Rumah Sendiri</option>
-                                            <option value="1">Milik Orangtua</option>
+                                            <option value="">Bebas Sewa</option>
+                                            <option value="1">Milik Sendiri</option>
+                                            <option value="2">Milik Orangtua</option>
                                         </select>
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Status Lahan Tempat Tinggal Yang Ditempati <span
-                                                class="text-orange-600">*</span>
+                                            Keberadaan SPPT <span class="text-orange-600">*</span>
                                         </label>
                                         <select id="pilih-lahan" placeholder="Status Lahan ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
@@ -967,78 +1178,39 @@
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Luas Lantai (m2) <span class="text-orange-600">*</span>
+                                            Nomor Objek Pajak <span class="text-orange-600">*</span>
                                         </label>
                                         <input type="text"
                                             class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="289">
+                                            placeholder="Masukkan Nomor Objek Pajak">
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Lantai Terluas
+                                            Luas Lahan (m2) <span class="text-orange-600">*</span>
+                                        </label>
+                                        <input type="text"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="Luas Lahan">
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Nama Hak Kepemilikan Sertifikat <span class="text-orange-600">*</span>
+                                        </label>
+                                        <input type="text"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="Sertifikat">
+                                    </div>
+                                    <div class=" mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Hak Kepemilikan Sertifikat
                                             <span class="text-orange-600">*</span>
                                         </label>
                                         <select id="pilih-lantai" placeholder="Jenis Lantai ..." autocomplete="on"
                                             class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
                                             <option value="">Tanah ...</option>
-                                            <option value="2">Semen/Bata Merah</option>
-                                            <option value="1">Keramik/Geranit</option>
-                                            <option value="1">Papan</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Dinding Terluas
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-dinding" placeholder="Jenis Dinding ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Plasteran/Anyaman Bambu/Kawat ...</option>
-                                            <option value="2">Semen/Bata Merah</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jumlah Kamar Tidur <span class="text-orange-600">*</span>
-                                        </label>
-                                        <input type="text"
-                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="4">
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Atap Terluas
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-atap" placeholder="Jenis Atap ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Genteng Tanah Liat ...</option>
-                                            <option value="">Seng ...</option>
-                                            <option value="">Asbes ...</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Sumber Air Minum
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-sumberair" placeholder="Sumber Air ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Sumur Tanah ...</option>
-                                            <option value="">PDAM ...</option>
-                                            <option value="">Sumur Terlindungi ...</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Cara Memperoleh Air Minum
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-sumberair" placeholder="Sumber Air ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Sumur Tanah ...</option>
-                                            <option value="">PDAM ...</option>
-                                            <option value="">Sumur Terlindungi ...</option>
+                                            <option value="1">Semen/Bata Merah</option>
+                                            <option value="2">Keramik/Geranit</option>
+                                            <option value="3">Papan</option>
                                         </select>
                                     </div>
                                 </div>
@@ -1054,104 +1226,21 @@
                                 <div class="sm:grid sm:grid-cols-1 md:grid-cols-3 sm:gap-[25px]">
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Status Penguasaan Bangunan Tempat Tinggal yang Ditempati <span
+                                            Pekerjaan yang menghasilkan pendapatan terbesar <span
                                                 class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-bangunan" placeholder="Status Bangunan ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Bebas Sewa ...</option>
-                                            <option value="2">Rumah Sendiri</option>
-                                            <option value="1">Milik Orangtua</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Status Lahan Tempat Tinggal Yang Ditempati <span
-                                                class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-lahan" placeholder="Status Lahan ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Bebas Sewa ...</option>
-                                            <option value="2">Rumah Sendiri</option>
-                                            <option value="1">Milik Orangtua</option>
-                                            <option value="1">Milik Orang Lain</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Luas Lantai (m2) <span class="text-orange-600">*</span>
                                         </label>
                                         <input type="text"
                                             class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="289">
+                                            placeholder="Berusaha dibantu buruh tetap/dibayar">
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Lantai Terluas
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-lantai" placeholder="Jenis Lantai ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Tanah ...</option>
-                                            <option value="2">Semen/Bata Merah</option>
-                                            <option value="1">Keramik/Geranit</option>
-                                            <option value="1">Papan</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Dinding Terluas
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-dinding" placeholder="Jenis Dinding ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Plasteran/Anyaman Bambu/Kawat ...</option>
-                                            <option value="2">Semen/Bata Merah</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jumlah Kamar Tidur <span class="text-orange-600">*</span>
+                                            Pendapatan seluruh anggota keluarga per bulan (Rp) (isi tanpa titik dan
+                                            koma) <span class="text-orange-600">*</span>
                                         </label>
                                         <input type="text"
                                             class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
-                                            placeholder="4">
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jenis Atap Terluas
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-atap" placeholder="Jenis Atap ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Genteng Tanah Liat ...</option>
-                                            <option value="">Seng ...</option>
-                                            <option value="">Asbes ...</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Sumber Air Minum
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-sumberair" placeholder="Sumber Air ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Sumur Tanah ...</option>
-                                            <option value="">PDAM ...</option>
-                                            <option value="">Sumur Terlindungi ...</option>
-                                        </select>
-                                    </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Cara Memperoleh Air Minum
-                                            <span class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-sumberair" placeholder="Sumber Air ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Sumur Tanah ...</option>
-                                            <option value="">PDAM ...</option>
-                                            <option value="">Sumur Terlindungi ...</option>
-                                        </select>
+                                            placeholder="600000">
                                     </div>
                                 </div>
                             </div>
