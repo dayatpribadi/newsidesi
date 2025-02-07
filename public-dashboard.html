@@ -192,15 +192,6 @@
                                 </i>
                             </div>
                         </div>
-                        <div class="mt-[15px] md:mt-[20px] flex items-center gap-[10px]">
-                            <span
-                                class="inline-block px-[8.5px] text-success-700 border border-success-300 bg-success-100 text-sm rounded-[100px] text-xs">
-                                +35.5%
-                            </span>
-                            <span class="block text-xs">
-                                Last 30 days
-                            </span>
-                        </div>
                     </div>
                 </div>
                 <div class="trezo-card bg-secondary-50 dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
@@ -220,15 +211,6 @@
                                     assured_workload
                                 </i>
                             </div>
-                        </div>
-                        <div class="mt-[15px] md:mt-[20px] flex items-center gap-[10px]">
-                            <span
-                                class="inline-block px-[8.5px] text-danger-700 border border-danger-300 bg-danger-100 text-sm rounded-[100px] text-xs">
-                                -28.5%
-                            </span>
-                            <span class="block text-xs">
-                                Last 30 days
-                            </span>
                         </div>
                     </div>
                 </div>
@@ -250,15 +232,6 @@
                                 </i>
                             </div>
                         </div>
-                        <div class="mt-[15px] md:mt-[20px] flex items-center gap-[10px]">
-                            <span
-                                class="inline-block px-[8.5px] text-danger-700 border border-danger-300 bg-danger-100 text-sm rounded-[100px] text-xs">
-                                -5.8%
-                            </span>
-                            <span class="block text-xs">
-                                Last 30 days
-                            </span>
-                        </div>
                     </div>
                 </div>
                 <div class="trezo-card bg-orange-50 dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
@@ -278,15 +251,6 @@
                                     groups
                                 </i>
                             </div>
-                        </div>
-                        <div class="mt-[15px] md:mt-[20px] flex items-center gap-[10px]">
-                            <span
-                                class="inline-block px-[8.5px] text-success-700 border border-success-300 bg-success-100 text-sm rounded-[100px] text-xs">
-                                +10.1%
-                            </span>
-                            <span class="block text-xs">
-                                Last 30 days
-                            </span>
                         </div>
                     </div>
                 </div>
@@ -311,7 +275,7 @@
                             <div class="flex items-center justify-between">
                                 <div>
                                     <span class="block mb-[7px] text-gray-300">
-                                        Penduduk Berdasarkan Rentang Usia
+                                        Penduduk Berdasarkan Jenis Kelamin
                                     </span>
                                     <div class="flex items-center gap-[10px]">
                                         <h6 class="leading-none text-white text-xl mb-0">
@@ -319,42 +283,37 @@
                                         </h6>
                                     </div>
                                 </div>
-                                <div class="trezo-card-dropdown relative">
-                                    <button type="button"
-                                        class="trezo-card-dropdown-btn inline-block rounded-md border border-primary-500 bg-primary-500 text-white py-[5px] md:py-[6.5px] px-[12px] md:px-[19px] transition-all hover:bg-primary-400 hover:border-primary-400"
-                                        id="dropdownToggleBtn">
-                                        <span
-                                            class="inline-block relative ltr:pr-[17px] ltr:md:pr-[20px] rtl:pl-[17px] rtl:ml:pr-[20px]">
-                                            Monthly
-                                            <i
-                                                class="ri-arrow-down-s-line text-lg absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>
-                                        </span>
-                                    </button>
-                                    <ul
-                                        class="trezo-card-dropdown-menu transition-all bg-white shadow-3xl rounded-md top-full py-[15px] absolute ltr:right-0 rtl:left-0 w-[195px] z-[5] dark:bg-dark dark:shadow-none">
-                                        <li>
-                                            <button type="button"
-                                                class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
-                                                Weekly
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button"
-                                                class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
-                                                Monthly
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button"
-                                                class="block w-full transition-all text-black ltr:text-left rtl:text-right relative py-[8px] px-[20px] hover:bg-gray-50 dark:text-white dark:hover:bg-black">
-                                                Yearly
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="-mb-[18px] ltr:-ml-[15px] rtl:-mr-[15px] mt-[10px]">
-                                <div id="chartPopulationByAge"></div>
+                                <div id="chartPopulationBySex"></div>
+                                <ul class="text-center my-[10px]">
+                                    <li
+                                        class="inline-block ltr:text-left rtl:text-right mx-[13px] lg:mx-[10px] xl:mx-[13px] mt-[15px]">
+                                        <span
+                                            class="block text-xs mb-[8px] text-white flex items-center justify-center">
+                                            <span style="background: #90C7FF"
+                                                class="block w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
+                                            Laki-Laki
+                                        </span>
+                                        <h6
+                                            class="mb-0 leading-none text-white  font-bold text-lg ltr:ml-[19px] rtl:mr-[19px]">
+                                            196,200
+                                        </h6>
+                                    </li>
+                                    <li
+                                        class="inline-block ltr:text-left rtl:text-right mx-[13px] lg:mx-[10px] xl:mx-[13px] mt-[15px]">
+                                        <span
+                                            class="block text-xs mb-[8px] flex text-white items-center justify-center">
+                                            <span style="background: #AD63F6;"
+                                                class="block  w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
+                                            Perempuan
+                                        </span>
+                                        <h6
+                                            class="mb-0 leading-none text-white  font-bold text-lg ltr:ml-[19px] rtl:mr-[19px]">
+                                            190,741
+                                        </h6>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -364,7 +323,7 @@
                         <div class="trezo-card-title text-center">
                             <div>
                                 <span class="block mb-[7px] text-dark">
-                                    Penduduk Berdasarkan Jenis Kelamin
+                                    Penduduk Berdasarkan Status Perkawinan
                                 </span>
                                 <div class="flex items-center gap-[10px]">
                                     <h6 class="leading-none text-dark text-xl mb-0">
@@ -375,44 +334,282 @@
                         </div>
                     </div>
                     <div class="trezo-card-content">
-                        <div class="-mt-[8px]">
-                            <div id="chartPopulationBySex"></div>
-                            <ul class="text-center my-[10px]">
+                        <div class="pt-[60px]">
+                            <!-- <div id="chartPopulationByMerried"></div> -->
+                            <div id="chartPopulationByMerried"></div>
+                            <ul class="text-center mt-[40px]">
                                 <li
                                     class="inline-block ltr:text-left rtl:text-right mx-[13px] lg:mx-[10px] xl:mx-[13px] mt-[15px]">
                                     <span class="block text-xs mb-[8px] flex items-center justify-center">
-                                        <span style="background: #90C7FF"
+                                        <span style="background: #8ED838;"
                                             class="block w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
-                                        Laki-Laki
+                                        Belum Kawin
                                     </span>
-                                    <h6 class="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
-                                        196,200
+                                    <h6 class="mb-0 leading-none  font-bold text-lg ltr:ml-[19px] rtl:mr-[19px]">
+                                        3633
                                     </h6>
                                 </li>
                                 <li
                                     class="inline-block ltr:text-left rtl:text-right mx-[13px] lg:mx-[10px] xl:mx-[13px] mt-[15px]">
                                     <span class="block text-xs mb-[8px] flex items-center justify-center">
-                                        <span style="background: #AD63F6;"
+                                        <span style="background: #00A7F4;"
                                             class="block  w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
-                                        Perempuan
+                                        Kawin
                                     </span>
-                                    <h6 class="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
-                                        190,741
+                                    <h6 class="mb-0 leading-none  font-bold text-lg ltr:ml-[19px] rtl:mr-[19px]">
+                                        3070
+                                    </h6>
+                                </li>
+                                <li
+                                    class="inline-block ltr:text-left rtl:text-right mx-[13px] lg:mx-[10px] xl:mx-[13px] mt-[15px]">
+                                    <span class="block text-xs mb-[8px] flex items-center justify-center">
+                                        <span style="background: #361E7D;"
+                                            class="block  w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
+                                        Cerai Hidup
+                                    </span>
+                                    <h6 class="mb-0 leading-none  font-bold text-lg ltr:ml-[19px] rtl:mr-[19px]">
+                                        93
+                                    </h6>
+                                </li>
+                                <li
+                                    class="inline-block ltr:text-left rtl:text-right mx-[13px] lg:mx-[10px] xl:mx-[13px] mt-[15px]">
+                                    <span class="block text-xs mb-[8px] flex items-center justify-center">
+                                        <span style="background: #F39C12;"
+                                            class="block  w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
+                                        Cerai Mati
+                                    </span>
+                                    <h6 class="mb-0 leading-none  font-bold text-lg ltr:ml-[19px] rtl:mr-[19px]">
+                                        251
                                     </h6>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </div>
-            <div class="absolute -top-[60px] ltr:left-[65px] rtl:right-[65px] -z-[1] blur-[150px]">
-                <img src="assets/images/front-pages/shape1.png" alt="shape1">
-            </div>
-            <div class="absolute -bottom-[30px] ltr:right-[20px] rtl:left-[20px] -z-[1] blur-[125px]">
-                <img src="assets/images/front-pages/shape2.png" alt="shape1">
+            <div class="lg:grid lg:grid-cols-3 gap-[25px] mt-[60px]">
+                <div class="trezo-card-content">
+                    <ul>
+                        <li
+                            class="flex items-center justify-between border-b border-gray-100 dark:border-[#172036] pb-[14px] mb-[15px] last:mb-0 last:pb-0 last:border-0">
+                            <div class="flex items-center">
+                                <div
+                                    class="text-primary-500 bg-primary-100 dark:bg-[#15203c] flex items-center justify-center w-[48px] h-[48px] ltr:mr-[15px] rtl:ml-[15px] rounded-sm">
+                                    <i class="material-symbols-outlined">
+                                        school
+                                    </i>
+                                </div>
+                                <div>
+                                    <a href="product-details.html"
+                                        class="block mb-[2px] text-black dark:text-white font-medium transition-all hover:text-primary-500">
+                                        Status Sekolah :
+                                    </a>
+                                    <span class="block">
+                                        Sedang Bersekolah
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="block text-black dark:text-white font-medium">
+                                196,455
+                            </span>
+                        </li>
+                        <li
+                            class="flex items-center justify-between border-b border-gray-100 dark:border-[#172036] pb-[14px] mb-[15px] last:mb-0 last:pb-0 last:border-0">
+                            <div class="flex items-center">
+                                <div
+                                    class="text-purple-500 bg-purple-100 dark:bg-[#15203c] flex items-center justify-center w-[48px] h-[48px] ltr:mr-[15px] rtl:ml-[15px] rounded-sm">
+                                    <i class="material-symbols-outlined">
+                                        school
+                                    </i>
+                                </div>
+                                <div>
+                                    <a href="product-details.html"
+                                        class="block mb-[2px] text-black dark:text-white font-medium transition-all hvoer:text-primary-500">
+                                        Status Sekolah :
+                                    </a>
+                                    <span class="block">
+                                        Belum Bersekolah
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="block text-black dark:text-white font-medium">
+                                9,670
+                            </span>
+                        </li>
+                        <li
+                            class="flex items-center justify-between border-b border-gray-100 dark:border-[#172036] pb-[14px] mb-[15px] last:mb-0 last:pb-0 last:border-0">
+                            <div class="flex items-center">
+                                <div
+                                    class="text-danger-500 bg-danger-100 dark:bg-[#15203c] flex items-center justify-center w-[48px] h-[48px] ltr:mr-[15px] rtl:ml-[15px] rounded-sm">
+                                    <i class="material-symbols-outlined">
+                                        engineering
+                                    </i>
+                                </div>
+                                <div>
+                                    <a href="product-details.html"
+                                        class="block mb-[2px] text-black dark:text-white font-medium transition-all hover:text-primary-500">
+                                        Status Pekerjaan :
+                                    </a>
+                                    <span class="block">
+                                        Sedang Bekerja
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="block text-black dark:text-white font-medium">
+                                75,329
+                            </span>
+                        </li>
+                        <li
+                            class="flex items-center justify-between border-b border-gray-100 dark:border-[#172036] pb-[14px] mb-[15px] last:mb-0 last:pb-0 last:border-0">
+                            <div class="flex items-center">
+                                <div
+                                    class="text-success-500 bg-success-100 dark:bg-[#15203c] flex items-center justify-center w-[48px] h-[48px] ltr:mr-[15px] rtl:ml-[15px] rounded-sm">
+                                    <i class="material-symbols-outlined">
+                                        engineering
+                                    </i>
+                                </div>
+                                <div>
+                                    <a href="product-details.html"
+                                        class="block mb-[2px] text-black dark:text-white font-medium transition-all hover:text-primary-500">
+                                        Status Pekerjaan :
+                                    </a>
+                                    <span class="block">
+                                        Belum Bekerja
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="block text-black dark:text-white font-medium">
+                                8,256
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-2">
+
+                    <!-- Time Spent -->
+                    <div class="trezo-card dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md"
+                        style="background: linear-gradient(104deg, #d5c9ff30 2.4%, #fffde4 112.33%);">
+                        <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
+                            <div class="trezo-card-title">
+                                <h5 class="mb-0">
+                                    Penduduk Berdasarkan Rentang Usia
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="trezo-card-content">
+                            <div class="lg:grid lg:grid-cols-3 gap-[25px] items-center">
+                                <div class="md:col-span-2">
+                                    <div class="mx-auto">
+                                        <div id="chartPopulationByAge"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="mb-[20px] lg:mb-[26px]">
+                                        <li
+                                            class="flex relative justify-between ltr:pl-[22px] rtl:pr-[22px] border-b border-gray-100 dark:border-[#172036] py-[6px] first:border-t">
+                                            <div
+                                                class="bg-success-500 absolute ltr:left-0 rtl:right-0 w-[10px] h-[10px] top-1/2 -translate-y-1/2 rounded-full">
+                                            </div>
+                                            <div>
+                                                <span class="block text-xs mb-px">
+                                                    Usia
+                                                </span>
+                                                <h6 class="mb-0 text-md font-semibold text-black dark:text-white">
+                                                    0 - 5 Tahun
+                                                </h6>
+                                            </div>
+                                            <div>
+                                                <span class="block text-xs mb-px">
+                                                    Populasi
+                                                </span>
+                                                <h6 class="mb-0 font-semibold">
+                                                    1809
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="flex relative justify-between ltr:pl-[22px] rtl:pr-[22px] border-b border-gray-100 dark:border-[#172036] py-[6px] first:border-t">
+                                            <div
+                                                class="bg-primary-400 absolute ltr:left-0 rtl:right-0 w-[10px] h-[10px] top-1/2 -translate-y-1/2 rounded-full">
+                                            </div>
+                                            <div>
+                                                <span class="block text-xs mb-px">
+                                                    Usia
+                                                </span>
+                                                <h6 class="mb-0 text-md font-semibold text-black dark:text-white">
+                                                    6-19 Tahun
+                                                </h6>
+                                            </div>
+                                            <div>
+                                                <span class="block text-xs mb-px">
+                                                    Populasi
+                                                </span>
+                                                <h6 class="mb-0 font-semibold">
+                                                    4880
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="flex relative justify-between ltr:pl-[22px] rtl:pr-[22px] border-b border-gray-100 dark:border-[#172036] py-[6px] first:border-t">
+                                            <div
+                                                class="bg-purple-400 absolute ltr:left-0 rtl:right-0 w-[10px] h-[10px] top-1/2 -translate-y-1/2 rounded-full">
+                                            </div>
+                                            <div>
+                                                <span class="block text-xs mb-px">
+                                                    Usia
+                                                </span>
+                                                <h6 class="mb-0 text-md font-semibold text-black dark:text-white">
+                                                    20-60 Tahun
+                                                </h6>
+                                            </div>
+                                            <div>
+                                                <span class="block text-xs mb-px">
+                                                    Populasi
+                                                </span>
+                                                <h6 class="mb-0 font-semibold">
+                                                    6563
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="flex relative justify-between ltr:pl-[22px] rtl:pr-[22px] border-b border-gray-100 dark:border-[#172036] py-[6px] first:border-t">
+                                            <div
+                                                class="bg-orange-400 absolute ltr:left-0 rtl:right-0 w-[10px] h-[10px] top-1/2 -translate-y-1/2 rounded-full">
+                                            </div>
+                                            <div>
+                                                <span class="block text-xs mb-px">
+                                                    Usia
+                                                </span>
+                                                <h6 class="mb-0 text-md font-semibold text-black dark:text-white">
+                                                    > 60 Tahun
+                                                </h6>
+                                            </div>
+                                            <div>
+                                                <span class="block text-xs mb-px">
+                                                    Populasi
+                                                </span>
+                                                <h6 class="mb-0 font-semibold">
+                                                    1131
+                                                </h6>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="absolute -top-[60px] ltr:left-[65px] rtl:right-[65px] -z-[1] blur-[150px]">
+            <img src="assets/images/front-pages/shape1.png" alt="shape1">
+        </div>
+        <div class="absolute -bottom-[30px] ltr:right-[20px] rtl:left-[20px] -z-[1] blur-[125px]">
+            <img src="assets/images/front-pages/shape2.png" alt="shape1">
+        </div>
+
     </div>
     <!-- End Widgets -->
 
