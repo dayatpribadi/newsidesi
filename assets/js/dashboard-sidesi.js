@@ -644,3 +644,133 @@ if (pieChart4) {
     var chart = new ApexCharts(document.querySelector("#pieChart4"), options);
     chart.render();
 }
+
+
+    // Finance Static Chart
+    const chartPendudukPerKecamatan = document.getElementById("chartPendudukPerKecamatan");
+    if (chartPendudukPerKecamatan) {
+        var options = {
+            series: [
+                {
+                    name: "Laki-Laki",
+                    data: [450, 540, 560, 540, 600, 570, 630, 600, 660, 560, 540, 600, 570, 630, 600, 660]
+                },
+                {
+                    name: "Perempuan",
+                    data: [760, 850, 1000, 970, 850, 1050, 900, 1130, 950, 1000, 970, 850, 1050, 900, 950, 201]
+                }
+            ],
+            chart: {
+                type: "bar",
+                height: 402,
+                toolbar: {
+                    show: false
+                }
+            },
+            colors: [
+                "#605DFF", "#D838AE" 
+            ],
+            plotOptions: {
+                bar: {
+                    columnWidth: "19.96px"
+                }
+            },
+            grid: {
+                show: true,
+                borderColor: "#F6F7F9"
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                width: 4,
+                show: true,
+                colors: ["transparent"]
+            },
+            xaxis: {
+                categories: [
+                    "Indralaya",
+                    "Indralaya Selatan",
+                    "Indralaya Utara",
+                    "Pemulutan",
+                    "Pemulutan Selatan",
+                    "Pemulutan Barat",
+                    "Payaraman",
+                    "Tanjung Batu",
+                    "Tanjung Raja",
+                    "Muara Kuang",
+                    "Kandis",
+                    "Lubuk Keliat",
+                    "Rambang Kuang",
+                    "Rantau Alai",
+                    "Rantau Panjang",
+                    "Sungai Pinang"
+                ],
+                axisTicks: {
+                    show: true,
+                    color: '#F6F7F9'
+                },
+                axisBorder: {
+                    show: false,
+                    color: '#F6F7F9'
+                },
+                labels: {
+                    show: true,
+                    style: {
+                        colors: "#64748B",
+                        fontSize: "12px"
+                    }
+                }
+            },
+            yaxis: {
+                tickAmount: 6,
+                max: 1200,
+                min: 0,
+                labels: {
+                    formatter: (val) => {
+                        return val + " jiwa";
+                    },
+                    style: {
+                        colors: "#64748B",
+                        fontSize: "12px"
+                    }
+                },
+                axisBorder: {
+                    show: false,
+                    color: '#F6F7F9'
+                },
+                axisTicks: {
+                    show: false,
+                    color: '#F6F7F9'
+                }
+            },
+            tooltip: {
+                y: {
+                    formatter: function(val) {
+                        return val + " jiwa";
+                    }
+                }
+            },
+            legend: {
+                show: true,
+                position: 'top',
+                fontSize: '12px',
+                horizontalAlign: 'center',
+                itemMargin: {
+                    horizontal: 8,
+                    vertical: 0
+                },
+                labels: {
+                    colors: '#64748B'
+                },
+                markers: {
+                    size: 6,
+                    offsetX: -2,
+                    offsetY: -.5,
+                    shape: 'square'
+                }
+            }
+        };
+        var chart = new ApexCharts(document.querySelector("#chartPendudukPerKecamatan"), options);
+        chart.render();
+    }
