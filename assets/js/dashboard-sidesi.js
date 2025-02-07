@@ -372,17 +372,17 @@ if (pieChart1) {
                     labels: {
                         show: true,
                         name: {
-                            color: '#FFF'
+                            color: '#000'
                         },
                         value: {
                             show: true,
-                            color: '#FFF',
+                            color: '#000',
                             fontSize: '28px',
                             fontWeight: '700'
                         },
                         total: {
                             show: true,
-                            color: '#FFF'
+                            color: '#000'
                         }
                     }
                 }
@@ -447,17 +447,17 @@ if (pieChart2) {
                     labels: {
                         show: true,
                         name: {
-                            color: '#FFF'
+                            color: '#000'
                         },
                         value: {
                             show: true,
-                            color: '#FFF',
+                            color: '#000',
                             fontSize: '28px',
                             fontWeight: '700'
                         },
                         total: {
                             show: true,
-                            color: '#FFF'
+                            color: '#000'
                         }
                     }
                 }
@@ -522,17 +522,17 @@ if (pieChart3) {
                     labels: {
                         show: true,
                         name: {
-                            color: '#FFF'
+                            color: '#000'
                         },
                         value: {
                             show: true,
-                            color: '#FFF',
+                            color: '#000',
                             fontSize: '28px',
                             fontWeight: '700'
                         },
                         total: {
                             show: true,
-                            color: '#FFF'
+                            color: '#000'
                         }
                     }
                 }
@@ -597,17 +597,17 @@ if (pieChart4) {
                     labels: {
                         show: true,
                         name: {
-                            color: '#FFF'
+                            color: '#000'
                         },
                         value: {
                             show: true,
-                            color: '#FFF',
+                            color: '#000',
                             fontSize: '28px',
                             fontWeight: '700'
                         },
                         total: {
                             show: true,
-                            color: '#FFF'
+                            color: '#000'
                         }
                     }
                 }
