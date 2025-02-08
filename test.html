@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tom-select.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+    <!-- Title -->
+    <title>Trezo - Tailwind CSS Admin Dashboard Template</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <div class="overflow-hidden">
+        <div class="pt-[89px]">
+            <div class="container 2xl:max-w-[1320px] mx-auto px-[12px] relative z-[1]">
+                <div class="text-center mx-auto mb-[30px] md:mb-[45px] lg:mb-[60px]">
+                    <a href="#" class="inline-block max-w-[300px] mb-[20px] md:mb-[23px]">
+                        <img src="assets/images/sidesi/logo_bersama.png" alt="logo" class="inline-block dark:hidden">
+                        <img src="assets/images/sidesi/logo_bersama.png" alt="logo" class="hidden dark:inline-block">
+                    </a>
+                    <h1
+                        class="text-[32px] md:text-[40px] lg:text-[50px] xl:text-[50px] mb-[13px] md:mb-[22px] lg:mb-[25px] xl:mb-[30px] -tracking-[.5px] md:-tracking-[1px] xl:-tracking-[1.5px] leading-[1.2]">
+                        Dashboard Publik Sidesi
+                    </h1>
+                    <p
+                        class="mx-auto mb-[25px] leading-[1.6] md:text-[15px] lg:text-[16px] xl:text-[18px] md:max-w-[600px] lg:max-w-[650px] xl:max-w-[740px] xl:tracking-[.2px]">
+                        Halaman ini menampilkan Data Statistik Inputan Direktori Data Desa <br> <b>(Desa Cantik
+                            Simpatik)</b>
+                        dan Potensi Desa <b><i>Sustainable Development Goals (SDGs)</i></b> Pada Aplikasi
+                        Sidesi.
+                    </p>
+
+                    <!-- Filter -->
+                    <div class="trezo-card mb-[25px] rounded-md">
+                        <div class="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-center">
+                            <div class="text-center">
+                                <h5 class="mb-0">
+                                    Filter Data Berdasarkan Kriteria
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="trezo-card-content">
+                            <form>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-[15px] sm:gap-[20px]">
+                                    <!-- Dropdown untuk kategori bantuan/fasilitas -->
+                                    <div>
+                                        <select id="pilih-dashboards" placeholder="Pilih Dashboard ..."
+                                            class="h-[44px] rounded-md border border-primary-500  bg-gray-50 dark:bg-[#0a0e19] p-[5px] block w-full outline-0 cursor-pointer">
+                                            <option value="">Pilih Dashboard ...</option>
+                                            <option value="1">Desa Cantik</option>
+                                            <option value="2">Potensi Desa</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Dropdown untuk pilih desa -->
+                                    <div>
+                                        <select id="pilih-kecamatans" placeholder="Ketik Nama Kecamatan ..."
+                                            class="h-[44px] text-start rounded-md border border-primary-500 bg-gray-50 dark:bg-[#0a0e19] p-[5px] block w-full cursor-pointer">
+                                            <option value="">Pilih Kecamatan ...</option>
+                                            <option value="1">Semua Kecamatan</option>
+                                            <option value="2">Kecamatan Indralaya Selatan</option>
+                                            <option value="3">Kecamatan Indralaya Utara</option>
+                                            <option value="4">Kecamatan Pemulutan</option>
+                                            <option value="5">Kecamatan Tanjung Batu</option>
+                                            <option value="6">Kecamatan Payaraman</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Dropdown untuk pilih kategori -->
+                                    <div>
+                                        <div>
+                                            <select id="pilih-desas" placeholder="Ketik Nama Desa ..."
+                                                class="h-[44px] border border-primary-500  rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[5px] block w-full outline-0 cursor-pointer">
+                                                <option value="">Pilih Desa ...</option>
+                                                <option value="1">Semua Desa</option>
+                                                <option value="2">Desa Payakabung</option>
+                                                <option value="3">Desa Tebedak</option>
+                                                <option value="4">Desa Meranjat</option>
+                                                <option value="5">Desa Bakung</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dropdown untuk kategori bantuan/fasilitas -->
+                                    <div>
+                                        <select id="pilih-tahun" placeholder="Pilih Tahun ..."
+                                            class="h-[44px] rounded-md border border-primary-500  bg-gray-50 dark:bg-[#0a0e19] p-[5px] block w-full outline-0 cursor-pointer">
+                                            <option value="">Pilih Tahun ...</option>
+                                            <option value="1">Semua</option>
+                                            <option value="2">2030</option>
+                                            <option value="3">2029</option>
+                                            <option value="4">2028</option>
+                                            <option value="5">2027</option>
+                                            <option value="6">2026</option>
+                                            <option value="7">2025</option>
+                                            <option value="8">2024</option>
+                                            <option value="9">2023</option>
+                                            <option value="10">2022</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <button
+                                            class="block w-full text-center py-[10px] px-[30px] bg-primary-500 text-white transition-all hover:bg-primary-400 rounded-md border border-primary-500 hover:border-primary-400"
+                                            type="button">
+                                            Terapkan Pencarian
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute -z-[1] ltr:-right-[30px] rtl:-left-[30px] bottom-[50px] blur-[150px]">
+                <img src="assets/images/front-pages/shape3.png" alt="shape3">
+            </div>
+            <div class="absolute -z-[1] ltr:left-[25px] rtl:right-[25px] -top-[210px] blur-[125px]">
+                <img src="assets/images/front-pages/shape2.png" alt="shape3">
+            </div>
+            <div class="absolute -z-[1] ltr:right-[260px] rtl:left-[260px] -top-[125px] blur-[75px]">
+                <img src="assets/images/front-pages/shape4.png" alt="shape3">
+            </div>
+            <div class="absolute -z-[1] ltr:-left-[50px] rtl:-right-[50px] bottom-0 blur-[75px]">
+                <img src="assets/images/front-pages/shape5.png" alt="shape3">
+            </div>
+        </div>
+
+        <div id="dashboard-desaCantik">
+            <div class="container 2xl:max-w-[1320px] mx-auto px-[12px] relative z-[1]">
+                <div class="mx-auto text-center md:max-w-[650px] lg:max-w-[810px] xl:max-w-[785px] mb-[35px]">
+                    <h2
+                        class="mb-0 text-[24px] md:text-[28px] lg:text-[34px] xl:text-[36px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px] leading-[1.2]">
+                        Dashboard Desa Cantik Simpatik <br> Kabupaten Ogan Ilir
+                    </h2>
+                </div>
+                <p>200 Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, hic.</p>
+            </div>
+        </div>
+        <div id="dashboard-potensiDesa">
+            <div class="mx-auto text-center md:max-w-[650px] lg:max-w-[810px] xl:max-w-[785px] mb-[35px]">
+                <h2
+                    class="mb-0 text-[24px] md:text-[28px] lg:text-[34px] xl:text-[36px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px] leading-[1.2]">
+                    Dashboard Potensi Desa <br> Kabupaten Ogan Ilir
+                </h2>
+            </div>
+            <div class="container 2xl:max-w-[1320px] mx-auto px-[12px] relative z-[1]">
+                <p>400 Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, hic.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dashboardSelect = document.getElementById("pilih-dashboards");
+            const searchButton = document.querySelector("button[type='button']");
+
+            // Semua dashboard yang bisa ditampilkan
+            const dashboards = {
+                "1": document.getElementById("dashboard-desaCantik"),
+                "2": document.getElementById("dashboard-potensiDesa")
+            };
+
+            // Sembunyikan semua dashboard kecuali dashboard simpatik saat halaman dimuat
+            Object.values(dashboards).forEach(dashboard => {
+                if (dashboard) dashboard.style.display = "none";
+            });
+            if (dashboards["1"]) dashboards["1"].style.display = "block";
+
+            // Event listener untuk tombol pencarian
+            searchButton.addEventListener("click", function () {
+                const selectedValue = dashboardSelect.value;
+
+                // Sembunyikan semua dashboard terlebih dahulu
+                Object.values(dashboards).forEach(dashboard => {
+                    if (dashboard) dashboard.style.display = "none";
+                });
+
+                // Tampilkan dashboard yang sesuai dengan pilihan
+                if (dashboards[selectedValue]) {
+                    dashboards[selectedValue].style.display = "block";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
