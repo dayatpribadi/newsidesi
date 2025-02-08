@@ -343,82 +343,175 @@ if (chartPopulationByMerried) {
     chart.render();
 }
 
-
-
-const pieChart1 = document.getElementById("pieChart1");
-if (pieChart1) {
-    var options = {
-        series: [
-            196200, 190741
-        ],
-        chart: {
-            height: 414,
-            type: "donut"
-        },
-        labels: [
-            "Laki-Laki", "Perempuan",
-        ],
-        colors: [
-            "#90C7FF", "#AD63F6", 
-        ],
-        stroke: {
-            show: false
-        },
-        plotOptions: {
-            pie: {
-                expandOnClick: false,
-                donut: {
-                    size: '65%',
-                    labels: {
-                        show: true,
-                        name: {
-                            color: '#000'
-                        },
-                        value: {
+document.addEventListener("DOMContentLoaded", function () {
+    const pieChart1 = document.getElementById("pieChart1");
+    if (pieChart1) {
+        var options = {
+            series: [196200, 190741],
+            chart: {
+                height: 414,
+                type: "donut"
+            },
+            labels: ["Laki-Laki", "Perempuan"],
+            colors: ["#90C7FF", "#AD63F6"],
+            fill: {
+                type: "gradient", // Efek gradasi agar lebih 3D
+                gradient: {
+                    shade: "light",
+                    type: "vertical",
+                    gradientToColors: ["#3A8DFF", "#8131F3"], // Gradasi ke warna yang lebih gelap
+                    stops: [-50, 100]
+                }
+            },
+            stroke: {
+                show: true,
+                width: 6, // Stroke agar lebih jelas
+                colors: ["#eee"]
+            },
+            plotOptions: {
+                pie: {
+                    expandOnClick: true, // Memperbesar slice saat diklik
+                    donut: {
+                        size: '65%',
+                        labels: {
                             show: true,
-                            color: '#000',
-                            fontSize: '28px',
-                            fontWeight: '700'
-                        },
-                        total: {
-                            show: true,
-                            color: '#000'
+                            name: {
+                                color: '#000',
+                                fontSize: '16px',
+                                fontWeight: '600'
+                            },
+                            value: {
+                                show: true,
+                                color: '#000',
+                                fontSize: '24px',
+                                fontWeight: '700'
+                            },
+                            total: {
+                                show: true,
+                                label: 'Total',
+                                color: '#000',
+                                fontSize: '18px',
+                                fontWeight: '600',
+                                formatter: function (w) {
+                                    return w.globals.seriesTotals.reduce((a, b) => a + b, 0).toLocaleString();
+                                }
+                            }
                         }
                     }
                 }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            tooltip: {
+                enabled: true,
+                y: {
+                    formatter: function (val) {
+                        return val.toLocaleString();
+                    }
+                }
+            },
+            legend: {
+                show: true,
+                fontSize: '14px',
+                position: 'bottom',
+                horizontalAlign: 'center',
+                itemMargin: {
+                    horizontal: 10,
+                    vertical: 10
+                },
+                labels: {
+                    colors: '#000'
+                },
+                markers: {
+                    size: 10,
+                    shape: 'circle'
+                },
+                formatter: function (seriesName, opts) {
+                    return seriesName + ": <strong>" + opts.w.globals.series[opts.seriesIndex].toLocaleString() + "</strong>";
+                }
             }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        tooltip: {
-            enabled: false
-        },
-        legend: {
-            show: false,
-            fontSize: '12px',
-            position: 'bottom',
-            horizontalAlign: 'center',
-            itemMargin: {
-                horizontal: 10,
-                vertical: 30
-            },
-            labels: {
-                colors: '#FFF'
-            },
-            markers: {
-                size: 8,
-                offsetX: -2,
-                shape: 'circle'
-            },
-            formatter: function(seriesName, opts) {
-                return seriesName + ": <strong>" + opts.w.globals.series[opts.seriesIndex] + "</strong>";
-            }
-        }
-    };
-    var chart = new ApexCharts(document.querySelector("#pieChart1"), options);
-    chart.render();
-}
+        };
+
+        var chart = new ApexCharts(document.querySelector("#pieChart1"), options);
+        chart.render();
+    }
+});
+
+// const pieChart1 = document.getElementById("pieChart1");
+// if (pieChart1) {
+//     var options = {
+//         series: [
+//             196200, 190741
+//         ],
+//         chart: {
+//             height: 414,
+//             type: "donut"
+//         },
+//         labels: [
+//             "Laki-Laki", "Perempuan",
+//         ],
+//         colors: [
+//             "#90C7FF", "#AD63F6", 
+//         ],
+//         stroke: {
+//             show: false
+//         },
+//         plotOptions: {
+//             pie: {
+//                 expandOnClick: false,
+//                 donut: {
+//                     size: '65%',
+//                     labels: {
+//                         show: true,
+//                         name: {
+//                             color: '#000'
+//                         },
+//                         value: {
+//                             show: true,
+//                             color: '#000',
+//                             fontSize: '28px',
+//                             fontWeight: '700'
+//                         },
+//                         total: {
+//                             show: true,
+//                             color: '#000'
+//                         }
+//                     }
+//                 }
+//             }
+//         },
+//         dataLabels: {
+//             enabled: false
+//         },
+//         tooltip: {
+//             enabled: false
+//         },
+//         legend: {
+//             show: false,
+//             fontSize: '12px',
+//             position: 'bottom',
+//             horizontalAlign: 'center',
+//             itemMargin: {
+//                 horizontal: 10,
+//                 vertical: 30
+//             },
+//             labels: {
+//                 colors: '#FFF'
+//             },
+//             markers: {
+//                 size: 8,
+//                 offsetX: -2,
+//                 shape: 'circle'
+//             },
+//             formatter: function(seriesName, opts) {
+//                 return seriesName + ": <strong>" + opts.w.globals.series[opts.seriesIndex] + "</strong>";
+//             }
+//         }
+//     };
+//     var chart = new ApexCharts(document.querySelector("#pieChart1"), options);
+//     chart.render();
+// }
 
 const pieChart2 = document.getElementById("pieChart2");
 if (pieChart2) {
@@ -657,7 +750,7 @@ if (pieChart4) {
                 },
                 {
                     name: "Perempuan",
-                    data: [760, 850, 1000, 970, 850, 1050, 900, 1130, 950, 1000, 970, 850, 1050, 900, 950, 201]
+                    data: [760, 850, 1000, 970, 850, 1050, 900, 1130, 950, 1000, 970, 850, 1050, 900, 950, 20]
                 }
             ],
             chart: {
