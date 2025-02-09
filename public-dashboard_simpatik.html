@@ -2485,9 +2485,14 @@
         document.addEventListener("DOMContentLoaded", function () {
             const dashboardSelect = document.getElementById("pilih-dashboards");
             const searchButton = document.querySelector("button[type='button']");
+            const loadingText = document.createElement("p");
+            loadingText.innerText = "Sedang Memuat data...";
+            loadingText.style.display = "none";
+            loadingText.style.textAlign = "center";
+            loadingText.style.fontWeight = "bold";
 
-            console.log(dashboardSelect); // Periksa apakah elemen ini ditemukan
-            console.log(searchButton); // Periksa apakah elemen ini ditemukan
+            // Masukkan loadingText ke dalam container utama
+            document.body.appendChild(loadingText);
 
             // Semua dashboard yang bisa ditampilkan
             const dashboards = {
@@ -2495,15 +2500,14 @@
                 "2": document.getElementById("dashboard-potensiDesa")
             };
 
-            // Sembunyikan semua dashboard kecuali dashboard simpatik saat halaman dimuat
+            // Sembunyikan semua dashboard kecuali dashboard pertama (default)
             Object.values(dashboards).forEach(dashboard => {
                 if (dashboard) dashboard.style.display = "none";
             });
-            if (dashboards["1"]) dashboards["1"].style.display = "block";
+            if (dashboards["1"]) dashboards["1"].style.display = "block"; // Tampilkan default
 
             // Event listener untuk tombol pencarian
             searchButton.addEventListener("click", function () {
-                console.log("Tombol diklik"); // Tambahkan ini untuk debugging
                 const selectedValue = dashboardSelect.value;
 
                 // Sembunyikan semua dashboard terlebih dahulu
@@ -2511,10 +2515,17 @@
                     if (dashboard) dashboard.style.display = "none";
                 });
 
-                // Tampilkan dashboard yang sesuai dengan pilihan
-                if (dashboards[selectedValue]) {
-                    dashboards[selectedValue].style.display = "block";
-                }
+                // Tampilkan teks loading
+                loadingText.style.display = "block";
+
+                // Simulasi loading sebelum menampilkan data
+                setTimeout(() => {
+                    loadingText.style.display = "none"; // Sembunyikan loading
+                    if (dashboards[selectedValue]) {
+                        dashboards[selectedValue].style.display =
+                            "block"; // Tampilkan dashboard yang dipilih
+                    }
+                }, 3000); // Simulasi loading selama 1 detik
             });
         });
     </script>

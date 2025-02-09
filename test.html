@@ -153,7 +153,7 @@
             </div>
         </div>
 
-        <div id="dashboard-desaCantik">
+        <div id="dashboard-simpatik">
             <div class="container 2xl:max-w-[1320px] mx-auto px-[12px] relative z-[1]">
                 <div class="mx-auto text-center md:max-w-[650px] lg:max-w-[810px] xl:max-w-[785px] mb-[35px]">
                     <h2
@@ -164,7 +164,7 @@
                 <p>200 Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, hic.</p>
             </div>
         </div>
-        <div id="dashboard-potensiDesa">
+        <div id="dashboard-podes">
             <div class="mx-auto text-center md:max-w-[650px] lg:max-w-[810px] xl:max-w-[785px] mb-[35px]">
                 <h2
                     class="mb-0 text-[24px] md:text-[28px] lg:text-[34px] xl:text-[36px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px] leading-[1.2]">
@@ -181,18 +181,26 @@
         document.addEventListener("DOMContentLoaded", function () {
             const dashboardSelect = document.getElementById("pilih-dashboards");
             const searchButton = document.querySelector("button[type='button']");
+            const loadingText = document.createElement("p");
+            loadingText.innerText = "Sedang Memuat data...";
+            loadingText.style.display = "none";
+            loadingText.style.textAlign = "center";
+            loadingText.style.fontWeight = "bold";
+
+            // Masukkan loadingText ke dalam container utama
+            document.body.appendChild(loadingText);
 
             // Semua dashboard yang bisa ditampilkan
             const dashboards = {
-                "1": document.getElementById("dashboard-desaCantik"),
-                "2": document.getElementById("dashboard-potensiDesa")
+                "1": document.getElementById("dashboard-simpatik"),
+                "2": document.getElementById("dashboard-podes")
             };
 
-            // Sembunyikan semua dashboard kecuali dashboard simpatik saat halaman dimuat
+            // Sembunyikan semua dashboard kecuali dashboard pertama (default)
             Object.values(dashboards).forEach(dashboard => {
                 if (dashboard) dashboard.style.display = "none";
             });
-            if (dashboards["1"]) dashboards["1"].style.display = "block";
+            if (dashboards["2"]) dashboards["2"].style.display = "block"; // Tampilkan default
 
             // Event listener untuk tombol pencarian
             searchButton.addEventListener("click", function () {
@@ -203,10 +211,17 @@
                     if (dashboard) dashboard.style.display = "none";
                 });
 
-                // Tampilkan dashboard yang sesuai dengan pilihan
-                if (dashboards[selectedValue]) {
-                    dashboards[selectedValue].style.display = "block";
-                }
+                // Tampilkan teks loading
+                loadingText.style.display = "block";
+
+                // Simulasi loading sebelum menampilkan data
+                setTimeout(() => {
+                    loadingText.style.display = "none"; // Sembunyikan loading
+                    if (dashboards[selectedValue]) {
+                        dashboards[selectedValue].style.display =
+                            "block"; // Tampilkan dashboard yang dipilih
+                    }
+                }, 3000); // Simulasi loading selama 1 detik
             });
         });
     </script>
