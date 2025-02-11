@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tom-select.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+    <!-- Title -->
+    <title>Aplikasi Sidesi Kabupaten Ogan Ilir</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen" id="main-content">
+
+        <div class="lg:grid lg:grid-cols-3 gap-[25px]">
+            <div class="lg:col-span-2">
+
+                <!-- Compose -->
+                <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                    <div
+                        class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between border-b border-gray-100 pb-[15px] dark:border-[#15203c]">
+                        <div class="trezo-card-title">
+                            <h5 class="mb-0">
+                                Formulir
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="trezo-card-content">
+                        <div id="form-elements" class="border p-4 rounded-md bg-gray-50">
+                            <p class="text-gray-500">Drag and drop elements here</p>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <button class="add-element px-4 py-2 bg-blue-500 text-white rounded"
+                                data-type="text">Header</button>
+                            <button class="add-element px-4 py-2 bg-blue-500 text-white rounded" data-type="input">Text
+                                Field</button>
+                            <button class="add-element px-4 py-2 bg-green-500 text-white rounded"
+                                data-type="textarea">Textarea</button>
+                            <button class="add-element px-4 py-2 bg-green-500 text-white rounded"
+                                data-type="checkbox">Checkbox</button>
+                            <button class="add-element px-4 py-2 bg-green-500 text-white rounded"
+                                data-type="radio">Radio Group</button>
+                            <button class="add-element px-4 py-2 bg-green-500 text-white rounded"
+                                data-type="file">Upload File</button>
+                            <button class="add-element px-4 py-2 bg-green-500 text-white rounded"
+                                data-type="select">Select</button>
+                            <button class="add-element px-4 py-2 bg-green-500 text-white rounded" data-type="date">Date
+                                Field</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="grow"></div>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
+        <p>
+            © <span class="text-purple-500">Copyright</span> Kominfo Ogan Ilir<a href="oganilirkab.go.id"
+                target="_blank" class="text-primary-500 transition-all hover:underline"> 2025</a>
+        </p>
+    </footer>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Links Of JS File -->
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/fslightbox.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fullcalendar.min.js"></script>
+    <script src="assets/js/jsvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/quill.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/tom-select.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+
+    <script>
+        const formElements = document.getElementById('form-elements');
+
+        new Sortable(formElements, {
+            animation: 150
+        });
+
+        document.querySelectorAll('.add-element').forEach(button => {
+            button.addEventListener('click', function () {
+                const type = this.getAttribute('data-type');
+                let element;
+
+                if (type === 'input') {
+                    element =
+                        `<label class="mb-[12px] font-medium block">Example Input</label> <input type="text" class="h-[55px] rounded-md text-black border border-gray-200  bg-white  px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500" placeholder="name@example.com">`;
+                } else if (type === 'textarea') {
+                    element =
+                        `<label class="mb-[12px] font-medium block">Example Textarea</label><textarea class="h-[140px] rounded-md text-black border border-gray-200  bg-white p-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500" placeholder="It makes me feel..."></textarea>`;
+                } else if (type === 'checkbox') {
+                    element =
+                        `<div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0"><input type="checkbox" class="cursor-pointer" id="defaultCheckbox"><label for="defaultCheckbox" class="cursor-pointer">Default checkbox</label></div>`;
+                } else if (type === 'file') {
+                    element =
+                        `<label class="mb-[12px] font-medium block">Default file input example</label><input type="file" class="rounded-md text-black border border-gray-200  bg-white py-[15px] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500  focus:border-primary-500 cursor-pointer">`;
+                } else if (type === 'select') {
+                    element = `<label class="mb-[12px] font-medium block">Example Select</label><select class="h-[55px] rounded-md border border-gray-200  bg-white  px-[13px] block w-full outline-0 cursor-pointer transition-all focus:border-primary-500">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        </select>`;
+                } else if (type === 'date') {
+                    element =
+                        `<label class="mb-[12px] font-medium block">Example Input</label> <input type="date" class="h-[55px] rounded-md text-black border border-gray-200  bg-white  px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500" placeholder="name@example.com">`;
+                } else if (type === 'radio') {
+                    element =
+                        `<div class="form-radio flex items-center gap-[8px] mb-[10px] last:mb-0"><input type="radio" class="cursor-pointer" name="flexRadioDefault" id="flexRadioDefault1"><label for="flexRadioDefault1" class="cursor-pointer">Default radio</label></div>`;
+                } else if (type === 'text') {
+                    element =
+                        `<h1 class="display-1" style="font-size:32px; font-weight: bold;">Display 1</h1>`;
+                }
+
+                formElements.innerHTML += element;
+            });
+        });
+    </script>
+</body>
+
+</html>
