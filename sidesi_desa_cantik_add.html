@@ -745,7 +745,7 @@
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Luas Lantai (m2) <span class="text-orange-600">*</span>
+                                            Luas Lantai (m<sup>2</sup>) <span class="text-orange-600">*</span>
                                         </label>
                                         <input type="text"
                                             class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
@@ -896,8 +896,7 @@
                 </div>
                 <div class="step" id="step3">
                     <form>
-                        <div
-                            class="trezo-card bg-secondary-50 dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
                             <div class="trezo-card-content mb-[25px]">
                                 <h3 class="mb-[25px]">Data Keluarga</h3>
                                 <div class="sm:grid sm:grid-cols-1 md:grid-cols-3 sm:gap-[25px]">
@@ -1186,7 +1185,7 @@
                                     </div>
                                     <div class=" mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Luas Lahan (m2) <span class="text-orange-600">*</span>
+                                            Luas Lahan (m<sup>2</sup>) <span class="text-orange-600">*</span>
                                         </label>
                                         <input type="text"
                                             class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
@@ -1253,130 +1252,270 @@
                             <div class="trezo-card-content mb-[25px]">
                                 <h3 class="mb-[25px]">Aset & Program</h3>
                                 <div class="sm:grid sm:grid-cols-1 md:grid-cols-3 sm:gap-[25px]">
-                                    <div class=" mb-[20px] sm:mb-0">
+                                    <div class="sm:col-span-1">
+                                        <div class=" mb-[20px] sm:mb-0">
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="defaultCheckbox">
+                                                <label for="defaultCheckbox" class="cursor-pointer">
+                                                    Tabung Gas 5.5 Kg atau lebih
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Lemari Es/Kulkas
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    AC
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Pemanas Air
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Telepon Rumah (PTSN)
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Televisi
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Emas, Perhiasan & Tabungan (Senilai 10gram Emas)
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Komputer/Laptop
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Sepeda
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Sepeda Motor
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Mobil
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Perahu
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Motor Tempel
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Perahu
+                                                </label>
+                                            </div>
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" checked class="cursor-pointer"
+                                                    id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Kapal
+                                                </label>
+                                            </div>
 
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" class="cursor-pointer" id="defaultCheckbox">
-                                            <label for="defaultCheckbox" class="cursor-pointer">
-                                                Tabung Gas 5.5 Kg atau lebih
-                                            </label>
                                         </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Lemari Es/Kulkas
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                AC
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Pemanas Air
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Telepon Rumah (PTSN)
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Televisi
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Emas, Perhiasan & Tabungan (Senilai 10gram Emas)
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Komputer/Laptop
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Sepeda
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Sepeda Motor
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Mobil
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Perahu
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Motor Tempel
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Perahu
-                                            </label>
-                                        </div>
-                                        <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
-                                            <input type="checkbox" checked class="cursor-pointer" id="checkedCheckbox">
-                                            <label for="checkedCheckbox" class="cursor-pointer">
-                                                Kapal
-                                            </label>
-                                        </div>
-
                                     </div>
-                                    <div class=" mb-[20px] sm:mb-0">
-                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jumlah No HP aktif yang dimiliki oleh seluruh anggota keluarga <span
-                                                class="text-orange-600">*</span>
-                                        </label>
-                                        <select id="pilih-hp" placeholder="Jumlah Nomor HP aktif ..." autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Jumlah Nomor HP</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="3">...</option>
-                                            <option value="3">10</option>
-                                        </select>
+                                    <div class="sm:col-span-1 md:col-span-2">
+                                        <div class=" mb-[20px] sm:mb-0">
+                                            <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                                Jumlah No HP aktif yang dimiliki oleh seluruh anggota keluarga <span
+                                                    class="text-orange-600">*</span>
+                                            </label>
+                                            <input type="number"
+                                                class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                                placeholder="Jumlah Nomor HP">
+                                        </div>
+                                        <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                            <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                                Jumlah TV layar datar minimal 30 Inch yang dimiliki anggota keluarga
+                                                <span class="text-orange-600">*</span>
+                                            </label>
+                                            <input type="number"
+                                                class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                                placeholder="Jumlah Televisi minimal 30 Inch">
+                                        </div>
+                                        <div class="mt-[20px]">
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Lahan(m<sup>2</sup>)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                            <input type="number"
+                                                class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                                placeholder="0">
+                                        </div>
+                                        <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                            <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                                <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                                <label for="checkedCheckbox" class="cursor-pointer">
+                                                    Rumah ditempat lain
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class=" mb-[20px] sm:mb-0">
+                                </div>
+                                <div class="py-[20px] mt-[20px]">
+                                    <h5>Jumlah Ternak yang dimiliki (Ekor)</h5>
+                                </div>
+                                <div class="sm:grid sm:grid-cols-1 md:grid-cols-3 sm:gap-[25px]">
+                                    <div class="mt-[20px] mb-[20px] sm:mb-0">
                                         <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
-                                            Jumlah TV layar datar minimal 30 Inch yang dimiliki anggota keluarga <span
-                                                class="text-orange-600">*</span>
+                                            Kambing / Domba
+                                            <span class="text-orange-600">*</span>
                                         </label>
-                                        <select id="pilih-tv" placeholder="Jumlah TV minimal 30 inch ..."
-                                            autocomplete="on"
-                                            class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
-                                            <option value="">Jumlah TV</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="3">...</option>
-                                            <option value="3">10</option>
-                                        </select>
+                                        <input type="number"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="0">
+                                    </div>
+                                    <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Sapi
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <input type="number"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="0">
+                                    </div>
+                                    <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Kerbau
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <input type="number"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="0">
+                                    </div>
+                                    <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Kuda
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <input type="number"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="0">
+                                    </div>
+                                    <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                        <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                            Babi
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                        <input type="number"
+                                            class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                                            placeholder="0">
+                                    </div>
+                                </div>
+                                <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                    <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                        Apakah ada anggota keluarga yang memiliki usaha sendiri / bersama ? <span
+                                            class="text-orange-600">*</span>
+                                    </label>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            ya
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Tidak
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-[20px] mb-[20px] sm:mb-0">
+                                    <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                        Keluarga menjadi / memiliki kartu program berikut : <span
+                                            class="text-orange-600">*</span>
+                                    </label>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Kartu Keluarga Sejahtera (KKS) / Kartu Perlindungan Sosial (KPS)
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Kartu Indonesia Pintar (KIP) / Bantuan Siswa Miskin (BSM)
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Kartu Indonesia Sehat (KIS) / BPJS Kesehatan / Jamkesmas
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            BPJS Kesehatan Peserta Mandiri
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Jaminan Sosial Tenaga Kerja (Jamsostek) / BPJS Ketenagakerjaan
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Asuransi Kesehatan Lainnya
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Program Keluarga Harapan (PKH)
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Bantuan Pangan Non Tunai (BPNT)
+                                        </label>
+                                    </div>
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="checkedCheckbox">
+                                        <label for="checkedCheckbox" class="cursor-pointer">
+                                            Kredit Usaha Rakyat (KUR)
+                                        </label>
                                     </div>
                                 </div>
                             </div>
