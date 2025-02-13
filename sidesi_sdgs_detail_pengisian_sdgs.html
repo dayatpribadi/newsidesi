@@ -681,12 +681,381 @@
                                 <div class="tab-pane" id="ket_desa">
                                     <div
                                         class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                                        <p>Desa Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                                            adipisci
-                                            distinctio illum!
-                                            Nesciunt, harum quae repudiandae ullam sit adipisci animi pariatur in
-                                            consequuntur nihil
-                                            exercitationem facere quidem totam amet possimus?</p>
+                                        <div class="trezo-card-header flex items-center justify-between">
+                                            <div class="trezo-card-title">
+                                                <h5 class="mb-0">
+                                                    Peraturan Desa Tahun Sebelumnya
+                                                </h5>
+                                            </div>
+
+                                            <button
+                                                class="inline-block py-[10px] px-[30px] bg-primary-500 text-white transition-all hover:bg-primary-400 rounded-md border border-primary-500 hover:border-primary-400"
+                                                type="button" id="add-new-popup-toggle">
+                                                Tambah Data
+                                            </button>
+
+                                            <div class="add-new-popup z-[999] fixed transition-all inset-0 overflow-x-hidden overflow-y-auto"
+                                                id="add-new-popup">
+                                                <div
+                                                    class="popup-dialog flex transition-all max-w-[550px] min-h-full items-center mx-auto">
+                                                    <div
+                                                        class="trezo-card w-full bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
+                                                        <div
+                                                            class="trezo-card-header bg-gray-50 dark:bg-[#15203c] mb-[20px] md:mb-[25px] flex items-center justify-between -mx-[20px] md:-mx-[25px] -mt-[20px] md:-mt-[25px] p-[20px] md:p-[25px] rounded-t-md">
+                                                            <div class="trezo-card-title">
+                                                                <h5 class="mb-0">
+                                                                    Tambah Peraturan Desa
+                                                                </h5>
+                                                            </div>
+                                                            <div class="trezo-card-subtitle">
+                                                                <button type="button"
+                                                                    class="text-[23px] transition-all leading-none text-black dark:text-white hover:text-primary-500"
+                                                                    id="add-new-popup-toggle">
+                                                                    <i class="ri-close-fill"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="trezo-card-content pb-[20px] md:pb-[25px]">
+                                                            <div class="mb[20px]">
+                                                                <label class="mb-[12px] font-medium block">
+                                                                    Nomor Peraturan
+                                                                </label>
+                                                                <input type="text"
+                                                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-50 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                                                    placeholder="Nomor Peraturan">
+                                                            </div>
+                                                            <div class="mt-[20px] mb[20px]">
+                                                                <label class="mb-[12px] font-medium block">
+                                                                    Bulan Ke
+                                                                </label>
+                                                                <input type="text"
+                                                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-50 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                                                    placeholder="Bulan Ke">
+                                                            </div>
+                                                            <div class="mt-[20px] mb[20px]">
+                                                                <label class="mb-[12px] font-medium block">
+                                                                    Tentang
+                                                                </label>
+                                                                <input type="text"
+                                                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-50 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                                                    placeholder="Tentang">
+                                                            </div>
+                                                            <div class="mt-[20px] mb[20px]">
+                                                                <label class="mb-[12px] font-medium block">
+                                                                    Dokumen
+                                                                </label>
+                                                                <input type="file"
+                                                                    class="rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] py-[15px] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500 cursor-pointer">
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="trezo-card-footer flex items-center justify-between -mx-[20px] md:-mx-[25px] px-[20px] md:px-[25px] pt-[20px] md:pt-[25px] border-t border-gray-100 dark:border-[#172036]">
+                                                            <button
+                                                                class="inline-block py-[10px] px-[30px] bg-danger-500 text-white transition-all hover:bg-danger-400 rounded-md border border-danger-500 hover:border-danger-400"
+                                                                type="button" id="add-new-popup-toggle">
+                                                                Batal
+                                                            </button>
+                                                            <button
+                                                                class="inline-block py-[10px] px-[30px] bg-primary-500 text-white transition-all hover:bg-primary-400 rounded-md border border-primary-500 hover:border-primary-400 ltr:mr-[11px] rtl:ml-[11px] mb-[15px]"
+                                                                type="button">
+                                                                Simpan Data
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="trezo-card-content">
+                                            <div
+                                                class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                                                <div class="trezo-card-content -mx-[20px] md:-mx-[25px]">
+                                                    <div class="table-responsive overflow-x-auto">
+                                                        <table class="w-full">
+                                                            <thead class="text-black dark:text-white">
+                                                                <tr>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        No
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Nomor Dokumen
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Bulan Ke
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Tentang
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Dokumen
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Aksi
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="text-black dark:text-white">
+                                                                <tr>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <span class="text-gray-500 dark:text-gray-400">
+                                                                            -
+                                                                        </span>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <a href="#"
+                                                                            class="inline-block font-medium transition-all text-gray-500 dark:text-gray-400 hover:text-primary-500">
+                                                                            -
+                                                                        </a>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <span class="text-gray-500 dark:text-gray-400">
+                                                                            -
+                                                                        </span>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <span class="text-gray-500 dark:text-gray-400">
+                                                                            -
+                                                                        </span>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <span class="text-gray-500 dark:text-gray-400">
+                                                                            -
+                                                                        </span>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <div class="flex items-center gap-[9px]">
+
+                                                                            <button type="button"
+                                                                                class="text-gray-500 dark:text-gray-400 leading-none">
+                                                                                <i
+                                                                                    class="material-symbols-outlined !text-md">
+                                                                                    edit
+                                                                                </i>
+                                                                            </button>
+                                                                            <button type="button"
+                                                                                class="text-danger-500 leading-none">
+                                                                                <i
+                                                                                    class="material-symbols-outlined !text-md">
+                                                                                    delete
+                                                                                </i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="flex items-center justify-center mt-[25px]">
+                                                            <dotlottie-player
+                                                                src="https://lottie.host/75f3da1e-e1cc-49d0-8865-46adc68efa32/gwj28xoTah.lottie"
+                                                                background="transparent" speed="1"
+                                                                style="width: 300px; height: 300px" loop autoplay>
+                                                            </dotlottie-player>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                                        <div class="trezo-card-header flex items-center justify-between">
+                                            <div class="trezo-card-title">
+                                                <h5 class="mb-0">
+                                                    Peraturan Kepala Desa Tahun Sebelumnya
+                                                </h5>
+                                            </div>
+
+                                            <button
+                                                class="inline-block py-[10px] px-[30px] bg-primary-500 text-white transition-all hover:bg-primary-400 rounded-md border border-primary-500 hover:border-primary-400"
+                                                type="button" id="add-new-popup-toggle">
+                                                Tambah Data
+                                            </button>
+
+                                            <div class="add-new-popup z-[999] fixed transition-all inset-0 overflow-x-hidden overflow-y-auto"
+                                                id="add-new-popup">
+                                                <div
+                                                    class="popup-dialog flex transition-all max-w-[550px] min-h-full items-center mx-auto">
+                                                    <div
+                                                        class="trezo-card w-full bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
+                                                        <div
+                                                            class="trezo-card-header bg-gray-50 dark:bg-[#15203c] mb-[20px] md:mb-[25px] flex items-center justify-between -mx-[20px] md:-mx-[25px] -mt-[20px] md:-mt-[25px] p-[20px] md:p-[25px] rounded-t-md">
+                                                            <div class="trezo-card-title">
+                                                                <h5 class="mb-0">
+                                                                    Tambah Peraturan Kepala Desa
+                                                                </h5>
+                                                            </div>
+                                                            <div class="trezo-card-subtitle">
+                                                                <button type="button"
+                                                                    class="text-[23px] transition-all leading-none text-black dark:text-white hover:text-primary-500"
+                                                                    id="add-new-popup-toggle">
+                                                                    <i class="ri-close-fill"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="trezo-card-content pb-[20px] md:pb-[25px]">
+                                                            <div class="mb[20px]">
+                                                                <label class="mb-[12px] font-medium block">
+                                                                    Nomor Peraturan
+                                                                </label>
+                                                                <input type="text"
+                                                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-50 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                                                    placeholder="Nomor Peraturan">
+                                                            </div>
+                                                            <div class="mt-[20px] mb[20px]">
+                                                                <label class="mb-[12px] font-medium block">
+                                                                    Bulan Ke
+                                                                </label>
+                                                                <input type="text"
+                                                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-50 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                                                    placeholder="Bulan Ke">
+                                                            </div>
+                                                            <div class="mt-[20px] mb[20px]">
+                                                                <label class="mb-[12px] font-medium block">
+                                                                    Tentang
+                                                                </label>
+                                                                <input type="text"
+                                                                    class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-50 dark:placeholder:text-gray-400 focus:border-primary-500"
+                                                                    placeholder="Tentang">
+                                                            </div>
+                                                            <div class="mt-[20px] mb[20px]">
+                                                                <label class="mb-[12px] font-medium block">
+                                                                    Dokumen
+                                                                </label>
+                                                                <input type="file"
+                                                                    class="rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] py-[15px] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500 cursor-pointer">
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="trezo-card-footer flex items-center justify-between -mx-[20px] md:-mx-[25px] px-[20px] md:px-[25px] pt-[20px] md:pt-[25px] border-t border-gray-100 dark:border-[#172036]">
+                                                            <button
+                                                                class="inline-block py-[10px] px-[30px] bg-danger-500 text-white transition-all hover:bg-danger-400 rounded-md border border-danger-500 hover:border-danger-400"
+                                                                type="button" id="add-new-popup-toggle">
+                                                                Batal
+                                                            </button>
+                                                            <button
+                                                                class="inline-block py-[10px] px-[30px] bg-primary-500 text-white transition-all hover:bg-primary-400 rounded-md border border-primary-500 hover:border-primary-400 ltr:mr-[11px] rtl:ml-[11px] mb-[15px]"
+                                                                type="button">
+                                                                Simpan Data
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="trezo-card-content">
+                                            <div
+                                                class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                                                <div class="trezo-card-content -mx-[20px] md:-mx-[25px]">
+                                                    <div class="table-responsive overflow-x-auto">
+                                                        <table class="w-full">
+                                                            <thead class="text-black dark:text-white">
+                                                                <tr>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        No
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Nomor Dokumen
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Bulan Ke
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Tentang
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Dokumen
+                                                                    </th>
+                                                                    <th
+                                                                        class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 bg-primary-50 dark:bg-[#15203c] whitespace-nowrap">
+                                                                        Aksi
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="text-black dark:text-white">
+                                                                <tr>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <span class="text-gray-500 dark:text-gray-400">
+                                                                            -
+                                                                        </span>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <a href="#"
+                                                                            class="inline-block font-medium transition-all text-gray-500 dark:text-gray-400 hover:text-primary-500">
+                                                                            -
+                                                                        </a>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <span class="text-gray-500 dark:text-gray-400">
+                                                                            -
+                                                                        </span>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <span class="text-gray-500 dark:text-gray-400">
+                                                                            -
+                                                                        </span>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <span class="text-gray-500 dark:text-gray-400">
+                                                                            -
+                                                                        </span>
+                                                                    </td>
+                                                                    <td
+                                                                        class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
+                                                                        <div class="flex items-center gap-[9px]">
+
+                                                                            <button type="button"
+                                                                                class="text-gray-500 dark:text-gray-400 leading-none">
+                                                                                <i
+                                                                                    class="material-symbols-outlined !text-md">
+                                                                                    edit
+                                                                                </i>
+                                                                            </button>
+                                                                            <button type="button"
+                                                                                class="text-danger-500 leading-none">
+                                                                                <i
+                                                                                    class="material-symbols-outlined !text-md">
+                                                                                    delete
+                                                                                </i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="flex items-center justify-center mt-[25px]">
+                                                            <dotlottie-player
+                                                                src="https://lottie.host/75f3da1e-e1cc-49d0-8865-46adc68efa32/gwj28xoTah.lottie"
+                                                                background="transparent" speed="1"
+                                                                style="width: 300px; height: 300px" loop autoplay>
+                                                            </dotlottie-player>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="kep_wil">
