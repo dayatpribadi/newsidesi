@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline Vertikal Pembentukan Koperasi Desa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex bg-gray-50">
+    <aside class="w-64 bg-white shadow-md min-h-screen">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-blue-600 text-center">Kopdes Merah Putih</h2>
+        </div>
+        <ul class="space-y-2 px-4">
+            <li class="p-2 rounded hover:bg-blue-100 cursor-pointer">Dashboard</li>
+            <li class="p-2 rounded hover:bg-blue-100 cursor-pointer">Tahapan Pembentukan</li>
+            <li class="p-2 rounded hover:bg-blue-100 cursor-pointer">Laporan</li>
+            <li class="p-2 rounded hover:bg-blue-100 cursor-pointer">Anggota</li>
+            <li class="p-2 rounded hover:bg-blue-100 cursor-pointer">Pengaturan</li>
+        </ul>
+    </aside>
+
+    <main class="flex-1">
+        <header class="bg-blue-600 text-white p-4 text-center">
+            <h1 class="text-xl font-semibold">Tahapan Pembentukan Koperasi Desa Merah Putih</h1>
+        </header>
+
+        <section class="px-6 py-10" id="timeline">
+            <div class="relative border-l-4 border-gray-200 ml-6">
+                <!-- Timeline steps generated here -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const steps = [{
+                title: "Pra-Pembentukan",
+                status: "completed"
+            },
+            {
+                title: "Musyawarah Desa Khusus",
+                status: "completed"
+            },
+            {
+                title: "Rapat Anggota",
+                status: "in-progress"
+            },
+            {
+                title: "Penyerahan NPAK",
+                status: "pending"
+            },
+            {
+                title: "Mengunggah SABH",
+                status: "pending"
+            },
+            {
+                title: "SK Pengesahan Kopdes",
+                status: "pending"
+            },
+            {
+                title: "Pengumuman BN SK Kopdes",
+                status: "pending"
+            },
+        ];
+
+        const timeline = document.querySelector("#timeline > div");
+
+        steps.forEach((step, index) => {
+            const statusStyles = {
+                completed: {
+                    color: "text-green-600",
+                    dot: "bg-green-500",
+                    border: "border-green-500",
+                },
+                "in-progress": {
+                    color: "text-yellow-600",
+                    dot: "bg-yellow-400",
+                    border: "border-yellow-400",
+                },
+                pending: {
+                    color: "text-gray-500",
+                    dot: "bg-gray-300",
+                    border: "border-gray-300",
+                },
+            } [step.status];
+
+            const statusText =
+                step.status === "completed" ?
+                "Selesai" :
+                step.status === "in-progress" ?
+                "Sedang Berjalan" :
+                "Belum Dimulai";
+
+            const el = document.createElement("div");
+            el.className = `mb-10 ml-6`;
+            el.innerHTML = `
+          <span class="flex absolute -left-3 justify-center items-center w-6 h-6 ${statusStyles.dot} rounded-full ring-4 ring-white"></span>
+          <div class="p-4 bg-white rounded-lg shadow-sm border ${statusStyles.border}">
+            <h3 class="text-lg font-semibold text-blue-600">${step.title}</h3>
+            <p class="mt-1 text-sm ${statusStyles.color} font-medium">${statusText}</p>
+          </div>
+        `;
+            timeline.appendChild(el);
+        });
+    </script>
+</body>
+
+</html>
