@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+    <!-- Title -->
+    <title>Aplikasi Sidesi Kabupaten Ogan Ilir</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar-area bg-white dark:bg-[#0c1427] fixed overflow-hidden z-[7] top-0 h-screen transition-all rounded-r-md"
+        id="sidebar-area">
+        <div
+            class="logo bg-white dark:bg-[#0c1427] border-b border-gray-100 dark:border-[#172036] px-[25px] pt-[19px] pb-[15px] absolute z-[2] right-0 top-0 left-0">
+            <a href="koperasi_desa_dashboard.html" class="transition-none relative flex items-center">
+                <img src="assets/images/logo-icon.svg" alt="logo-icon">
+                <span class="font-bold text-black dark:text-white relative ltr:ml-[8px] rtl:mr-[8px] top-px text-xl">
+                    Sidesi
+                </span>
+            </a>
+            <button type="button"
+                class="burger-menu inline-block absolute z-[3] top-[24px] ltr:right-[25px] rtl:left-[25px] transition-all hover:text-primary-500"
+                id="hide-sidebar-toggle2">
+                <i class="material-symbols-outlined">
+                    close
+                </i>
+            </button>
+        </div>
+        <div class="pt-[89px] px-[25px] pb-[20px] h-screen" data-simplebar>
+            <div class="accordion">
+                <span
+                    class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Koperasi Desa
+                </span>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="koperasi_desa_dashboard.html"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            home_app_logo
+                        </i>
+                        <span class="title leading-none">
+                            Dashboard
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button active toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            groups_3
+                        </i>
+                        <span class="title leading-none">
+                            Keanggotaan
+                        </span>
+                    </button>
+                    <div class="accordion-collapse show">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="koperasi_desa.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Koperasi Desa
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#" class=" sidemenu-link active rounded-md flex items-center relative transition-all
+                                        font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px]
+                                        ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500
+                                        hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Pembentukan Kopdes
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="koperasi_desa_status.html"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Status
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="#"
+                                        class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Menu Lainnya
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="#"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            analytics
+                        </i>
+                        <span class="title leading-none">
+                            Laporan
+                        </span>
+                    </a>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <a href="#"
+                        class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                        <i
+                            class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            logout
+                        </i>
+                        <span class="title leading-none">
+                            Keluar
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <!-- Header -->
+    <div class="header-area bg-white dark:bg-[#0c1427] py-[13px] px-[20px] md:px-[25px] fixed top-0 z-[6] rounded-b-md transition-all"
+        id="header-area">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="flex items-center justify-between md:justify-normal">
+                <div
+                    class="relative leading-none top-px ltr:mr-[13px] ltr:md:mr-[18px] ltr:lg:mr-[23px] rtl:ml-[13px] rtl:md:ml-[18px] rtl:lg:ml-[23px]">
+                    <button type="button" class="hide-sidebar-toggle transition-all inline-block hover:text-primary-500"
+                        id="hide-sidebar-toggle">
+                        <i class="material-symbols-outlined !text-[20px]">
+                            menu
+                        </i>
+                    </button>
+                </div>
+            </div>
+            <ul class="flex items-center justify-between md:justify-normal mt-[13px] md:mt-0">
+                <li
+                    class="relative mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                    <button type="button"
+                        class="light-dark-toggle leading-none inline-block transition-all relative top-[2px] text-[#fe7a36]"
+                        id="light-dark-toggle">
+                        <i class="material-symbols-outlined !text-[20px] md:!text-[22px]">
+                            light_mode
+                        </i>
+                    </button>
+                </li>
+                <li
+                    class="relative profile-menu mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                    <button type="button"
+                        class="flex items-center -mx-[5px] relative ltr:pr-[14px] rtl:pl-[14px] text-black dark:text-white"
+                        id="dropdownToggleBtn">
+                        <img src="assets/images/admin.png"
+                            class="w-[35px] h-[35px] md:w-[42px] md:h-[42px] rounded-full ltr:md:mr-[2px] ltr:lg:mr-[8px] rtl:md:ml-[2px] rtl:lg:ml-[8px] border-[2px] border-primary-200 inline-block"
+                            alt="admin-image">
+                        <span class="block font-semibold text-[0] lg:text-base">
+                            Sidesi
+                        </span>
+                        <i
+                            class="ri-arrow-down-s-line text-[15px] absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>
+                    </button>
+                    <div
+                        class="profile-menu-dropdown bg-white dark:bg-[#0c1427] transition-all shadow-3xl dark:shadow-none py-[22px] absolute mt-[13px] md:mt-[14px] w-[195px] z-[1] top-full ltr:right-0 rtl:left-0 rounded-md">
+                        <div
+                            class="flex items-center border-b border-gray-100 dark:border-[#172036] pb-[12px] mx-[20px] mb-[10px]">
+                            <img src="assets/images/admin.png"
+                                class="rounded-full w-[31px] h-[31px] ltr:mr-[9px] rtl:ml-[9px] border-2 border-primary-200 inline-block"
+                                alt="admin-image">
+                            <div>
+                                <span class="block text-black dark:text-white font-medium">
+                                    Sidesi
+                                </span>
+                                <span class="block text-xs">
+                                </span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <i
+                                        class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                        settings
+                                    </i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <i
+                                        class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                        logout
+                                    </i>
+                                    Keluar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Main Content -->
+    <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen" id="main-content">
+
+        <!-- Breadcrumb -->
+        <div class="mb-[25px] md:flex items-center justify-between">
+            <h5 class="mb-0">
+                Koperasi Desa
+            </h5>
+            <ol class="breadcrumb mt-[12px] md:mt-0">
+                <li
+                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
+                    <a href="koperasi_desa_dashboard.html"
+                        class="inline-block relative ltr:pl-[22px] rtl:pr-[22px] transition-all hover:text-primary-500">
+                        <i
+                            class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 !text-lg -mt-px text-primary-500 top-1/2 -translate-y-1/2">
+                            home
+                        </i>
+                        Dashboard
+                    </a>
+                </li>
+                <li
+                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
+                    Koperasi Desa
+                </li>
+                <li
+                    class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
+                    Pembentukan Koperasi Desa
+                </li>
+            </ol>
+        </div>
+
+        <div class="trezo-card mb-[25px] p-[20px] md:p-[25px] rounded-md"
+            style="background: linear-gradient(81deg, #605DFF 3.39%, #9747FF 93.3%);">
+            <div class="trezo-card-content relative sm:ltr:pr-[250px] sm:rtl:pl-[250px]">
+                <div class="md:pb-[20px] flex items-center gap-[3px]">
+                    <i class="material-symbols-outlined text-white !text-[35px] ltr:mr-[8px] rtl:ml-[8px]">
+                        info
+                    </i>
+                    <h4 class="mb-[5px] md:mb-px font-semibold text-white">
+                        Petunjuk <span class="text-orange-100"> Pengisian :</span>
+                    </h4>
+                </div>
+                <p class="text-white">
+                    This NFT captures the essence of boundless potential, symbolized by a surreal landscape where
+                    the sky meets the earth in a dazzling fusion of colors. The intricate design features flowing
+                    lines that blend together, representing the limitless paths we can take in life.
+                </p>
+                <div
+                    class="sm:absolute sm:top-1/2 sm:-translate-y-1/2 sm:ltr:-right-[15px] sm:rtl:-left-[15px] sm:-mt-[8px] sm:max-w-[285px]">
+                    <img src="assets/images/online-learning.gif" alt="online-learning-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
+            <div class="trezo-card-title text-center">
+                <h5 class="mb-0">
+                    📝 Pra-Pembentukan
+                </h5>
+            </div>
+        </div>
+        <div class="trezo-card-content">
+            <form>
+                <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                    <div class="trezo-card-content mb-[25px]">
+                        <div class="sm:grid sm:grid-cols-1 md:grid-cols-4 sm:gap-[25px]">
+                            <div class="sm:col-span-2 mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                    Pilih Kecamatan <span class="text-orange-600">*</span>
+                                </label>
+                                <select id="pilih-status" placeholder="Pilih Kecamatan ..." autocomplete="on"
+                                    class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                    <option value="">Pilih Kecamatan ...</option>
+                                    <option value="1">Kecamatan ...</option>
+                                    <option value="2">Kecamatan ...</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2 mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                    Pilih Desa/Kelurahan <span class="text-orange-600">*</span>
+                                </label>
+                                <select id="pilih-status" placeholder="Pilih Desa/Kelurahan ..." autocomplete="on"
+                                    class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                    <option value="">Pilih Desa/Kelurahan ...</option>
+                                    <option value="1">Desa ...</option>
+                                    <option value="2">Kelurahan ...</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-4 mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                    Nama Inisiator <span class="text-orange-600">*</span>
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-50 dark:placeholder:text-gray-400"
+                                    placeholder="Inisiator Pembentukan Koperasi Desa">
+                            </div>
+                            <div class="sm:col-span-4 mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                    Jumlah Penduduk Desa <span class="text-orange-600">*</span>
+                                </label>
+                                <input type="text"
+                                    class="h-[55px] font-medium md:text-sm rounded-[4px] text-gray-900 dark:text-white border border-gray-100 dark:border-[#0a0e19] bg-gray-50 dark:bg-[#0a0e19] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-50 dark:placeholder:text-gray-400"
+                                    placeholder="236">
+                            </div>
+                            <div class="sm:col-span-4 mb-[20px] sm:mb-0">
+                                <label class="mb-[10px] text-gray-500 dark:text-white font-semibold block">
+                                    Minat Masyarakat <span class="text-orange-600">*</span>
+                                </label>
+                                <select id="pilih-status" placeholder="Minat Masyarakat ..." autocomplete="on"
+                                    class="h-[55px] rounded-md bg-gray-50 dark:bg-[#0a0e19] p-[15px] block w-full outline-0 cursor-pointer border border-gray-100 dark:border-[#0a0e19]">
+                                    <option value="">Pilih Minat Masyarakat ...</option>
+                                    <option value="1">Tinggi</option>
+                                    <option value="2">Sedang</option>
+                                    <option value="3">Rendah</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trezo-card border border-gray-300 rounded-md p-[20px] mb-[25px] mt-[25px]">
+                        <div class="trezo-card-content">
+                            <div class="sm:col-span-2 mb-[20px] sm:mb-0">
+                                <div class="flex items-center gap-[25px] justify-between">
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="defaultCheckbox2">
+                                        <label for="defaultCheckbox3" class="cursor-pointer font-semibold">
+                                            Sosialisasi ke masyarakat
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                    </div>
+                                    <span
+                                        class="ltr:mr-[10px] border border-danger-300 rounded-md text-sm px-[15px] py-[.2em]rtl:ml-[10px] text-danger-500">Belum
+                                        Lengkap</span>
+                                </div>
+                                <div>
+                                    <ul
+                                        class="my-[19px] border-t border-b border-gray-100 py-[15px] dark:border-[#172036]">
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-success-700 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-success-700">
+                                                        check
+                                                    </i>
+                                                    📄 Undangan resmi sosialisasi
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-success-500 bg-success-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Lihat Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-success-700 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-success-700">
+                                                        check
+                                                    </i>
+                                                    📸 Dokumentasi kegiatan
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-success-500 bg-success-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Lihat Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-danger-500 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-danger-500">
+                                                        close
+                                                    </i>
+                                                    📋 Daftar hadir peserta
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-danger-500 bg-danger-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Upload Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-danger-500 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-danger-500">
+                                                        close
+                                                    </i>
+                                                    📝 Materi presentasi
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-danger-500 bg-danger-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Upload Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-danger-500 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-danger-500">
+                                                        close
+                                                    </i>
+                                                    🗣️ Berita acara kegiatan
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-danger-500 bg-danger-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Upload Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2 mt-[20px] mb-[20px] sm:mb-0">
+                                <div class="flex items-center gap-[25px] justify-between">
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="defaultCheckbox2">
+                                        <label for="defaultCheckbox3" class="cursor-pointer font-semibold">
+                                            Kajian potensi ekonomi desa/kelurahan
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                    </div>
+                                    <span
+                                        class="ltr:mr-[10px] border border-danger-300 rounded-md text-sm px-[15px] py-[.2em]rtl:ml-[10px] text-danger-500">Belum
+                                        Lengkap</span>
+                                </div>
+                                <div>
+                                    <ul
+                                        class="my-[19px] border-t border-b border-gray-100 py-[15px] dark:border-[#172036]">
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-success-700 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-success-700">
+                                                        check
+                                                    </i>
+                                                    🗺️ Peta potensi desa
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-success-500 bg-success-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Lihat Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-success-700 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-success-700">
+                                                        check
+                                                    </i>
+                                                    📈 Data statistik desa
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-success-500 bg-success-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Lihat Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-danger-500 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-danger-500">
+                                                        close
+                                                    </i>
+                                                    📝 Format wawancara atau kuisioner
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-danger-500 bg-danger-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Upload Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-danger-500 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-danger-500">
+                                                        close
+                                                    </i>
+                                                    📋 Laporan hasil kajian dan
+                                                    rekomendasi
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-danger-500 bg-danger-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Upload Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-danger-500 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-danger-500">
+                                                        close
+                                                    </i>
+                                                    📸 Dokumentasi survey lapangan
+                                                    (Optional)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-danger-500 bg-danger-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Upload Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2 mt-[20px] mb-[20px] sm:mb-20px">
+                                <div class="flex items-center gap-[25px] justify-between">
+                                    <div class="form-check flex items-center gap-[8px] mb-[10px] last:mb-0">
+                                        <input type="checkbox" class="cursor-pointer" id="defaultCheckbox2">
+                                        <label for="defaultCheckbox3" class="cursor-pointer font-semibold">
+                                            Dukungan dari perangkat desa
+                                            <span class="text-orange-600">*</span>
+                                        </label>
+                                    </div>
+                                    <span
+                                        class="ltr:mr-[10px] border border-danger-300 rounded-md text-sm px-[15px] py-[.2em]rtl:ml-[10px] text-danger-500">Belum
+                                        Lengkap</span>
+                                </div>
+                                <div>
+                                    <ul
+                                        class="my-[19px] border-t border-b border-gray-100 py-[15px] dark:border-[#172036]">
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-success-700 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-success-700">
+                                                        check
+                                                    </i>
+                                                    📨 Surat rekomendasi atau dukungan
+                                                    dari Kepala Desa
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-success-500 bg-success-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Lihat Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-success-700 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-success-700">
+                                                        check
+                                                    </i>
+                                                    📄 Notulen rapat perangkat desa yang
+                                                    membahas koperasi
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-success-500 bg-success-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Lihat Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-danger-500 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-danger-500">
+                                                        close
+                                                    </i>
+                                                    🗣️ Berita acara atau pernyataan
+                                                    sikap perangkat desa
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-danger-500 bg-danger-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Upload Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="relative ltr:pl-[27px] rtl:pr-[27px] mb-[7px] last:mb-0 text-danger-500 dark:text-white">
+                                            <div class="flex items-center justify-between ">
+                                                <div>
+                                                    <i
+                                                        class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] text-danger-500">
+                                                        close
+                                                    </i>
+                                                    📝 Daftar nama perangkat yang
+                                                    hadir/menyetujui
+                                                    (format.pdf)
+                                                </div>
+                                                <a type="button" href="#"
+                                                    class="inline-block px-[15px] py-[.2em] text-white border border-danger-500 bg-danger-500 text-xs rounded-md ltr:mr-[10px] rtl:ml-[10px]">
+                                                    Upload Dokumen
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="koperasi_desa_pembentukan.html" type="button"
+                        class="font-medium inline-block transition-all rounded-md md:text-sm ltr:mr-[15px] rtl:ml-[15px] py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-danger-500 text-white hover:bg-danger-400">
+                        Cancel
+                    </a>
+                    <button type="button"
+                        class="font-medium inline-block transition-all rounded-md md:text-sm py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-primary-500 text-white hover:bg-primary-400">
+                        <span class="inline-block relative ltr:pl-[29px] rtl:pr-[29px]">
+                            <i
+                                class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
+                                save
+                            </i>
+                            Simpan Data
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="grow"></div>
+
+        <!-- Footer -->
+        <footer
+            class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
+            <p>
+                © <span class="text-purple-500">Copyright</span> Kominfo Ogan Ilir<a href="oganilirkab.go.id"
+                    target="_blank" class="text-primary-500 transition-all hover:underline"> 2025</a>
+            </p>
+        </footer>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Links Of JS File -->
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/fslightbox.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fullcalendar.min.js"></script>
+    <script src="assets/js/jsvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/quill.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+
+
+    <script>
+        // Mini PDF preview
+        document.getElementById("sabh-upload").addEventListener("change", function () {
+            const file = this.files[0];
+            if (file && file.type === "application/pdf") {
+                const url = URL.createObjectURL(file);
+                const frame = document.getElementById("pdf-frame");
+                frame.src = url;
+                document.getElementById("pdf-preview").classList.remove("hidden");
+            }
+        });
+    </script>
+
+    <script>
+        // Mini PDF preview
+        document.getElementById("pengesahan-upload").addEventListener("change", function () {
+            const file = this.files[0];
+            if (file && file.type === "application/pdf") {
+                const url = URL.createObjectURL(file);
+                const frame = document.getElementById("pdf-frame-prev");
+                frame.src = url;
+                document.getElementById("pengesahan-preview").classList.remove("hidden");
+            }
+        });
+    </script>
+
+    <script>
+        // Mini PDF preview
+        document.getElementById("bn-upload").addEventListener("change", function () {
+            const file = this.files[0];
+            if (file && file.type === "application/pdf") {
+                const url = URL.createObjectURL(file);
+                const frame = document.getElementById("bn-frame-prev");
+                frame.src = url;
+                document.getElementById("bn-preview").classList.remove("hidden");
+            }
+        });
+    </script>
+</body>
+
+</html>
